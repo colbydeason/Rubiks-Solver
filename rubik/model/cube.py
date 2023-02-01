@@ -13,25 +13,25 @@ class Cube:
         for rotation in directions:
             match rotation:
                 case 'F':
-                    self.rotateF()
+                    self._rotateF()
                 case 'f':
-                    self.rotatef()
+                    self._rotatef()
                 case 'B':
-                    self.rotateB()
+                    self._rotateB()
                 case 'b':
-                    self.rotateb()
+                    self._rotateb()
                 case 'L':
-                    self.rotateL()
+                    self._rotateL()
                 case 'l':
-                    self.rotatel()
+                    self._rotatel()
                 case 'R':
-                    self.rotateR()
+                    self._rotateR()
                 case 'r':
-                    self.rotater()
+                    self._rotater()
                 case 'U':
-                    self.rotateU()
+                    self._rotateU()
                 case 'u':
-                    self.rotateu()
+                    self._rotateu()
         
         #returns list into cube
         self._cube = "".join(self._cubeList)
