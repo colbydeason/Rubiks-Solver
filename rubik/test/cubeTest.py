@@ -54,5 +54,3 @@ class Test(unittest.TestCase):
         rotatedCube = testCube.rotate('F')
         self.assertEqual(rotatedCube, 'wggrwowybrbgwbwrwgybygybyrybogygybrbrorgoroywoowgrbowo')
     
-    def testName(self):
-        pass
