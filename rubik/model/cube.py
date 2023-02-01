@@ -50,28 +50,28 @@ class Cube:
         return self._cubelist
         
     def _rotatef(self):
-    
+        pass
     
     def _rotateB(self):
-    
+        pass
     
     def _rotateb(self):
-    
+        pass
 
     def _rotateL(self):
-
+        pass
 
     def _rotatel(self):
-    
+        pass
 
     def _rotateR(self):
-    
+        pass
 
     def _rotater(self):
-    
+        pass
 
     def _rotateU(self):
-    
+        pass
 
     def _rotateu(self):
-        
+        pass
