@@ -8,7 +8,7 @@ class Cube:
     def __init__(self, encodedCube):
         self.cube = encodedCube
         
-    def rotate(self, directions):
+    def rotate(self, directions = 'F'):
         pass
     
     def get(self):
