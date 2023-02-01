@@ -14,6 +14,7 @@ class Cube:
         
         #returns list into cube
         self._cube = "".join(self._cubeList)
+        return self.cube
         pass
     
     def get(self):
@@ -48,9 +49,8 @@ class Cube:
         rotatedCubeList[42] = self._cubeList[29]
         rotatedCubeList[43] = self._cubeList[32]
         rotatedCubeList[44] = self._cubeList[35]
-        # Modifies the cube
-        self._cubeList = rotatedCubeList
-        return self._cubelist
+        # Modifies the cubeList
+        self._cubeList = rotatedCubeList  
         
     def _rotatef(self):
         pass
