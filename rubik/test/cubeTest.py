@@ -4,12 +4,12 @@ Created on Jan 31, 2023
 @author: Colby Deason
 '''
 import unittest
-import rubik.model.cube as Cube
+import rubik.model.cube as cube
 
 
 class Test(unittest.TestCase):
 
-    # Analysis of Cube:
+    # Analysis of cube:
     #     
     #    Cube: class, instance of a state machine, maintain internal state (don't allow changes of state from the outside)
     #    Methods: __init__ => instantiates a cube from a string denoting the colors on the cube
@@ -47,11 +47,12 @@ class Test(unittest.TestCase):
     #        evil path:
     #            none
     
-    rngCube = ""
+    rngCube = 'gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo'
     
     def test_cubeTest_rotate_001_FRotation(self):
-        
-    
+        testCube = cube.Cube('gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo')
+        rotatedCube = testCube.rotate('F')
+        self.assertEqual(rotatedCube, 'wggrwowybrbgwbwrwgybygybyrybogygybrbrorgoroywoowgrbowo')
     
     def testName(self):
         pass
