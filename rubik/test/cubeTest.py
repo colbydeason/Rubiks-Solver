@@ -100,12 +100,12 @@ class Test(unittest.TestCase):
         self.assertEqual(rotatedCube, 'oryrwygogowoborwyywbbyygrrgwwworgywyrobggogbbryrbbgowb')
         
     def test_cubeTest_rotate_011_MissingDirection(self):
-        testCube = cube.Cube('oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb')
+        testCube = cube.Cube('gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo')
         rotatedCube = testCube.rotate()
         self.assertEqual(rotatedCube, 'wggrwowybrbgwbwrwgybygybyrybogygybrbrorgoroywoowgrbowo')
         
     def test_cubeTest_rotate_012_EmptyDirection(self):
-        testCube = cube.Cube('oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb')
+        testCube = cube.Cube('gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo')
         rotatedCube = testCube.rotate('')
         self.assertEqual(rotatedCube, 'wggrwowybrbgwbwrwgybygybyrybogygybrbrorgoroywoowgrbowo')
         
