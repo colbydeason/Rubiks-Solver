@@ -10,7 +10,28 @@ class Cube:
         self._cubeList = list(self._cube)
         
     def rotate(self, directions = 'F'):
-        self._rotateF()
+        for rotation in directions:
+            match rotation:
+                case 'F':
+                    self.rotateF()
+                case 'f':
+                    self.rotatef()
+                case 'B':
+                    self.rotateB()
+                case 'b':
+                    self.rotateb()
+                case 'L':
+                    self.rotateL()
+                case 'l':
+                    self.rotatel()
+                case 'R':
+                    self.rotateR()
+                case 'r':
+                    self.rotater()
+                case 'U':
+                    self.rotateU()
+                case 'u':
+                    self.rotateu()
         
         #returns list into cube
         self._cube = "".join(self._cubeList)
