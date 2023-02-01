@@ -32,6 +32,8 @@ class Cube:
                     self._rotateU()
                 case 'u':
                     self._rotateu()
+                case other:
+                    self._rotateF()
         
         #returns list into cube
         self._cube = "".join(self._cubeList)
@@ -105,16 +107,128 @@ class Cube:
         self._cubeList = rotatedCubeList
     
     def _rotateB(self):
-        pass
+        rotatedCubeList = self._cubeList[:]
+        # Rotate back panels
+        rotatedCubeList[20] = self._cubeList[18]
+        rotatedCubeList[23] = self._cubeList[19]
+        rotatedCubeList[26] = self._cubeList[20]
+        rotatedCubeList[19] = self._cubeList[21]
+        rotatedCubeList[22] = self._cubeList[22]
+        rotatedCubeList[25] = self._cubeList[23]
+        rotatedCubeList[18] = self._cubeList[24]
+        rotatedCubeList[21] = self._cubeList[25]
+        rotatedCubeList[24] = self._cubeList[26]
+        # Rotate top panels CW
+        rotatedCubeList[33] = self._cubeList[36]
+        rotatedCubeList[30] = self._cubeList[37]
+        rotatedCubeList[27] = self._cubeList[38]
+        # Rotate right panels CW
+        rotatedCubeList[51] = self._cubeList[27]
+        rotatedCubeList[52] = self._cubeList[30]
+        rotatedCubeList[53] = self._cubeList[33]
+        # Rotate bottom panels CW
+        rotatedCubeList[17] = self._cubeList[51]
+        rotatedCubeList[14] = self._cubeList[52]
+        rotatedCubeList[11] = self._cubeList[53]
+        # Rotate left panels CW
+        rotatedCubeList[36] = self._cubeList[11]
+        rotatedCubeList[37] = self._cubeList[14]
+        rotatedCubeList[38] = self._cubeList[17]
+        # Modifies the cubeList
+        self._cubeList = rotatedCubeList
     
     def _rotateb(self):
-        pass
+        rotatedCubeList = self._cubeList[:]
+        # Rotate back panels
+        rotatedCubeList[24] = self._cubeList[18]
+        rotatedCubeList[21] = self._cubeList[19]
+        rotatedCubeList[18] = self._cubeList[20]
+        rotatedCubeList[25] = self._cubeList[21]
+        rotatedCubeList[22] = self._cubeList[22]
+        rotatedCubeList[19] = self._cubeList[23]
+        rotatedCubeList[26] = self._cubeList[24]
+        rotatedCubeList[23] = self._cubeList[25]
+        rotatedCubeList[20] = self._cubeList[26]
+        # Rotate top panels CCW
+        rotatedCubeList[11] = self._cubeList[36]
+        rotatedCubeList[14] = self._cubeList[37]
+        rotatedCubeList[17] = self._cubeList[38]
+        # Rotate right panels CCW
+        rotatedCubeList[38] = self._cubeList[27]
+        rotatedCubeList[37] = self._cubeList[30]
+        rotatedCubeList[36] = self._cubeList[33]
+        # Rotate bottom panels CCW
+        rotatedCubeList[27] = self._cubeList[51]
+        rotatedCubeList[30] = self._cubeList[52]
+        rotatedCubeList[33] = self._cubeList[53]
+        # Rotate left panels CCW
+        rotatedCubeList[53] = self._cubeList[11]
+        rotatedCubeList[52] = self._cubeList[14]
+        rotatedCubeList[51] = self._cubeList[17]
+        # Modifies the cubeList
+        self._cubeList = rotatedCubeList
 
     def _rotateL(self):
-        pass
+        rotatedCubeList = self._cubeList[:]
+        # Rotate left panels
+        rotatedCubeList[29] = self._cubeList[27]
+        rotatedCubeList[32] = self._cubeList[28]
+        rotatedCubeList[35] = self._cubeList[29]
+        rotatedCubeList[28] = self._cubeList[30]
+        rotatedCubeList[31] = self._cubeList[31]
+        rotatedCubeList[34] = self._cubeList[32]
+        rotatedCubeList[27] = self._cubeList[33]
+        rotatedCubeList[30] = self._cubeList[34]
+        rotatedCubeList[33] = self._cubeList[35]
+        # Rotate top panels CW
+        rotatedCubeList[0] = self._cubeList[36]
+        rotatedCubeList[3] = self._cubeList[39]
+        rotatedCubeList[6] = self._cubeList[42]
+        # Rotate front panels CW
+        rotatedCubeList[45] = self._cubeList[0]
+        rotatedCubeList[48] = self._cubeList[3]
+        rotatedCubeList[51] = self._cubeList[6]
+        # Rotate bottom panels CW
+        rotatedCubeList[26] = self._cubeList[45]
+        rotatedCubeList[23] = self._cubeList[48]
+        rotatedCubeList[20] = self._cubeList[51]
+        # Rotate back panels CW
+        rotatedCubeList[42] = self._cubeList[20]
+        rotatedCubeList[39] = self._cubeList[23]
+        rotatedCubeList[36] = self._cubeList[26]
+        # Modifies the cubeList
+        self._cubeList = rotatedCubeList
 
     def _rotatel(self):
-        pass
+        rotatedCubeList = self._cubeList[:]
+        # Rotate left panels
+        rotatedCubeList[33] = self._cubeList[27]
+        rotatedCubeList[30] = self._cubeList[28]
+        rotatedCubeList[27] = self._cubeList[29]
+        rotatedCubeList[34] = self._cubeList[30]
+        rotatedCubeList[31] = self._cubeList[31]
+        rotatedCubeList[28] = self._cubeList[32]
+        rotatedCubeList[35] = self._cubeList[33]
+        rotatedCubeList[32] = self._cubeList[34]
+        rotatedCubeList[29] = self._cubeList[35]
+        # Rotate top panels CCW
+        rotatedCubeList[26] = self._cubeList[36]
+        rotatedCubeList[23] = self._cubeList[39]
+        rotatedCubeList[20] = self._cubeList[42]
+        # Rotate front panels CCW
+        rotatedCubeList[36] = self._cubeList[0]
+        rotatedCubeList[39] = self._cubeList[3]
+        rotatedCubeList[42] = self._cubeList[6]
+        # Rotate bottom panels CCW
+        rotatedCubeList[0] = self._cubeList[45]
+        rotatedCubeList[3] = self._cubeList[48]
+        rotatedCubeList[6] = self._cubeList[51]
+        # Rotate back panels CCW
+        rotatedCubeList[51] = self._cubeList[20]
+        rotatedCubeList[48] = self._cubeList[23]
+        rotatedCubeList[45] = self._cubeList[26]
+        # Modifies the cubeList
+        self._cubeList = rotatedCubeList
 
     def _rotateR(self):
         pass
