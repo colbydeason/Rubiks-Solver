@@ -317,9 +317,9 @@ class Cube:
         rotatedCubeList[10] = self._cubeList[19]
         rotatedCubeList[11] = self._cubeList[20]
         # Rotate left panels CW
-        rotatedCubeList[20] = self._cubeList[27]
+        rotatedCubeList[18] = self._cubeList[27]
         rotatedCubeList[19] = self._cubeList[28]
-        rotatedCubeList[18] = self._cubeList[29]
+        rotatedCubeList[20] = self._cubeList[29]
         # Modifies the cubeList
         self._cubeList = rotatedCubeList
 
