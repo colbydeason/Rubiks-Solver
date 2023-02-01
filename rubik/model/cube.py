@@ -36,19 +36,19 @@ class Cube:
         # Rotate top panels CW
         rotatedCubeList[9] = self._cubeList[42]
         rotatedCubeList[12] = self._cubeList[43]
-        rotatedCubeList[13] = self._cubeList[44]
+        rotatedCubeList[15] = self._cubeList[44]
         # Rotate right panels CW
-        rotatedCubeList[45] = self._cubeList[9]
+        rotatedCubeList[47] = self._cubeList[9]
         rotatedCubeList[46] = self._cubeList[12]
-        rotatedCubeList[47] = self._cubeList[15]
+        rotatedCubeList[45] = self._cubeList[15]
         # Rotate bottom panels CW
         rotatedCubeList[29] = self._cubeList[45]
         rotatedCubeList[32] = self._cubeList[46]
         rotatedCubeList[35] = self._cubeList[47]
         # Rotate left panels CW
-        rotatedCubeList[42] = self._cubeList[29]
+        rotatedCubeList[44] = self._cubeList[29]
         rotatedCubeList[43] = self._cubeList[32]
-        rotatedCubeList[44] = self._cubeList[35]
+        rotatedCubeList[42] = self._cubeList[35]
         # Modifies the cubeList
         self._cubeList = rotatedCubeList  
         
