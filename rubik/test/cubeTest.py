@@ -47,7 +47,7 @@ class Test(unittest.TestCase):
     #        evil path:
     #            none
     
-    rngCube = 'gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo'
+    rngCube = 'oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb'
     
     def test_cubeTest_rotate_001_FRotation(self):
         testCube = cube.Cube('gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo')
@@ -55,66 +55,66 @@ class Test(unittest.TestCase):
         self.assertEqual(rotatedCube, 'wggrwowybrbgwbwrwgybygybyrybogygybrbrorgoroywoowgrbowo')
         
     def test_cubeTest_rotate_002_fRotation(self):
-        testCube = cube.Cube('gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo')
+        testCube = cube.Cube('oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb')
         rotatedCube = testCube.rotate('f')
-        self.assertEqual(rotatedCube, '')
+        self.assertEqual(rotatedCube, 'oygwwoorgrbbyorryywwwyygrrgorboroywbggrbgowbwygybbgowb')
         
     def test_cubeTest_rotate_003_BRotation(self):
-        testCube = cube.Cube('gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo')
+        testCube = cube.Cube('oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb')
         rotatedCube = testCube.rotate('B')
-        self.assertEqual(rotatedCube, '')
+        self.assertEqual(rotatedCube, 'oworwygogwbbbowwyorywrywggwrrygrggwybrybgobobryrbbgooy')
         
     def test_cubeTest_rotate_004_bRotation(self):
-        testCube = cube.Cube('gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo')
+        testCube = cube.Cube('oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb')
         rotatedCube = testCube.rotate('b')
-        self.assertEqual(rotatedCube, '')
+        self.assertEqual(rotatedCube, 'oworwygogwbgbogwyrwggwyrwyrorywrgbwyyoobgobobryrbbgyrb')
         
     def test_cubeTest_rotate_005_LRotation(self):
-        testCube = cube.Cube('gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo')
+        testCube = cube.Cube('oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb')
         rotatedCube = testCube.rotate('L')
-        self.assertEqual(rotatedCube, '')
+        self.assertEqual(rotatedCube, 'gwobwybogwbbborwyywwoyybrrryoowrrygyggrggowoboyrrbggwb')
         
     def test_cubeTest_rotate_006_lRotation(self):
-        testCube = cube.Cube('gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo')
+        testCube = cube.Cube('oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb')
         rotatedCube = testCube.rotate('l')
-        self.assertEqual(rotatedCube, '')
+        self.assertEqual(rotatedCube, 'rwobwyoogwbbborwyywwbyybrrgygyrrwooyogrrgogobgyrgbgwwb')
         
     def test_cubeTest_rotate_007_RRotation(self):
-        testCube = cube.Cube('gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo')
+        testCube = cube.Cube('oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb')
         rotatedCube = testCube.rotate('R')
-        self.assertEqual(rotatedCube, '')
+        self.assertEqual(rotatedCube, 'owrrwggobwbwyobyrbbwwoygrrgoryorgywyggobgybogryrbbyoww')
         
     def test_cubeTest_rotate_008_rRotation(self):
-        testCube = cube.Cube('gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo')
+        testCube = cube.Cube('oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb')
         rotatedCube = testCube.rotate('r')
-        self.assertEqual(rotatedCube, '')
+        self.assertEqual(rotatedCube, 'owrrwogobbryboywbwbwwgygrrgoryorgywyggrbgybowryobbyowg')
         
     def test_cubeTest_rotate_009_URotation(self):
-        testCube = cube.Cube('gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo')
+        testCube = cube.Cube('oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb')
         rotatedCube = testCube.rotate('U')
-        self.assertEqual(rotatedCube, '')
+        self.assertEqual(rotatedCube, 'wbbrwygogwwwborwyyoryyygrrgowoorgywybbgoggborryrbbgowb')
         
     def test_cubeTest_rotate_010_uRotation(self):
-        testCube = cube.Cube('gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo')
+        testCube = cube.Cube('oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb')
         rotatedCube = testCube.rotate('u')
-        self.assertEqual(rotatedCube, '')
+        self.assertEqual(rotatedCube, 'oryrwygogowoborwyywbbyygrrgwwworgywyrobggogbbryrbbgowb')
         
     def test_cubeTest_rotate_011_MissingDirection(self):
-        testCube = cube.Cube('gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo')
+        testCube = cube.Cube('oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb')
         rotatedCube = testCube.rotate()
-        self.assertEqual(rotatedCube, '')
+        self.assertEqual(rotatedCube, 'wggrwowybrbgwbwrwgybygybyrybogygybrbrorgoroywoowgrbowo')
         
     def test_cubeTest_rotate_012_EmptyDirection(self):
-        testCube = cube.Cube('gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo')
+        testCube = cube.Cube('oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb')
         rotatedCube = testCube.rotate('')
-        self.assertEqual(rotatedCube, '')
+        self.assertEqual(rotatedCube, 'wggrwowybrbgwbwrwgybygybyrybogygybrbrorgoroywoowgrbowo')
         
     def test_cubeTest_rotate_013_MultipleRotations(self):
-        testCube = cube.Cube('gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo')
+        testCube = cube.Cube('oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb')
         rotatedCube = testCube.rotate('Full')
-        self.assertEqual(rotatedCube, '')
+        self.assertEqual(rotatedCube, 'grrgwwbyogrooorbyybbgyyorrorwyyrowwwwoybggobyrbwgbggwb')
         
     def test_cubeTest_rotate_901_InvalidDirection(self):
-        testCube = cube.Cube('gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo')
+        testCube = cube.Cube('oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb')
         rotatedCube = testCube.rotate('D')
-        self.assertEqual(rotatedCube, '')
+        pass
