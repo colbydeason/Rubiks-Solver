@@ -11,6 +11,9 @@ class Cube:
         
     def rotate(self, directions = 'F'):
         self._rotateF()
+        
+        #returns list into cube
+        self._cube = "".join(self._cubeList)
         pass
     
     def get(self):
