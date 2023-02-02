@@ -124,4 +124,4 @@ class Test(unittest.TestCase):
     def test_cubeTest_rotate_555_FullSolveFinalAlgorithm(self):
         testCube = cube.Cube('bgwwwwgwwobybbybbgbyygyywgbgwwrggooyobroooorgrrryrryor')
         rotatedCube = testCube.rotate('rLuRUbblrRuB')
-        self.assertEqual('wwwwwwwwwbbbbbbbbbyyyyyyyyygggggggggooooooooorrrrrrrrr')
+        self.assertEqual(rotatedCube, 'wwwwwwwwwbbbbbbbbbyyyyyyyyygggggggggooooooooorrrrrrrrr')
