@@ -46,6 +46,9 @@ class Test(unittest.TestCase):
     #
     #        evil path:
     #            none
+    #        
+    #        full solve:
+    #            test 555: one algorithm left, should solve, uses most rotations
     
     rngCube = 'oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb'
     
@@ -118,3 +121,7 @@ class Test(unittest.TestCase):
         testCube = cube.Cube('oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb')
         rotatedCube = testCube.rotate('D')
         self.assertFalse(1 == 1)
+    def test_cubeTest_rotate_555_FullSolveFinalAlgorithm(self):
+        testCube = cube.Cube('bgwwwwgwwobybbybbgbyygyywgbgwwrggooyobroooorgrrryrryor')
+        rotatedCube = testCube.rotate('rLuRUbblrRuB')
+        self.assertEqual('wwwwwwwwwbbbbbbbbbyyyyyyyyygggggggggooooooooorrrrrrrrr')
