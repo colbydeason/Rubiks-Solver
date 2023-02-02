@@ -10,7 +10,8 @@ class Cube:
         self._cubeList = list(self._cube)
         
     def rotate(self, directions = 'F'):
-        if len(directions) == 0:
+        print(directions)
+        if directions == None or len(directions) == 0:
             directions = 'F'
         for rotation in directions:
             match rotation:
