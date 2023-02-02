@@ -35,7 +35,7 @@ class Cube:
                 case 'u':
                     self._rotateu()
                 case other:
-                    print('error: invalid direction')
+                    raise Exception("error: invalid direction")
         
         #returns list into cube
         self._cube = "".join(self._cubeList)
