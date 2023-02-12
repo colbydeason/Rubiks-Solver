@@ -119,9 +119,10 @@ class Test(unittest.TestCase):
         
     def test_cubeTest_rotate_901_InvalidDirection(self):
         testCube = cube.Cube('oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb')
-        with self.assertRaises(Exception) as context:
-            rotatedCube = testCube.rotate('D')
-        self.assertTrue('error: invalid direction' in str(context.exception))
+        # with self.assertRaises(Exception) as context:
+        rotatedCube = testCube.rotate('D')
+        # self.assertTrue('error: invalid direction' in str(context.exception))
+        self.assertEqual(rotatedCube, 'error: invalid direction')
         
     def test_cubeTest_rotate_555_FullSolveFinalAlgorithm(self):
         testCube = cube.Cube('bgwwwwgwwobybbybbgbyygyywgbgwwrggooyobroooorgrrryrryor')
