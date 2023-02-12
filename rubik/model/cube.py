@@ -38,6 +38,8 @@ class Cube:
                 case other:
                     self._cube = 'error: invalid direction'
                     return self._cube
+                    # Previous exception implementation with raise
+                    #
                     # raise Exception("error: invalid direction")
         
         #returns list into cube

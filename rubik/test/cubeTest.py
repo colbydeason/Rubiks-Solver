@@ -119,6 +119,8 @@ class Test(unittest.TestCase):
         
     def test_cubeTest_rotate_901_InvalidDirection(self):
         testCube = cube.Cube('oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb')
+        # Previous implemented exception with raise
+        #
         # with self.assertRaises(Exception) as context:
         rotatedCube = testCube.rotate('D')
         # self.assertTrue('error: invalid direction' in str(context.exception))

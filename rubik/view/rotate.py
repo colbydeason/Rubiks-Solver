@@ -10,6 +10,10 @@ def rotate(parms):
     directions = parms.get('dir')
     theCube.rotate(directions)
     
-    result['cube'] = theCube.get()
-    result['status'] = 'ok'                     
+    resultCube = theCube.get()
+    if resultCube.startswith('error: '):
+        result['status'] = resultCube
+    else:
+        result['cube'] = theCube.get()
+        result['status'] = 'ok'                 
     return result
