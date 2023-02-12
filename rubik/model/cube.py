@@ -41,7 +41,6 @@ class Cube:
         #returns list into cube
         self._cube = "".join(self._cubeList)
         return self._cube
-        pass
     
     def get(self):
         return self._cube
