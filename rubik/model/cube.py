@@ -49,6 +49,15 @@ class Cube:
     def get(self):
         return self._cube
 
+
+
+
+
+
+
+
+
+
     # Individual rotation private methods
     def _rotateF(self):
         rotatedCubeList = self._cubeList[:]
