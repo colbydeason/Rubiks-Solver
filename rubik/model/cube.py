@@ -55,14 +55,14 @@ class Cube:
         if (len(encodedCube) != 54):
             self._cube = 'error: invalid cube length'
             
-        uniqueArray = [][]
+        uniqueArray = []
         for i in encodedCube:
             if not (encodedCube[i].isalpha() or encodedCube[i].isnumeric()):
                 self._cube = 'error: invalid character'
                 return
             for j in uniqueArray:
                 if encodedCube[i] in uniqueArray[j][0]:
-                    uniqueArray[j][0]++
+                    uniqueArray[j][0] = uniqueArray[j][0] + 1
             uniqueArray.append([encodedCube, 1])
             
         if len(uniqueArray) == 6:
