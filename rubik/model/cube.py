@@ -39,11 +39,7 @@ class Cube:
                 case other:
                     self._cube = 'error: invalid direction'
                     return self._cube
-                    # Previous exception implementation with raise
-                    #
-                    # raise Exception("error: invalid direction")
         
-        #returns list into cube
         self._cube = "".join(self._cubeList)
         return self._cube
     
@@ -52,26 +48,16 @@ class Cube:
 
 
 
+
+
     def _isValidCube(self):
         self._isValidLength()
         self._isValidFaces()
-            
-        # if len(uniqueArray) == 6:
-        #     for i in range(len(uniqueArray)):
-        #         if uniqueArray[i][1] != "111111111":
-        #             self._cube = 'error: uneven cube character distribution'
-        #             return
-        #     self._cube = encodedCube
-        # else:
-        #     self._cube = 'error: unique characters is not equal to 6'
 
-    def _isValidCharacter(self, char):
-        if char.isalpha():
-            return True
-        elif char.isnumeric():
-            return True
-        else:
-            return False
+
+
+
+
     
     def _isValidLength(self):
         if self._cube == 54:
@@ -95,10 +81,19 @@ class Cube:
                     elif j == len(uniqueArray) - 1:
                         uniqueArray.append([self._cube[i], "1"])    
         
+        if not (len(uniqueArray) == 6):
+            self._cube = 'error: incorrect number of unique colors'
+        for i in uniqueArray:
+            if i[1] != '111111111':
+                self._cube = 'error: colors are unbalanced, must have 9 of each'
         
-        
-        
-        
+    def _isValidCharacter(self, char):
+        if char.isalpha():
+            return True
+        elif char.isnumeric():
+            return True
+        else:
+            return False    
         
         
         
