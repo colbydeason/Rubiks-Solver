@@ -52,12 +52,13 @@ class Cube:
     def _isValidCube(self):
         if not self._isValidLength():
             return
-        # if not self._isValidFaces():
-        #     return
-        # if not self._isUniquelyCentered():
-        #     return
+        if not self._isValidFaces():
+            return
+        if not self._isUniquelyCentered():
+            return
+        
     def _isValidLength(self):
-        if self._cube == 54:
+        if len(self._cube) == 54:
             return True
         else:
             self._cube = 'error: invalid length for cube [54]'
