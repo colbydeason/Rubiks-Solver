@@ -66,17 +66,17 @@ class Cube:
         #     self._cube = 'error: unique characters is not equal to 6'
 
     def _isValidCharacter(self, char):
-        if char.isalpha() or char.isnumeric():
+        if char.isalpha():
+            return True
+        elif char.isnumeric():
             return True
         else:
-            self._cube = 'error: invalid character in cube'
             return False
     
     def _isValidLength(self):
         if self._cube == 54:
             return True
         else:
-            self._cube = 'error: invalid length for cube'
             return False   
         
     def _isValidFaces(self):
@@ -84,7 +84,7 @@ class Cube:
         for i in range(len(self._cube)):
             newChar = self._cube[i]
             if not self._isValidCharacter(newChar):
-                self._cube = 'error: invalid character'
+                self._cube = 'error: invalid length for cube'
                 return
             if len(uniqueArray) == 0:
                 uniqueArray.append([self._cube[i], "1"])
