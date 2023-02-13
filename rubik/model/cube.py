@@ -8,8 +8,7 @@ class Cube:
     def __init__(self, encodedCube):
         self._cube = encodedCube
         self._isValid(encodedCube)
-        if  not self._cube.startswith('error: '):
-            self._cubeList = list(self._cube)
+        self._cubeList = list(self._cube)
         
     def rotate(self, directions = 'F'):
         print(directions)
@@ -67,7 +66,7 @@ class Cube:
                     uniqueArray[j][1] = uniqueArray[j][1] +"1"
                 else:
                     uniqueArray.append([encodedCube, "1"])
-        self._cube = len(uniqueArray)
+        self._cube = encodedCube
         # if len(uniqueArray) == 6:
         #     for i in range(len(uniqueArray)):
         #         if uniqueArray[i][1] != "111111111":
