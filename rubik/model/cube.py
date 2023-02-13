@@ -86,8 +86,6 @@ class Cube:
         else:
             return False
         
-    def _cubeFaceArray(self):
-        
         
         
         
