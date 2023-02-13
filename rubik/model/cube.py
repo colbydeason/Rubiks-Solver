@@ -74,7 +74,7 @@ class Cube:
                         uniqueArray[j][1] = uniqueArray[j][1] +"1"
                     elif j == len(uniqueArray) - 1:
                         uniqueArray.append([self._cube[i], "1"])    
-        print(len(uniqueArray))
+        print(uniqueArray)
         if not (len(uniqueArray) == 6):
             self._cube = 'error: incorrect number of unique colors'
         for i in uniqueArray:
