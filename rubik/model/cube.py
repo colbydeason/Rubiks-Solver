@@ -7,7 +7,6 @@ class Cube:
 
     def __init__(self, encodedCube):
         self._isValid(encodedCube)
-        # self._cube = encodedCube
         self._cubeList = list(self._cube)
         
     def rotate(self, directions = 'F'):
@@ -53,6 +52,8 @@ class Cube:
 
 
     def _isValid(self, encodedCube):
+        if (len(encodedCube) != 54):
+            self._cube = 'error: invalid cube length'
         self._cube = encodedCube
 
 
