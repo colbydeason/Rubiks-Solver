@@ -7,7 +7,7 @@ class Cube:
 
     def __init__(self, encodedCube):
         self._cube = encodedCube
-        self._isValid(encodedCube)
+        self._isValidCube()
         self._cubeList = list(self._cube)
         
     def rotate(self, directions = 'F'):
@@ -52,25 +52,25 @@ class Cube:
 
 
 
-    def _isValid(self, encodedCube):
-        if (len(encodedCube) != 54):
+    def _isValidCube(self):
+        newCube = self._cube
+        if (len(self._cube) != 54):
             self._cube = 'error: invalid cube length'
-    
+            return
         uniqueArray = []
-        for i in range(len(encodedCube)):
-            if not (encodedCube[i].isalpha() or encodedCube[i].isnumeric()):
+        for i in range(len(self._cube)):
+            newChar = self._cube[i]
+            if self._isValidCharacter(newChar):
                 self._cube = 'error: invalid character'
                 return
             if len(uniqueArray) == 0:
-                uniqueArray.append([encodedCube[i], "1"])
+                uniqueArray.append([self._cube[i], "1"])
             else:
                 for j in range(len(uniqueArray)):
-                    if encodedCube[i] == uniqueArray[j][0]:
+                    if self._cube[i] == uniqueArray[j][0]:
                         uniqueArray[j][1] = uniqueArray[j][1] +"1"
                     else:
-                        uniqueArray.append([encodedCube, "1"])
-        self._cube = encodedCube
-        return
+                        uniqueArray.append([self._cube, "1"])
         # if len(uniqueArray) == 6:
         #     for i in range(len(uniqueArray)):
         #         if uniqueArray[i][1] != "111111111":
@@ -80,10 +80,17 @@ class Cube:
         # else:
         #     self._cube = 'error: unique characters is not equal to 6'
 
-
-
-
-
+    def _isValidCharacter(self, char):
+        if char.isalpha() or char.isnumeric():
+            return True
+        else:
+            return False
+        
+    def _cubeFaceArray(self):
+        
+        
+        
+        
 
     # Individual rotation private methods
     def _rotateF(self):
