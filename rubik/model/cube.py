@@ -97,7 +97,8 @@ class Cube:
             return False    
         
     def _isUniquelyCentered(self):
-        if self._cube[4] != self._cube[13] != self._cube[22] != self._cube[31] != self._cube[40] != self._cube[49]:
+        uniqList = [self._cube[4], self._cube[13], self._cube[22], self._cube[31], self._cube[40], self._cube[49]]
+        if (len(set(uniqList)) == len(uniqList)):
             return True
         else:
             self._cube = 'error: centers are not unique'
