@@ -92,8 +92,8 @@ class Cube:
                 for j in uniqueArray:
                     if self._cube[i] == j[0]:
                         j[1] = j[1] +"1"
-                    else:
-                        uniqueArray.append([self._cube[i], "1"])    
+            uniqueArray.append([self._cube[i], "1"])
+                            
         
         print(uniqueArray)
     # Individual rotation private methods
