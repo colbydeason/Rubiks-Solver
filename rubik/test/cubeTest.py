@@ -88,6 +88,8 @@ class Test(unittest.TestCase):
     def test_cubeTest_cube_904_UniqueCenterError(self):
         testCube = cube.Cube('lllllllll333333333KKKKKKKKKKrrrrrrrr999999999AAAAAAAAA')
         self.assertEqual('error: incorrect number of unique colors [6, 9 of each]', testCube.get())
+        
+        
     #    Analysis of Cube.rotate
     #        inputs:
     #            directions: string, len >= 0, in[FfRrBbLlUu]; optional, defaults to F if missing; un-validated
