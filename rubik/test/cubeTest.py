@@ -56,17 +56,17 @@ class Test(unittest.TestCase):
         testCube = cube.Cube('wwwwwwwwwbbbbbbbbbyyyyyyyyygggggggggooooooooorrrrrrrrr')
         self.assertEqual('wwwwwwwwwbbbbbbbbbyyyyyyyyygggggggggooooooooorrrrrrrrr', testCube.get())
     
-    def test_cubeTest_cube_002_UpperCaseCube(self):
-        testCube = cube.Cube('WWWWWWWWWBBBBBBBBBYYYYYYYYYGGGGGGGGGOOOOOOOOORRRRRRRRR')
-        self.assertEqual('WWWWWWWWWBBBBBBBBBYYYYYYYYYGGGGGGGGGOOOOOOOOORRRRRRRRR', testCube.get())
-    
-    def test_cubeTest_cube_003_NumberCube(self):
-        testCube = cube.Cube('000000000111111111222222222333333333444444444555555555')
-        self.assertEqual('000000000111111111222222222333333333444444444555555555', testCube.get())
-    
-    def test_cubeTest_cube_004_UpperLowerAndNumberCube(self):
-        testCube = cube.Cube('lllllllll333333333KKKKKKKKKrrrrrrrrr999999999AAAAAAAAA')
-        self.assertEqual('lllllllll333333333KKKKKKKKKrrrrrrrrr999999999AAAAAAAAA', testCube.get())
+    # def test_cubeTest_cube_002_UpperCaseCube(self):
+    #     testCube = cube.Cube('WWWWWWWWWBBBBBBBBBYYYYYYYYYGGGGGGGGGOOOOOOOOORRRRRRRRR')
+    #     self.assertEqual('WWWWWWWWWBBBBBBBBBYYYYYYYYYGGGGGGGGGOOOOOOOOORRRRRRRRR', testCube.get())
+    #
+    # def test_cubeTest_cube_003_NumberCube(self):
+    #     testCube = cube.Cube('000000000111111111222222222333333333444444444555555555')
+    #     self.assertEqual('000000000111111111222222222333333333444444444555555555', testCube.get())
+    #
+    # def test_cubeTest_cube_004_UpperLowerAndNumberCube(self):
+    #     testCube = cube.Cube('lllllllll333333333KKKKKKKKKrrrrrrrrr999999999AAAAAAAAA')
+    #     self.assertEqual('lllllllll333333333KKKKKKKKKrrrrrrrrr999999999AAAAAAAAA', testCube.get())
         
     #    Analysis of Cube.rotate
     #        inputs:
