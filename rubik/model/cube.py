@@ -69,8 +69,10 @@ class Cube:
             for i in range(len(uniqueArray)):
                 if uniqueArray[i][1] != "111111111":
                     self._cube = 'error: uneven cube character distribution'
+                    return
             if len(uniqueArray) == 6:
                 self._cube = encodedCube
+                return
         self._cube = 'error: number of individual characters is not equal to 6'
 
 
