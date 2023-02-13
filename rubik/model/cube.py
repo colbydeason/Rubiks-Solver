@@ -62,12 +62,12 @@ class Cube:
                 return
             for j in range(len(uniqueArray)):
                 if encodedCube[i] in uniqueArray[j][0]:
-                    uniqueArray[j][0] = uniqueArray[j][0] + 1
+                    uniqueArray[j][0] = uniqueArray[j][0] +"1"
             uniqueArray.append([encodedCube, 1])
             
         if len(uniqueArray) == 6:
             for i in range(len(uniqueArray)):
-                if uniqueArray[i][1] != 9:
+                if uniqueArray[i][1] != "111111111":
                     self._cube = 'error: uneven cube character distribution'
             if len(uniqueArray) == 6:
                 self._cube = encodedCube
