@@ -99,7 +99,7 @@ class Cube:
                         uniqueArray.append([self._cube[i], "1"])
                     # print(uniqueArray)      
         
-            print(uniqueArray)
+        print(uniqueArray)
     # Individual rotation private methods
     def _rotateF(self):
         rotatedCubeList = self._cubeList[:]
