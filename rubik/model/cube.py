@@ -50,10 +50,12 @@ class Cube:
 
 
     def _isValidCube(self):
-        self._isValidLength()
-        self._isValidFaces()
-        self._isUniquelyCentered()
-        
+        if self._isValidLength():
+            return
+        if self._isValidFaces():
+            return
+        if self._isUniquelyCentered():
+            return
     def _isValidLength(self):
         if self._cube == 54:
             return True
