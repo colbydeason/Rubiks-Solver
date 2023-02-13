@@ -6,7 +6,8 @@ class Cube:
     '''
 
     def __init__(self, encodedCube):
-        self._isValid(encodedCube)
+        self._cube = encodedCube
+        # self._isValid(encodedCube)
         self._cubeList = list(self._cube)
         
     def rotate(self, directions = 'F'):
@@ -51,28 +52,28 @@ class Cube:
 
 
 
-    def _isValid(self, encodedCube):
-        if (len(encodedCube) != 54):
-            self._cube = 'error: invalid cube length'
-            
-        uniqueArray = []
-        for i in range(len(encodedCube)):
-            if not (encodedCube[i].isalpha() or encodedCube[i].isnumeric()):
-                self._cube = 'error: invalid character'
-                return
-            for j in range(len(uniqueArray)):
-                if encodedCube[i] in uniqueArray[j][0]:
-                    uniqueArray[j][0] = uniqueArray[j][0] +"1"
-            uniqueArray.append([encodedCube, 1])
-            
-        if len(uniqueArray) == 6:
-            for i in range(len(uniqueArray)):
-                if uniqueArray[i][1] != "111111111":
-                    self._cube = 'error: uneven cube character distribution'
-                    return
-            self._cube = encodedCube
-        else:
-            self._cube = 'error: unique characters is not equal to 6'
+    # def _isValid(self, encodedCube):
+    #     if (len(encodedCube) != 54):
+    #         self._cube = 'error: invalid cube length'
+    #
+    #     uniqueArray = []
+    #     for i in range(len(encodedCube)):
+    #         if not (encodedCube[i].isalpha() or encodedCube[i].isnumeric()):
+    #             self._cube = 'error: invalid character'
+    #             return
+    #         for j in range(len(uniqueArray)):
+    #             if encodedCube[i] in uniqueArray[j][0]:
+    #                 uniqueArray[j][0] = uniqueArray[j][0] +"1"
+    #         uniqueArray.append([encodedCube, 1])
+    #
+    #     if len(uniqueArray) == 6:
+    #         for i in range(len(uniqueArray)):
+    #             if uniqueArray[i][1] != "111111111":
+    #                 self._cube = 'error: uneven cube character distribution'
+    #                 return
+    #         self._cube = encodedCube
+    #     else:
+    #         self._cube = 'error: unique characters is not equal to 6'
 
 
 
