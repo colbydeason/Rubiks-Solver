@@ -59,7 +59,7 @@ class Cube:
         uniqueArray = []
         for i in range(len(self._cube)):
             newChar = self._cube[i]
-            if self._isValidCharacter(newChar):
+            if not self._isValidCharacter(newChar):
                 self._cube = 'error: invalid character'
                 return
             if len(uniqueArray) == 0:
@@ -80,7 +80,6 @@ class Cube:
         #     self._cube = 'error: unique characters is not equal to 6'
 
     def _isValidCharacter(self, char):
-        print(char)
         if char.isalpha() or char.isnumeric():
             return True
         else:
