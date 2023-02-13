@@ -93,7 +93,7 @@ class Cube:
                     if self._cube[i] == uniqueArray[j][0]:
                         uniqueArray[j][1] = uniqueArray[j][1] +"1"
                     else:
-                        uniqueArray.append([self._cube, "1"])    
+                        uniqueArray.append([self._cube[i], "1"])    
         
 
     # Individual rotation private methods
