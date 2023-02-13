@@ -50,11 +50,11 @@ class Cube:
 
 
     def _isValidCube(self):
-        if self._isValidLength():
+        if not self._isValidLength():
             return
-        if self._isValidFaces():
+        if not self._isValidFaces():
             return
-        if self._isUniquelyCentered():
+        if not self._isUniquelyCentered():
             return
     def _isValidLength(self):
         if self._cube == 54:
@@ -69,7 +69,7 @@ class Cube:
             newChar = self._cube[i]
             if not self._isValidCharacter(newChar):
                 self._cube = 'error: invalid character for cube [a-zA-Z0-9]'
-                return
+                return False
             if len(uniqueArray) == 0:
                 uniqueArray.append([self._cube[i], "1"])
             else:
@@ -85,7 +85,8 @@ class Cube:
         for i in uniqueArray:
             if i[1] != '111111111':
                 self._cube = 'error: colors are unbalanced [9 of each]'
-        
+                return False
+        return True
     def _isValidCharacter(self, char):
         if char.isalpha():
             return True
