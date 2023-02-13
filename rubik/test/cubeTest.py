@@ -42,8 +42,9 @@ class Test(unittest.TestCase):
     #
     #        sad path:
     #            test 901: invalid length
-    #            test 902: incorrect amount of unique characters
-    #            test 903: centers are not unique
+    #            test 902: invalid character
+    #            test 903: incorrect amount of unique characters
+    #            test 904: centers are not unique
     #
     #            Future error tests
     #                test 904-...: cube is unsolvable
