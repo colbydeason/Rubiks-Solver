@@ -6,8 +6,7 @@ class Cube:
     '''
 
     def __init__(self, encodedCube):
-        # self._cube = encodedCube
-        self._isValid(encodedCube)
+        self._cube = encodedCube
         self._cubeList = list(self._cube)
         
     def rotate(self, directions = 'F'):
