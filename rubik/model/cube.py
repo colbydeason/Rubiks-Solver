@@ -91,7 +91,7 @@ class Cube:
             else:
                 for j in range(len(uniqueArray)):
                     if self._cube[i] == uniqueArray[j][0]:
-                        uniqueArray[j][1] = uniqueArray[1] +"1"
+                        uniqueArray[j][1] = uniqueArray[j][1] +"1"
                     if j == len(uniqueArray):
                         uniqueArray.append([self._cube[i], "1"])
                             
