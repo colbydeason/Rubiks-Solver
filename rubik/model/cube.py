@@ -52,8 +52,8 @@ class Cube:
     def _isValidCube(self):
         if not self._isValidLength():
             return
-        if not self._isValidFaces():
-            return
+        # if not self._isValidFaces():
+        #     return
         # if not self._isUniquelyCentered():
         #     return
     def _isValidLength(self):
