@@ -82,10 +82,10 @@ class Cube:
                         uniqueArray.append([self._cube[i], "1"])    
         print(uniqueArray)
         if not (len(uniqueArray) == 6):
-            self._cube = 'error: incorrect number of unique colors [6]'
+            self._cube = 'error: incorrect number of unique colors [6, 9 of each]'
         for i in uniqueArray:
             if i[1] != '111111111':
-                self._cube = 'error: colors are unbalanced [9 of each]'
+                self._cube = 'error: incorrect number of unique colors [6, 9 of each]'
                 return False
         return True
     def _isValidCharacter(self, char):

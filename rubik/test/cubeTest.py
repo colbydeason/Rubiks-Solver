@@ -43,9 +43,8 @@ class Test(unittest.TestCase):
     #        sad path:
     #            test 901: invalid length for cube [54]
     #            test 902: invalid character for cube [a-zA-Z0-9]
-    #            test 903: incorrect number of unique colors [6]
-    #            test 904: centers are not unique
-    #            test 905: colors are unbalanced [9 of each]
+    #            test 903: incorrect number of unique colors [6, 9 of each]
+    #            test 904: centers are not unique           
     #
     #            Future error tests
     #                test 904-...: cube is unsolvable
@@ -79,15 +78,12 @@ class Test(unittest.TestCase):
     
     def test_cubeTest_cube_903_UniqueColorError(self):
         testCube = cube.Cube('jjjjjjjjjjjjjjjjjjffffffffffffffffffbbbbbbbbbbbbbbbbbb')
-        self.assertEqual('error: incorrect number of unique colors [6]', testCube.get())
+        self.assertEqual('error: incorrect number of unique colors [6, 9 of each]', testCube.get())
         
     def test_cubeTest_cube_904_UniqueCenterError(self):
         testCube = cube.Cube('llllrllll333333333KKKKKKKKKlrrrrrrrr999999999AAAAAAAAA')
         self.assertEqual('error: centers are not unique', testCube.get())
         
-    def test_cubeTest_cube_904_UnbalancedColors(self):
-        testCube = cube.Cube('3llllllll333333333KKKKKKKKKrrrrrrrrr999999999AAAAAAAAA')
-        self.assertEqual('error: colors are unbalanced [9 of each]', testCube.get())
     #    Analysis of Cube.rotate
     #        inputs:
     #            directions: string, len >= 0, in[FfRrBbLlUu]; optional, defaults to F if missing; un-validated
