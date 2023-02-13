@@ -66,11 +66,11 @@ class Cube:
             uniqueArray.append([encodedCube, 1])
             
         if len(uniqueArray) == 6:
-            for i in range(len(uniqueArray))
+            for i in range(len(uniqueArray)):
                 if uniqueArray[i][1] != 9:
                     self._cube = 'error: uneven cube character distribution'
-            if len(uniqueArray) == 6
-            self._cube = encodedCube
+            if len(uniqueArray) == 6:
+                self._cube = encodedCube
         self._cube = 'error: number of individual characters is not equal to 6'
 
 
