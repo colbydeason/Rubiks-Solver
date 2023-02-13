@@ -90,13 +90,16 @@ class Cube:
                 uniqueArray.append([self._cube[i], "1"])
             else:
                 for j in range(len(uniqueArray)):
+                    print(i)
+                    print(j)
+                    print(len(uniqueArray))
                     if self._cube[i] == uniqueArray[j][0]:
                         uniqueArray[j][1] = uniqueArray[j][1] +"1"
                     if j == len(uniqueArray):
                         uniqueArray.append([self._cube[i], "1"])
-                            
+                    print(uniqueArray)      
         
-        print(uniqueArray)
+
     # Individual rotation private methods
     def _rotateF(self):
         rotatedCubeList = self._cubeList[:]
