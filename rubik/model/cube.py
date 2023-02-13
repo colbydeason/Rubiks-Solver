@@ -89,10 +89,14 @@ class Cube:
             if len(uniqueArray) == 0:
                 uniqueArray.append([self._cube[i], "1"])
             else:
+                lastCounter = len(uniqueArray)
+                currCounter = 0
                 for j in uniqueArray:
+                    currCounter++
                     if self._cube[i] == j[0]:
                         j[1] = j[1] +"1"
-            uniqueArray.append([self._cube[i], "1"])
+                    if lastCounter == currCounter:
+                        uniqueArray.append([self._cube[i], "1"])
                             
         
         print(uniqueArray)
