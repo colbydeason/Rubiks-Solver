@@ -53,7 +53,6 @@ class Cube:
 
 
     def _isValidCube(self):
-        newCube = self._cube
         if (len(self._cube) != 54):
             self._cube = 'error: invalid cube length'
             return
@@ -81,6 +80,7 @@ class Cube:
         #     self._cube = 'error: unique characters is not equal to 6'
 
     def _isValidCharacter(self, char):
+        print(char)
         if char.isalpha() or char.isnumeric():
             return True
         else:
