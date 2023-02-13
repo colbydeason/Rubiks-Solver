@@ -57,18 +57,18 @@ class Cube:
             self._cube = 'error: invalid cube length'
     
         uniqueArray = []
-        for i in range(len(encodedCube)):
-            if not (encodedCube[i].isalpha() or encodedCube[i].isnumeric()):
-                self._cube = 'error: invalid character'
-                return
-            if len(uniqueArray) == 0:
-                uniqueArray.append([encodedCube[i], "1"])
-            else:
-                for j in range(len(uniqueArray)):
-                    if encodedCube[i] == uniqueArray[j][0]:
-                        uniqueArray[j][1] = uniqueArray[j][1] +"1"
-                    else:
-                        uniqueArray.append([encodedCube, "1"])
+        # for i in range(len(encodedCube)):
+        #     if not (encodedCube[i].isalpha() or encodedCube[i].isnumeric()):
+        #         self._cube = 'error: invalid character'
+        #         return
+        #     if len(uniqueArray) == 0:
+        #         uniqueArray.append([encodedCube[i], "1"])
+        #     else:
+        #         for j in range(len(uniqueArray)):
+        #             if encodedCube[i] == uniqueArray[j][0]:
+        #                 uniqueArray[j][1] = uniqueArray[j][1] +"1"
+        #             else:
+        #                 uniqueArray.append([encodedCube, "1"])
         self._cube = encodedCube
         # if len(uniqueArray) == 6:
         #     for i in range(len(uniqueArray)):
