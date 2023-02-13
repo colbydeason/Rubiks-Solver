@@ -52,7 +52,8 @@ class Cube:
     def _isValidCube(self):
         self._isValidLength()
         self._isValidFaces()
-    
+        self._isUniquelyCentered()
+        
     def _isValidLength(self):
         if self._cube == 54:
             return True
@@ -90,10 +91,12 @@ class Cube:
         else:
             return False    
         
-        
-        
-        
-        
+    def _isUniquelyCentered(self):
+        if self._cube[4] != self._cube[13] != self._cube[22] != self._cube[31] != self._cube[40] != self._cube[49]:
+            return True
+        else:
+            self._cube = 'error: centers are not unique'
+            return False
         
     # Individual rotation private methods
     def _rotateF(self):
