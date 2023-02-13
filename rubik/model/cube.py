@@ -51,7 +51,7 @@ class Cube:
 
     def _isValidCube(self):
         self._isValidLength()
-        # self._isValidFaces()
+        self._isValidFaces()
     
     def _isValidLength(self):
         if self._cube == 54:
