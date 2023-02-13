@@ -11,7 +11,6 @@ class Cube:
         self._cubeList = list(self._cube)
         
     def rotate(self, directions = 'F'):
-        print(directions)
         if directions == None or len(directions) == 0:
             directions = 'F'
         for rotation in directions:
