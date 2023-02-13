@@ -54,8 +54,8 @@ class Cube:
             return
         if not self._isValidFaces():
             return
-        if not self._isUniquelyCentered():
-            return
+        # if not self._isUniquelyCentered():
+        #     return
     def _isValidLength(self):
         if self._cube == 54:
             return True
