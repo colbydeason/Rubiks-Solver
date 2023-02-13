@@ -78,7 +78,7 @@ class Test(unittest.TestCase):
         self.assertEqual('error: invalid character for cube [a-zA-Z0-9]', testCube.get())
     
     def test_cubeTest_cube_903_UniqueColorError(self):
-        testCube = cube.Cube('lllllllll333333333KKDKKKKKKrrrrrrrrr999999999AAAAAAAAA')
+        testCube = cube.Cube('jjjjjjjjjjjjjjjjjjffffffffffffffffffbbbbbbbbbbbbbbbbbb')
         self.assertEqual('error: incorrect number of unique colors [6]', testCube.get())
         
     def test_cubeTest_cube_904_UniqueCenterError(self):
