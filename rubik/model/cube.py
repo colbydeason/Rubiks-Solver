@@ -52,11 +52,6 @@ class Cube:
     def _isValidCube(self):
         self._isValidLength()
         self._isValidFaces()
-
-
-
-
-
     
     def _isValidLength(self):
         if self._cube == 54:
@@ -82,9 +77,9 @@ class Cube:
         
         if not (len(uniqueArray) == 6):
             self._cube = 'error: incorrect number of unique colors'
-        for i in uniqueArray:
-            if i[1] != '111111111':
-                self._cube = 'error: colors are unbalanced, must have 9 of each'
+        # for i in uniqueArray:
+        #     if i[1] != '111111111':
+        #         self._cube = 'error: colors are unbalanced, must have 9 of each'
         
     def _isValidCharacter(self, char):
         if char.isalpha():
