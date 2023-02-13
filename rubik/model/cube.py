@@ -66,7 +66,7 @@ class Cube:
                     uniqueArray[j][1] = uniqueArray[j][1] +"1"
                 else:
                     uniqueArray.append([encodedCube, 1])
-    
+        print(len(uniqueArray))
         if len(uniqueArray) == 6:
             for i in range(len(uniqueArray)):
                 if uniqueArray[i][1] != "111111111":
