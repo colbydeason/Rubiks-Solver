@@ -41,10 +41,11 @@ class Test(unittest.TestCase):
     #            test 004: mixed cube
     #
     #        sad path:
-    #            test 901: invalid length
-    #            test 902: invalid character
-    #            test 903: incorrect amount of unique characters
+    #            test 901: invalid length for cube [54]
+    #            test 902: invalid character for cube [a-zA-Z0-9]
+    #            test 903: incorrect number of unique colors [6]
     #            test 904: centers are not unique
+    #            test 905: colors are unbalanced [9 of each]
     #
     #            Future error tests
     #                test 904-...: cube is unsolvable
@@ -68,6 +69,25 @@ class Test(unittest.TestCase):
         testCube = cube.Cube('lllllllll333333333KKKKKKKKKrrrrrrrrr999999999AAAAAAAAA')
         self.assertEqual('lllllllll333333333KKKKKKKKKrrrrrrrrr999999999AAAAAAAAA', testCube.get())
         
+    def test_cubeTest_cube_901_InvalidLength(self):
+        testCube = cube.Cube('lllllllll333333333KKKKKKKKKrrrrrrrrr999999999AAAAAAAA')
+        self.assertEqual('error: invalid length for cube [54]', testCube.get())
+        
+    def test_cubeTest_cube_902_InvalidCharacter(self):
+        testCube = cube.Cube('lllllllll333333-33KKKKKKKKKrrrrrrrrr999999999AAAAAAAAA')
+        self.assertEqual('error: invalid character for cube [a-zA-Z0-9]', testCube.get())
+    
+    def test_cubeTest_cube_903_UniqueColorError(self):
+        testCube = cube.Cube('lllllllll333333333KKDKKKKKKrrrrrrrrr999999999AAAAAAAAA')
+        self.assertEqual('error: incorrect number of unique colors [6]', testCube.get())
+        
+    def test_cubeTest_cube_904_UniqueCenterError(self):
+        testCube = cube.Cube('llllrllll333333333KKKKKKKKKrlrrrrrrr999999999AAAAAAAAA')
+        self.assertEqual('error: centers are not unique', testCube.get())
+        
+    def test_cubeTest_cube_904_UnbalancedColors(self):
+        testCube = cube.Cube('3llllllll333333333KKKKKKKKKrrrrrrrrr999999999AAAAAAAAA')
+        self.assertEqual('error: colors are unbalanced [9 of each]', testCube.get())
     #    Analysis of Cube.rotate
     #        inputs:
     #            directions: string, len >= 0, in[FfRrBbLlUu]; optional, defaults to F if missing; un-validated
