@@ -62,7 +62,7 @@ class Cube:
                 self._cube = 'error: invalid character'
                 return
             for j in range(len(uniqueArray)):
-                if encodedCube[i] in uniqueArray[j][0]:
+                if encodedCube[i] == uniqueArray[j][0]:
                     uniqueArray[j][1] = uniqueArray[j][1] +"1"
                 else:
                     uniqueArray.append([encodedCube, "1"])
