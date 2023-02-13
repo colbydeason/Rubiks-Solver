@@ -53,23 +53,9 @@ class Cube:
 
 
     def _isValidCube(self):
-        if (len(self._cube) != 54):
-            self._cube = 'error: invalid cube length'
-            return
-        uniqueArray = []
-        for i in range(len(self._cube)):
-            newChar = self._cube[i]
-            if not self._isValidCharacter(newChar):
-                self._cube = 'error: invalid character'
-                return
-            if len(uniqueArray) == 0:
-                uniqueArray.append([self._cube[i], "1"])
-            else:
-                for j in range(len(uniqueArray)):
-                    if self._cube[i] == uniqueArray[j][0]:
-                        uniqueArray[j][1] = uniqueArray[j][1] +"1"
-                    else:
-                        uniqueArray.append([self._cube, "1"])
+        self._isValidLength()
+        self._isValidFaces()
+            
         # if len(uniqueArray) == 6:
         #     for i in range(len(uniqueArray)):
         #         if uniqueArray[i][1] != "111111111":
@@ -83,10 +69,31 @@ class Cube:
         if char.isalpha() or char.isnumeric():
             return True
         else:
+            self._cube = 'error: invalid character in cube'
             return False
+    
+    def _isValidLength(self):
+        if self._cube == 54:
+            return True
+        else:
+            self._cube = 'error: invalid length for cube'
+            return False   
         
-        
-        
+    def _isValidFaces(self):
+        uniqueArray = []
+        for i in range(len(self._cube)):
+            newChar = self._cube[i]
+            if not self._isValidCharacter(newChar):
+                self._cube = 'error: invalid character'
+                return
+            if len(uniqueArray) == 0:
+                uniqueArray.append([self._cube[i], "1"])
+            else:
+                for j in range(len(uniqueArray)):
+                    if self._cube[i] == uniqueArray[j][0]:
+                        uniqueArray[j][1] = uniqueArray[j][1] +"1"
+                    else:
+                        uniqueArray.append([self._cube, "1"])    
         
 
     # Individual rotation private methods
