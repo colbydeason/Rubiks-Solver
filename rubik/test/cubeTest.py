@@ -15,10 +15,61 @@ class Test(unittest.TestCase):
     #    Methods: __init__ => instantiates a cube from a string denoting the colors on the cube
     #             get      => returns string of internal representation of the cube
     #             rotate   => rotates the cube based on the 'dir' key
-    #    
+    
+     
+    #    Analysis of Cube() -> __init__
+    #        input:
+    #            cube: string, 54 characters, 6 unique characters [a-zA-Z0-9], 0-53; 4, 13, 22, 31, 40, and 49 must be unique
+    #                mandatory, arrived unvalidated
+    #        outputs: 
+    #            nominal:
+    #                Instance of a cube with self._cube equal to the input
+    #            abnormal:
+    #                Instance of a cube with self._cube equal to the error
+    #                    error 1: invalid length
+    #                    error 2: incorrect amount of unique characters (6 unique, and 9 of each)
+    #                    error 3: centers not unique
+    #                future errors not implemented:
+    #                    error 4-...: unsolvable cube
+    #            side-effects:
+    #                none
+    #
+    #        happy path:
+    #            test 001: lower-case cube
+    #            test 002: upper-case cube
+    #            test 003: number cube
+    #            test 004: mixed cube
+    #
+    #        sad path:
+    #            test 901: invalid length
+    #            test 902: incorrect amount of unique characters
+    #            test 903: centers are not unique
+    #
+    #            Future error tests
+    #                test 904-...: cube is unsolvable
+    #            
+    #        evil path:
+    #            none
+
+    # def test_cubeTest_cube_001_LowerCaseCube(self):
+    #     testCube = cube.Cube('wwwwwwwwwbbbbbbbbbyyyyyyyyygggggggggooooooooorrrrrrrrr')
+    #     self.assertEqual('wwwwwwwwwbbbbbbbbbyyyyyyyyygggggggggooooooooorrrrrrrrr', testCube.get())
+    #
+    # def test_cubeTest_cube_002_UpperCaseCube(self):
+    #     testCube = cube.Cube('WWWWWWWWWBBBBBBBBBYYYYYYYYYGGGGGGGGGOOOOOOOOORRRRRRRRR')
+    #     self.assertEqual('WWWWWWWWWBBBBBBBBBYYYYYYYYYGGGGGGGGGOOOOOOOOORRRRRRRRR', testCube.get())
+    #
+    # def test_cubeTest_cube_003_NumberCube(self):
+    #     testCube = cube.Cube('000000000111111111222222222333333333444444444555555555')
+    #     self.assertEqual('000000000111111111222222222333333333444444444555555555', testCube.get())
+    #
+    # def test_cubeTest_cube_004_UpperLowerAndNumberCube(self):
+    #     testCube = cube.Cube('lllllllll333333333KKKKKKKKKrrrrrrrrr999999999AAAAAAAAA')
+    #     self.assertEqual('lllllllll333333333KKKKKKKKKrrrrrrrrr999999999AAAAAAAAA', testCube.get())
+        
     #    Analysis of Cube.rotate
     #        inputs:
-    #            directions: string, len >= 0, in[FfRrBbLlUu]; optional, defaults to F if missing; unvalidated
+    #            directions: string, len >= 0, in[FfRrBbLlUu]; optional, defaults to F if missing; un-validated
     #        outputs:
     #            nominal:
     #                return serialized rotated cube
@@ -50,7 +101,6 @@ class Test(unittest.TestCase):
     #        full solve:
     #            test 555: one algorithm left, should solve, uses most rotations
     
-    rngCube = 'oworwygogwbbborwyywwwyygrrgoryorgywyggrbgobobryrbbgowb'
     
     def test_cubeTest_rotate_001_FRotation(self):
         testCube = cube.Cube('gobgwywrwwbgobwowgybygybyrybowygybrororgorrwrgybgrbowo')
