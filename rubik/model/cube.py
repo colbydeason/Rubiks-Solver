@@ -63,11 +63,12 @@ class Cube:
                 return
             if len(uniqueArray) == 0:
                 uniqueArray.append([encodedCube[i], "1"])
-            for j in range(len(uniqueArray)):
-                if encodedCube[i] == uniqueArray[j][0]:
-                    uniqueArray[j][1] = uniqueArray[j][1] +"1"
-                else:
-                    uniqueArray.append([encodedCube, "1"])
+            else:
+                for j in range(len(uniqueArray)):
+                    if encodedCube[i] == uniqueArray[j][0]:
+                        uniqueArray[j][1] = uniqueArray[j][1] +"1"
+                        else:
+                            uniqueArray.append([encodedCube, "1"])
         self._cube = encodedCube
         print(uniqueArray)
         # if len(uniqueArray) == 6:
