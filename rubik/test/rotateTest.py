@@ -38,7 +38,7 @@ class RotateTest(TestCase):
     #                 none
     
     def test_rotateTest_rotate_001_SuccessfullyRotatedCube(self):
-        testCube = 'ceedabfffdeefbcdbcaeefcdfcdbdefdefdbccbaebdaaaaacfacbb'
+        testCube = 'ceedaafffdeefbbcbbaeefccfccbdefdefdaccbaebdaadddcfabba'
         testDir = 'FRBLU'
         parms = {}
         parms['cube'] = testCube
