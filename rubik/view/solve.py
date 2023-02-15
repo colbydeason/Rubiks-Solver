@@ -12,6 +12,9 @@ def solve(parms):
      
     encodedCube = parms.get('cube')
     theCube = Cube(encodedCube)
+    if theCube.get().startswith('error: '):
+        result['status'] = theCube.get()
+        return result
     
     rotations = ""
     rotations += solveBottomCross(theCube)      #iteration 2
