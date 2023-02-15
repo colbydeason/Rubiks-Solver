@@ -53,7 +53,7 @@ class RotateTest(TestCase):
     def test_rotateTest_rotate_901_InvalidCubeOnly(self):
         pass
     
-    def test_rotateTest_rotate_902_InvalidRotationOnly(self)
+    def test_rotateTest_rotate_902_InvalidRotationOnly(self):
         pass
     
     def test_rotateTest_rotate_903_InvalidCubeAndRotation(self):
