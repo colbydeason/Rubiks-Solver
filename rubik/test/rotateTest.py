@@ -38,7 +38,17 @@ class RotateTest(TestCase):
     #                 none
     
     def test_rotateTest_rotate_001_SuccessfullyRotatedCube(self):
-        pass
+        testCube = 'ceedabfffdeefbcdbcaeefcdfcdbdefdefdbccbaebdaaaaacfacbb'
+        testDir = 'FRBLU'
+        parms = {}
+        parms['cube'] = testCube
+        parms['dir'] = testDir
+        result = rotate(parms)
+        expectedResult = {}
+        expectedResult['cube'] = 'aaaaaaaaabbbbbbbbbcccccccccdddddddddeeeeeeeeefffffffff'
+        expectedResult['status'] = 'ok'
+        
+        self.assertEqual(result, expectedResult)
     
     def test_rotateTest_rotate_901_InvalidCubeOnly(self):
         pass
