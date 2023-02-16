@@ -9,7 +9,25 @@ class Cube:
         self._cube = encodedCube
         self._isValidCube()
         self._cubeList = list(self._cube)
+        # First index is current front facing face
+        self._faceState = []
+        self._faceState.append('F')
+        self._faceState.append('R')
+        self._faceState.append('B')
+        self._faceState.append('L')
         
+    def rotateCube(self, direction):
+        if direction == 'R':
+            tempFace = self._faceState.pop(0)
+            self._faceState.append(tempFace)
+        if direction == 'L':
+            tempFace = self._faceState.pop(3)
+            self._faceState.appendleft(tempFace)
+        
+    def getRotation(self):
+        return self._faceState[0]
+    
+    
     def rotate(self, directions = 'F'):
         if directions == None or len(directions) == 0:
             directions = 'F'
@@ -413,3 +431,12 @@ class Cube:
         rotatedCubeList[FTR] = self._cubeList[LTR]
         # Modifies the cubeList
         self._cubeList = rotatedCubeList
+        
+    # Advanced Cube Rotation Idea
+    #
+    # In order to allow for less code and more general algorithms, a rotate full cube option will be allowed, in which all
+    # rotations done in this "state" will be recorded and transferred to normal facing cube notation
+    #
+    # Separate cube with notation showing what full turns it has done so they can be transcribed to regular face rotations
+    #
+    # Face rotate doesn't actually do anything, just changes how rotate sees incoming characters, transferring to regular cube face

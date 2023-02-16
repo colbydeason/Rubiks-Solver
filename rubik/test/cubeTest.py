@@ -199,3 +199,11 @@ class Test(unittest.TestCase):
         testCube = cube.Cube('bgwwwwgwwobybbybbgbyygyywgbgwwrggooyobroooorgrrryrryor')
         rotatedCube = testCube.rotate('rLuRUbblrRuB')
         self.assertEqual(rotatedCube, 'wwwwwwwwwbbbbbbbbbyyyyyyyyygggggggggooooooooorrrrrrrrr')
+        
+    # Rotate State
+    
+    def test_cubeTest_rotateCube_001_RightTurn(self):
+        testCube = cube.Cube('aaaaaaaaabbbbbbbbbcccccccccdddddddddeeeeeeeeefffffffff')
+        testCube.rotateCube('R')
+        self.assertEqual('R', testCube.getRotation())
+        

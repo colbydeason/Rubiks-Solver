@@ -2,11 +2,20 @@ import rubik.model.constants
 from rubik.model.cube import Cube
 
 def solveBottomCross(theCube: Cube) -> str:
-    '''
-        This is the top-level function  for rotating
-        a cube into the down-face cross configuration.
-        
-        input:  an instance of the cube class
-        output: the rotations required to transform the input cube into the down-face cross 
-    '''  
-    return 'F'      #TODO:  remove this stubbed value
+    
+    # Solving Breakdown
+    #
+    # Step 1: Solve flower
+    #     a) check each side and move white edge pieces to the top to form the flower
+    # Step 2: Solve cross
+    #     b) match up edge to face center and rotate side 
+    
+    
+    solution = ''
+    bottomFaceColor = theCube.get()[4]
+    
+    
+    
+    
+    
+    return solution
