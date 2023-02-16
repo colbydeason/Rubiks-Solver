@@ -201,6 +201,8 @@ class Test(unittest.TestCase):
         self.assertEqual(rotatedCube, 'wwwwwwwwwbbbbbbbbbyyyyyyyyygggggggggooooooooorrrrrrrrr')
         
     # Rotate State
+    #
+    # Rotates a list of faces, showing which is the "front face" to map relative face algorithms to absolute face directions
     
     def test_cubeTest_rotateCube_001_RightTurn(self):
         testCube = cube.Cube('aaaaaaaaabbbbbbbbbcccccccccdddddddddeeeeeeeeefffffffff')

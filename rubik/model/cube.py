@@ -15,6 +15,7 @@ class Cube:
         self._faceState.append('R')
         self._faceState.append('B')
         self._faceState.append('L')
+        self._currentRotationsString = ''
         
     def rotateCube(self, direction):
         if direction == 'R':
@@ -23,9 +24,6 @@ class Cube:
         if direction == 'L':
             tempFace = self._faceState.pop(3)
             self._faceState.insert(0, tempFace)
-        
-    def getRotation(self):
-        return self._faceState[0]
     
     
     def rotate(self, directions = 'F'):
@@ -34,21 +32,85 @@ class Cube:
         for rotation in directions:
             match rotation:
                 case 'F':
-                    self._rotateF()
+                    match self._faceState[0]:
+                        case 'F':
+                            self._rotateF()
+                        case 'R':
+                            self._rotateR()
+                        case 'B':
+                            self._rotateB()
+                        case 'L':
+                            self._rotateL()
                 case 'f':
-                    self._rotatef()
+                    match self._faceState[0]:
+                        case 'F':
+                            self._rotatef()
+                        case 'R':
+                            self._rotater()
+                        case 'B':
+                            self._rotateb()
+                        case 'L':
+                            self._rotatel()
                 case 'B':
-                    self._rotateB()
+                    match self._faceState[0]:
+                        case 'F':
+                            self._rotateB()
+                        case 'R':
+                            self._rotateL()
+                        case 'B':
+                            self._rotateF()
+                        case 'L':
+                            self._rotateR()
                 case 'b':
-                    self._rotateb()
+                    match self._faceState[0]:
+                        case 'F':
+                            self._rotateb()
+                        case 'R':
+                            self._rotatel()
+                        case 'B':
+                            self._rotatef()
+                        case 'L':
+                            self._rotater()
                 case 'L':
-                    self._rotateL()
+                    match self._faceState[0]:
+                        case 'F':
+                            self._rotateL()
+                        case 'R':
+                            self._rotateF()
+                        case 'B':
+                            self._rotateR()
+                        case 'L':
+                            self._rotateB()
                 case 'l':
-                    self._rotatel()
+                    match self._faceState[0]:
+                        case 'F':
+                            self._rotatel()
+                        case 'R':
+                            self._rotatef()
+                        case 'B':
+                            self._rotater()
+                        case 'L':
+                            self._rotateb()
                 case 'R':
-                    self._rotateR()
+                    match self._faceState[0]:
+                        case 'F':
+                            self._rotateR()
+                        case 'R':
+                            self._rotateB()
+                        case 'B':
+                            self._rotateL()
+                        case 'L':
+                            self._rotateF()
                 case 'r':
-                    self._rotater()
+                    match self._faceState[0]:
+                        case 'F':
+                            self._rotater()
+                        case 'R':
+                            self._rotateb()
+                        case 'B':
+                            self._rotatel()
+                        case 'L':
+                            self._rotatef()
                 case 'U':
                     self._rotateU()
                 case 'u':
@@ -63,7 +125,11 @@ class Cube:
     def get(self):
         return self._cube
 
-
+    def getRotation(self):
+        return self._faceState[0]
+    
+    def getCurrentRotationString(self):
+        return self._currentRotationsString
 
 
 
@@ -150,7 +216,8 @@ class Cube:
         rotatedCubeList[UBR] = self._cubeList[LTR]
         rotatedCubeList[UBM] = self._cubeList[LMR]
         rotatedCubeList[UBL] = self._cubeList[LBR]
-        # Modifies the cubeList
+        # Modifies the cubeList and turn list
+        self._currentRotationsString += 'F'
         self._cubeList = rotatedCubeList  
         
     def _rotatef(self):
@@ -182,6 +249,7 @@ class Cube:
         rotatedCubeList[DTM] = self._cubeList[LMR]
         rotatedCubeList[DTR] = self._cubeList[LBR]
         # Modifies the cubeList
+        self._currentRotationsString += 'f'
         self._cubeList = rotatedCubeList
     
     def _rotateB(self):
@@ -213,6 +281,7 @@ class Cube:
         rotatedCubeList[UTM] = self._cubeList[RMR]
         rotatedCubeList[UTR] = self._cubeList[RBR]
         # Modifies the cubeList
+        self._currentRotationsString += 'B'
         self._cubeList = rotatedCubeList
     
     def _rotateb(self):
@@ -244,6 +313,7 @@ class Cube:
         rotatedCubeList[DBM] = self._cubeList[RMR]
         rotatedCubeList[DBL] = self._cubeList[RBR]
         # Modifies the cubeList
+        self._currentRotationsString += 'b'
         self._cubeList = rotatedCubeList
 
     def _rotateL(self):
@@ -275,6 +345,7 @@ class Cube:
         rotatedCubeList[UML] = self._cubeList[BMR]
         rotatedCubeList[UTL] = self._cubeList[BBR]
         # Modifies the cubeList
+        self._currentRotationsString += 'L'
         self._cubeList = rotatedCubeList
 
     def _rotatel(self):
@@ -306,6 +377,7 @@ class Cube:
         rotatedCubeList[DML] = self._cubeList[BMR]
         rotatedCubeList[DTL] = self._cubeList[BBR]
         # Modifies the cubeList
+        self._currentRotationsString += 'l'
         self._cubeList = rotatedCubeList
 
     def _rotateR(self):
@@ -337,6 +409,7 @@ class Cube:
         rotatedCubeList[UMR] = self._cubeList[FMR]
         rotatedCubeList[UBR] = self._cubeList[FBR]
         # Modifies the cubeList
+        self._currentRotationsString += 'R'
         self._cubeList = rotatedCubeList
 
     def _rotater(self):
@@ -368,6 +441,7 @@ class Cube:
         rotatedCubeList[DMR] = self._cubeList[FMR]
         rotatedCubeList[DBR] = self._cubeList[FBR]
         # Modifies the cubeList
+        self._currentRotationsString += 'r'
         self._cubeList = rotatedCubeList
 
     def _rotateU(self):
@@ -399,6 +473,7 @@ class Cube:
         rotatedCubeList[BTM] = self._cubeList[LTM]
         rotatedCubeList[BTR] = self._cubeList[LTR]
         # Modifies the cubeList
+        self._currentRotationsString += 'U'
         self._cubeList = rotatedCubeList
 
     def _rotateu(self):
@@ -430,6 +505,7 @@ class Cube:
         rotatedCubeList[FTM] = self._cubeList[LTM]
         rotatedCubeList[FTR] = self._cubeList[LTR]
         # Modifies the cubeList
+        self._currentRotationsString += 'u'
         self._cubeList = rotatedCubeList
         
     # Advanced Cube Rotation Idea
