@@ -22,7 +22,7 @@ class Cube:
             self._faceState.append(tempFace)
         if direction == 'L':
             tempFace = self._faceState.pop(3)
-            self._faceState.appendleft(tempFace)
+            self._faceState.insert(0, tempFace)
         
     def getRotation(self):
         return self._faceState[0]
