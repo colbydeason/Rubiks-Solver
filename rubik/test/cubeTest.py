@@ -220,3 +220,11 @@ class Test(unittest.TestCase):
         testCube.rotateCube('R')
         self.assertEqual('B', testCube.getRotation())
         
+    def test_cubeTest_rotateCube_004_MultipleTurns2(self):
+        testCube = cube.Cube('aaaaaaaaabbbbbbbbbcccccccccdddddddddeeeeeeeeefffffffff')
+        testCube.rotateCube('L')
+        testCube.rotateCube('R')
+        testCube.rotateCube('L')
+        testCube.rotateCube('L')
+        self.assertEqual('B', testCube.getRotation())
+        
