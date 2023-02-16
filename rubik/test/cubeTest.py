@@ -200,33 +200,36 @@ class Test(unittest.TestCase):
         rotatedCube = testCube.rotate('rLuRUbblrRuB')
         self.assertEqual(rotatedCube, 'wwwwwwwwwbbbbbbbbbyyyyyyyyygggggggggooooooooorrrrrrrrr')
         
-    # Rotate State
+    # Rotate State:
+    #     Rotates a list of faces, showing which is the "front face" to map relative face algorithms to absolute face directions
     #
-    # Rotates a list of faces, showing which is the "front face" to map relative face algorithms to absolute face directions
+    #     input: 
+    #         N/A
+    
     
     def test_cubeTest_rotateCube_001_RightTurn(self):
         testCube = cube.Cube('aaaaaaaaabbbbbbbbbcccccccccdddddddddeeeeeeeeefffffffff')
-        testCube.rotateCube('R')
-        self.assertEqual('R', testCube.getRotation())
+        testCube.rotateCubeR()
+        self.assertEqual('R', testCube.getCurrentFrontFace())
         
     def test_cubeTest_rotateCube_002_LeftTurn(self):
         testCube = cube.Cube('aaaaaaaaabbbbbbbbbcccccccccdddddddddeeeeeeeeefffffffff')
-        testCube.rotateCube('L')
-        self.assertEqual('L', testCube.getRotation())
+        testCube.rotateCubeL()
+        self.assertEqual('L', testCube.getCurrentFrontFace())
         
     def test_cubeTest_rotateCube_003_MultipleTurns(self):
         testCube = cube.Cube('aaaaaaaaabbbbbbbbbcccccccccdddddddddeeeeeeeeefffffffff')
-        testCube.rotateCube('R')
-        testCube.rotateCube('L')
-        testCube.rotateCube('R')
-        testCube.rotateCube('R')
-        self.assertEqual('B', testCube.getRotation())
+        testCube.rotateCubeR()
+        testCube.rotateCubeL()
+        testCube.rotateCubeR()
+        testCube.rotateCubeR()
+        self.assertEqual('B', testCube.getCurrentFrontFace())
         
     def test_cubeTest_rotateCube_004_MultipleTurns2(self):
         testCube = cube.Cube('aaaaaaaaabbbbbbbbbcccccccccdddddddddeeeeeeeeefffffffff')
-        testCube.rotateCube('L')
-        testCube.rotateCube('R')
-        testCube.rotateCube('L')
-        testCube.rotateCube('L')
-        self.assertEqual('B', testCube.getRotation())
+        testCube.rotateCubeL()
+        testCube.rotateCubeR()
+        testCube.rotateCubeL()
+        testCube.rotateCubeL()
+        self.assertEqual('B', testCube.getCurrentFrontFace())
         
