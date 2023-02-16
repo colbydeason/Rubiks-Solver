@@ -47,7 +47,6 @@ class RotateTest(TestCase):
         expectedResult = {}
         expectedResult['cube'] = 'aaaaaaaaabbbbbbbbbcccccccccdddddddddeeeeeeeeefffffffff'
         expectedResult['status'] = 'ok'
-        
         self.assertEqual(result, expectedResult)
     
     def test_rotateTest_rotate_901_InvalidCubeOnly(self):
@@ -59,11 +58,18 @@ class RotateTest(TestCase):
         result = rotate(parms)
         expectedResult = {}
         expectedResult['status'] = 'error: invalid length for cube [54]'
-        
         self.assertEqual(result, expectedResult)
     
     def test_rotateTest_rotate_902_InvalidRotationOnly(self):
-        pass
+        testCube = 'ceedaafffdeefbbcbbaeefccfccbdefdefdaccbaebdaadddcfabba'
+        testDir = 'FRBLUD'
+        parms = {}
+        parms['cube'] = testCube
+        parms['dir'] = testDir
+        result = rotate(parms)
+        expectedResult = {}
+        expectedResult['status'] = 'error: invalid direction'
+        self.assertEqual(result, expectedResult)
     
     def test_rotateTest_rotate_903_InvalidCubeAndRotation(self):
         pass
