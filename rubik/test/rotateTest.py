@@ -72,4 +72,12 @@ class RotateTest(TestCase):
         self.assertEqual(result, expectedResult)
     
     def test_rotateTest_rotate_903_InvalidCubeAndRotation(self):
-        pass
+        testCube = 'ceedaafffdeefbbcbbaeefccfccbdefdefdaccbaebdaa'
+        testDir = 'FRBLUD'
+        parms = {}
+        parms['cube'] = testCube
+        parms['dir'] = testDir
+        result = rotate(parms)
+        expectedResult = {}
+        expectedResult['status'] = 'error: invalid length for cube [54]'
+        self.assertEqual(result, expectedResult)
