@@ -60,7 +60,7 @@ class RotateTest(TestCase):
         expectedResult = {}
         expectedResult['status'] = 'error: invalid length for cube [54]'
         
-        self.asserEqual(result, expectedResult)
+        self.assertEqual(result, expectedResult)
     
     def test_rotateTest_rotate_902_InvalidRotationOnly(self):
         pass
