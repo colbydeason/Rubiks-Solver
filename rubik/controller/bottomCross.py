@@ -10,7 +10,7 @@ def solveBottomCross(theCube: Cube) -> str:
     # Step 2: Solve cross
     #     b) match up edge to face center and rotate side 
     
-    edgeList = ['1', '3', '5', '7', '46']
+    edgeList = [1, 3, 5, 7, 46]
     bottomColor = theCube.get()[49]
     for i in range(4):
         topEdge = theCube.getRelativeSquare(43)
