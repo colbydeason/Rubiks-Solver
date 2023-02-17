@@ -217,14 +217,15 @@ class Test(unittest.TestCase):
     #         test 003: Multiple turns
     #         test 004: Multiple turns 2
     #         REGULAR TESTS: determine if rotate now works with changed states, supplying correct rotations and string output for use in controller classes
-    #         test 005: Rotate all directions CW using F as basis
-    #         test 006: Rotate all directions CW using R as basis
-    #         test 007: Rotate all directions CW using B as basis
-    #         test 008: Rotate all directions CW using L as basis
-    #         test 009: Rotate all directions CCW using F as basis
-    #         test 010: Rotate all directions CCW using R as basis
-    #         test 011: Rotate all directions CCW using B as basis
-    #         test 012: Rotate all directions CCW using L as basis
+    #                        These tests also use rotate, which has already been implemented and tested, but will be retested using new conditions
+    #         test 001: Rotate all directions CW using F as basis
+    #         test 002: Rotate all directions CW using R as basis
+    #         test 003: Rotate all directions CW using B as basis
+    #         test 004: Rotate all directions CW using L as basis
+    #         test 005: Rotate all directions CCW using F as basis
+    #         test 006: Rotate all directions CCW using R as basis
+    #         test 007: Rotate all directions CCW using B as basis
+    #         test 008: Rotate all directions CCW using L as basis
     #
     #     sad path:
     #         N/A
@@ -258,4 +259,9 @@ class Test(unittest.TestCase):
         testCube.rotateCubeL()
         testCube.rotateCubeL()
         self.assertEqual('B', testCube.getCurrentFrontFace())
+        
+    def test_cubeTest_rotateUpdated_001_FBasis(self):
+        testCube = cube.Cube('244300555344511211044522522134534530221041300333250110')
+        testCube.rotate('FRBLU')
+        self.assertEqual('000000000111111111222222222333333333444444444555555555', testCube.get())
         
