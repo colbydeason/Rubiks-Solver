@@ -20,22 +20,22 @@ def solveBottomCross(theCube: Cube) -> str:
         else:
             for j in range (4):
                 if theCube.getRelativeSquare(edgeList[0]) == bottomColor:
-                    theCube.rotate('FuRU')
+                    theCube.rotate('FuRUU')
                     break
                 if theCube.getRelativeSquare(edgeList[1]) == bottomColor:
-                    theCube.rotate('Ulu')
+                    theCube.rotate('Ul')
                     break
                 if theCube.getRelativeSquare(edgeList[2]) == bottomColor:
-                    theCube.rotate('uRU')
+                    theCube.rotate('uRUU')
                     break
                 if theCube.getRelativeSquare(edgeList[3]) == bottomColor:
-                    theCube.rotate('FUru')
+                    theCube.rotate('FUr')
                     break
                 if theCube.getRelativeSquare(edgeList[4]) == bottomColor:
-                    theCube.rotate('FF')
+                    theCube.rotate('FFU')
                     break
-        theCube.rotate('U')
-    
+                theCube.rotate('u')
+                theCube.rotateCubeR()
     
     
     
