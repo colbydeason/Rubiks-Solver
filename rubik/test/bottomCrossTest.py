@@ -37,5 +37,6 @@ class Test(unittest.TestCase):
             if testCube.get()[edge] == bottomColor:
                 continue
             else:
+                print(testCube.get())
                 self.fail()
         pass
