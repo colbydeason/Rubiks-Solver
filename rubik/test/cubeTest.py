@@ -309,3 +309,23 @@ class Test(unittest.TestCase):
         testCube.rotate('rblfu')
         self.assertEqual('000000000111111111222222222333333333444444444555555555', testCube.get())
         
+    def test_cubeTest_rotateUpdated_008_CombinationString(self):
+        testCube = cube.Cube('')
+        testCube.rotate('FRBLU')
+        testCube.rotateCubeR()
+        testCube.rotate('LFRBU')
+        testCube.rotateCubeR()
+        testCube.rotate('BLFRU')
+        testCube.rotateCubeR()
+        testCube.rotate('RBLFU')
+        testCube.rotateCubeR()
+        testCube.rotate('frblu')
+        testCube.rotateCubeL()
+        testCube.rotate('lfrbu')
+        testCube.rotateCubeL()
+        testCube.rotate('blfru')
+        testCube.rotateCubeL()
+        testCube.rotate('rblfu')
+        correctStringList = ('FRBLUFRBLUFRBLUFRBLUfrblufrblufrblufrblu')
+        self.assertEqual(correctStringList, testCube.getCurrentRotationString())
+        
