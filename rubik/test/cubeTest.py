@@ -475,6 +475,7 @@ class Test(unittest.TestCase):
         testCube = cube.Cube('520403304503011230434225544011231052142044231551155323')
         recreatedCube = ''
         testCube.rotateCubeR()
+        testCube.rotateCubeR()
         recreatedCube += testCube.getRelativeSquare(0)
         recreatedCube += testCube.getRelativeSquare(1)
         recreatedCube += testCube.getRelativeSquare(2)
