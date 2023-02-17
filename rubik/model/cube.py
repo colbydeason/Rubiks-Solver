@@ -121,7 +121,7 @@ class Cube:
                     self._rotateU()
                 case 'u':
                     self._rotateu()
-                case other:
+                case _:
                     self._cube = 'error: invalid direction'
                     return self._cube
         
@@ -190,7 +190,7 @@ class Cube:
                             adjSquare = self._cube[DML]
                         case DBR:
                             adjSquare = self._cube[DBL]
-                        case other:
+                        case _:
                             print("oh")
             case 'B':
                 if FTL <= square <= RBR:
@@ -235,7 +235,7 @@ class Cube:
                             adjSquare = self._cube[DTM]
                         case DBR:
                             adjSquare = self._cube[DTL]
-                        case other:
+                        case _:
                             print("oh")
             case 'L':
                 if FTL <= square <= FBR:
@@ -280,9 +280,9 @@ class Cube:
                             adjSquare = self._cube[DMR]
                         case DBR:
                             adjSquare = self._cube[DTR]
-                        case other:
+                        case _:
                             print("oh")
-            case other:
+            case _:
                 print("oh")
         return adjSquare
 
