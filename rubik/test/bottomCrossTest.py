@@ -24,8 +24,9 @@ class Test(unittest.TestCase):
     #             Cube object is rotated and the bottom cross is solved
     #       
     #     happy path:
-    #         DEVELOPER TESTS
+    #         DEVELOPER TEST
     #         test 001: Flower stage
+    #         FULL TEST
     #         test 002: bottom cross
     
     # def test_bottomCrossTest_solveBottomCross_001_TopFlower(self):
