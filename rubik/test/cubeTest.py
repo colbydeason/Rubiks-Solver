@@ -310,7 +310,7 @@ class Test(unittest.TestCase):
         self.assertEqual('000000000111111111222222222333333333444444444555555555', testCube.get())
         
     def test_cubeTest_rotateUpdated_008_CombinationString(self):
-        testCube = cube.Cube('')
+        testCube = cube.Cube('000000000111111111222222222333333333444444444555555555')
         testCube.rotate('FRBLU')
         testCube.rotateCubeR()
         testCube.rotate('LFRBU')
