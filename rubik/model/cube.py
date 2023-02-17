@@ -190,6 +190,8 @@ class Cube:
                             adjSquare = self._cube[DML]
                         case DBR:
                             adjSquare = self._cube[DBL]
+                        case other:
+                            print("oh")
             case 'B':
                 if FTL <= square <= RBR:
                     adjSquare = self._cube[square + 18]
@@ -233,6 +235,8 @@ class Cube:
                             adjSquare = self._cube[DTM]
                         case DBR:
                             adjSquare = self._cube[DTL]
+                        case other:
+                            print("oh")
             case 'L':
                 if FTL <= square <= FBR:
                     adjSquare = self._cube[square + 27]
@@ -276,6 +280,10 @@ class Cube:
                             adjSquare = self._cube[DMR]
                         case DBR:
                             adjSquare = self._cube[DTR]
+                        case other:
+                            print("oh")
+            case other:
+                print("oh")
         return adjSquare
 
     def _isValidCube(self):
