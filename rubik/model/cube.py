@@ -137,7 +137,6 @@ class Cube:
     def getCurrentRotationString(self):
         returnString = self._currentRotationsString
         self._currentRotationsString = ''
-        self._faceState = 
         return returnString
 
 
