@@ -329,3 +329,83 @@ class Test(unittest.TestCase):
         correctStringList = ('FRBLUFRBLUFRBLUFRBLUfrblufrblufrblufrblu')
         self.assertEqual(correctStringList, testCube.getCurrentRotationString())
         
+    # Analysis getRelativeSquare:
+    #     Returns square value relative to the orientation state
+    #     
+    #     input:
+    #         int [0-53] representing a square, unvalidated, developer use only
+    #     
+    #     output:
+    #         char representing color of the requested cube
+    #
+    #     happy path:
+    #         test 001: recreated cube F facing
+    #         test 002: recreated cube R facing
+    #         test 003: recreated cube B facing
+    #         test 004: recreated cube L Facing
+    #
+    #     sad path:
+    #         test 901: out of bounds number
+    #         test 902: invalid type
+    #    
+    #     evil path:
+    #         none
+    
+    def test_cubeTest_getRelativeSquare_001_FFacing(self):
+        testCube = cube.Cube('520403304503011230434225544011231052142044231551155323')
+        recreatedCube = ''
+        recreatedCube += testCube.getRelativeSquare(0)
+        recreatedCube += testCube.getRelativeSquare(1)
+        recreatedCube += testCube.getRelativeSquare(2)
+        recreatedCube += testCube.getRelativeSquare(3)
+        recreatedCube += testCube.getRelativeSquare(4)
+        recreatedCube += testCube.getRelativeSquare(5)
+        recreatedCube += testCube.getRelativeSquare(6)
+        recreatedCube += testCube.getRelativeSquare(7)
+        recreatedCube += testCube.getRelativeSquare(8)
+        recreatedCube += testCube.getRelativeSquare(9)
+        recreatedCube += testCube.getRelativeSquare(10)
+        recreatedCube += testCube.getRelativeSquare(11)
+        recreatedCube += testCube.getRelativeSquare(12)
+        recreatedCube += testCube.getRelativeSquare(13)
+        recreatedCube += testCube.getRelativeSquare(14)
+        recreatedCube += testCube.getRelativeSquare(15)
+        recreatedCube += testCube.getRelativeSquare(16)
+        recreatedCube += testCube.getRelativeSquare(17)
+        recreatedCube += testCube.getRelativeSquare(18)
+        recreatedCube += testCube.getRelativeSquare(19)
+        recreatedCube += testCube.getRelativeSquare(20)
+        recreatedCube += testCube.getRelativeSquare(21)
+        recreatedCube += testCube.getRelativeSquare(22)
+        recreatedCube += testCube.getRelativeSquare(23)
+        recreatedCube += testCube.getRelativeSquare(24)
+        recreatedCube += testCube.getRelativeSquare(25)
+        recreatedCube += testCube.getRelativeSquare(26)
+        recreatedCube += testCube.getRelativeSquare(27)
+        recreatedCube += testCube.getRelativeSquare(28)
+        recreatedCube += testCube.getRelativeSquare(29)
+        recreatedCube += testCube.getRelativeSquare(30)
+        recreatedCube += testCube.getRelativeSquare(31)
+        recreatedCube += testCube.getRelativeSquare(32)
+        recreatedCube += testCube.getRelativeSquare(33)
+        recreatedCube += testCube.getRelativeSquare(34)
+        recreatedCube += testCube.getRelativeSquare(35)
+        recreatedCube += testCube.getRelativeSquare(36)
+        recreatedCube += testCube.getRelativeSquare(37)
+        recreatedCube += testCube.getRelativeSquare(38)
+        recreatedCube += testCube.getRelativeSquare(39)
+        recreatedCube += testCube.getRelativeSquare(40)
+        recreatedCube += testCube.getRelativeSquare(41)
+        recreatedCube += testCube.getRelativeSquare(42)
+        recreatedCube += testCube.getRelativeSquare(43)
+        recreatedCube += testCube.getRelativeSquare(44)
+        recreatedCube += testCube.getRelativeSquare(45)
+        recreatedCube += testCube.getRelativeSquare(46)
+        recreatedCube += testCube.getRelativeSquare(47)
+        recreatedCube += testCube.getRelativeSquare(48)
+        recreatedCube += testCube.getRelativeSquare(49)
+        recreatedCube += testCube.getRelativeSquare(50)
+        recreatedCube += testCube.getRelativeSquare(51)
+        recreatedCube += testCube.getRelativeSquare(52)
+        recreatedCube += testCube.getRelativeSquare(53)
+        self.assertEqual(recreatedCube. testCube.get())

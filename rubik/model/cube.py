@@ -144,6 +144,8 @@ class Cube:
         return returnString
     
     def getRelativeSquare(self, square):
+        if square < 0 or square > 53:
+            raise Exception('square request is out of bounds')
         match self.getCurrentOrientation():
             case 'F':
                 adjSquare = self._cube[square]
@@ -190,8 +192,6 @@ class Cube:
                             adjSquare = self._cube[DML]
                         case 53:
                             adjSquare = self._cube[DBL]
-                        case _:
-                            print("Dev error")
             case 'B':
                 if FTL <= square <= RBR:
                     adjSquare = self._cube[square + 18]
@@ -235,8 +235,6 @@ class Cube:
                             adjSquare = self._cube[DTM]
                         case 53:
                             adjSquare = self._cube[DTL]
-                        case _:
-                            print("Dev error")
             case 'L':
                 if FTL <= square <= FBR:
                     adjSquare = self._cube[square + 27]
@@ -280,10 +278,6 @@ class Cube:
                             adjSquare = self._cube[DMR]
                         case 53:
                             adjSquare = self._cube[DTR]
-                        case _:
-                            print("Dev error")
-            case _:
-                print("oh")
         return adjSquare
 
     def _isValidCube(self):
