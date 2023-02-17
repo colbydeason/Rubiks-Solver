@@ -205,6 +205,32 @@ class Test(unittest.TestCase):
     #
     #     input: 
     #         N/A
+    #
+    #     output:
+    #         Nominal: N/A
+    #         Side-effects: Changed "state" of cube, determining what rotate actually rotates
+    #     
+    #     happy path:
+    #         DEVELOPER TESTS: getCurrentFace is a developer test only available outside of Cube for this test and these tests will be commented out
+    #         test 001: Right turn
+    #         test 002: Left turn
+    #         test 003: Multiple turns
+    #         test 004: Multiple turns 2
+    #         REGULAR TESTS: determine if rotate now works with changed states, supplying correct rotations and string output for use in controller classes
+    #         test 005: Rotate all directions CW using F as basis
+    #         test 006: Rotate all directions CW using R as basis
+    #         test 007: Rotate all directions CW using B as basis
+    #         test 008: Rotate all directions CW using L as basis
+    #         test 009: Rotate all directions CCW using F as basis
+    #         test 010: Rotate all directions CCW using R as basis
+    #         test 011: Rotate all directions CCW using B as basis
+    #         test 012: Rotate all directions CCW using L as basis
+    #
+    #     sad path:
+    #         N/A
+    #
+    #     evil path:
+    #         N/A
     
     
     def test_cubeTest_rotateCube_001_RightTurn(self):
