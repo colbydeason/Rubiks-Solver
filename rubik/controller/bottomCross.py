@@ -16,4 +16,4 @@ def solveBottomCross(theCube: Cube) -> str:
     
     
     
-    return theCube.getCurrentRotationString()
+    return theCube.popCurrentRotationString()

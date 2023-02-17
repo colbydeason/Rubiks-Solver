@@ -142,7 +142,141 @@ class Cube:
         returnString = self._currentRotationsString
         self._currentRotationsString = ''
         return returnString
-
+    
+    def getRelativeSquare(self, square):
+        match self.getCurrentOrientation():
+            case 'F':
+                adjSquare = self._cube[square]
+            case 'R':
+                if FTL <= square <= BBR:
+                    adjSquare = self._cube[square + 9]
+                elif LTL <= square <= LBR:
+                    adjSquare = self._cube[square - 27]
+                else:
+                    match square:
+                        case UTL:
+                            adjSquare = self._cube[UBL]
+                        case UTM:
+                            adjSquare = self._cube[UML]
+                        case UTR:
+                            adjSquare = self._cube[UTL]
+                        case UML:
+                            adjSquare = self._cube[UBM]
+                        case UMM:
+                            adjSquare = self._cube[UMM]
+                        case UMR:
+                            adjSquare = self._cube[UTM]
+                        case UBL:
+                            adjSquare = self._cube[UBR]
+                        case UBM:
+                            adjSquare = self._cube[UMR]
+                        case UBR:
+                            adjSquare = self._cube[UTR]
+                        case DTL:
+                            adjSquare = self._cube[DTR]
+                        case DTM:
+                            adjSquare = self._cube[DMR]
+                        case DTR:
+                            adjSquare = self._cube[DBR]
+                        case DML:
+                            adjSquare = self._cube[DTM]
+                        case DMM:
+                            adjSquare = self._cube[DMM]
+                        case DMR:
+                            adjSquare = self._cube[DBM]
+                        case DBL:
+                            adjSquare = self._cube[DTL]
+                        case DBM:
+                            adjSquare = self._cube[DML]
+                        case DBR:
+                            adjSquare = self._cube[DBL]
+            case 'B':
+                if FTL <= square <= RBR:
+                    adjSquare = self._cube[square + 18]
+                elif BTR <= square <= LBR:
+                    adjSquare = self._cube[square - 18]
+                else:
+                    match square:
+                        case UTL:
+                            adjSquare = self._cube[UBR]
+                        case UTM:
+                            adjSquare = self._cube[UBM]
+                        case UTR:
+                            adjSquare = self._cube[UBL]
+                        case UML:
+                            adjSquare = self._cube[UMR]
+                        case UMM:
+                            adjSquare = self._cube[UMM]
+                        case UMR:
+                            adjSquare = self._cube[UML]
+                        case UBL:
+                            adjSquare = self._cube[UTR]
+                        case UBM:
+                            adjSquare = self._cube[UTM]
+                        case UBR:
+                            adjSquare = self._cube[UTL]
+                        case DTL:
+                            adjSquare = self._cube[DBR]
+                        case DTM:
+                            adjSquare = self._cube[DBM]
+                        case DTR:
+                            adjSquare = self._cube[DBL]
+                        case DML:
+                            adjSquare = self._cube[DMR]
+                        case DMM:
+                            adjSquare = self._cube[DMM]
+                        case DMR:
+                            adjSquare = self._cube[DML]
+                        case DBL:
+                            adjSquare = self._cube[DTR]
+                        case DBM:
+                            adjSquare = self._cube[DTM]
+                        case DBR:
+                            adjSquare = self._cube[DTL]
+            case 'L':
+                if FTL <= square <= FBR:
+                    adjSquare = self._cube[square + 27]
+                elif RTL <= square <= LBR:
+                    adjSquare = self._cube[square - 9]
+                else:
+                    match square:
+                        case UTL:
+                            adjSquare = self._cube[UTR]
+                        case UTM:
+                            adjSquare = self._cube[UMR]
+                        case UTR:
+                            adjSquare = self._cube[UBR]
+                        case UML:
+                            adjSquare = self._cube[UTM]
+                        case UMM:
+                            adjSquare = self._cube[UMM]
+                        case UMR:
+                            adjSquare = self._cube[UBM]
+                        case UBL:
+                            adjSquare = self._cube[UTL]
+                        case UBM:
+                            adjSquare = self._cube[UML]
+                        case UBR:
+                            adjSquare = self._cube[UBL]
+                        case DTL:
+                            adjSquare = self._cube[DBL]
+                        case DTM:
+                            adjSquare = self._cube[DML]
+                        case DTR:
+                            adjSquare = self._cube[DTL]
+                        case DML:
+                            adjSquare = self._cube[DBM]
+                        case DMM:
+                            adjSquare = self._cube[DMM]
+                        case DMR:
+                            adjSquare = self._cube[DTM]
+                        case DBL:
+                            adjSquare = self._cube[DBR]
+                        case DBM:
+                            adjSquare = self._cube[DMR]
+                        case DBR:
+                            adjSquare = self._cube[DTR]
+        return adjSquare
 
     def _isValidCube(self):
         if not self._isValidLength():
