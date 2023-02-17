@@ -408,4 +408,4 @@ class Test(unittest.TestCase):
         recreatedCube += testCube.getRelativeSquare(51)
         recreatedCube += testCube.getRelativeSquare(52)
         recreatedCube += testCube.getRelativeSquare(53)
-        self.assertEqual(recreatedCube. testCube.get())
+        self.assertEqual(recreatedCube, testCube.get())
