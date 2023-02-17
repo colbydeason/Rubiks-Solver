@@ -345,8 +345,7 @@ class Test(unittest.TestCase):
     #         test 004: recreated cube L Facing
     #
     #     sad path:
-    #         test 901: out of bounds number
-    #         test 902: invalid type
+    #         none
     #    
     #     evil path:
     #         none
@@ -533,7 +532,7 @@ class Test(unittest.TestCase):
         recreatedCubeString = '434225544011231052520403304503011230132440241323551155'
         self.assertEqual(recreatedCube, recreatedCubeString)
         
-    def test_cubeTest_getRelativeSquare_002_LFacing(self):
+    def test_cubeTest_getRelativeSquare_004_LFacing(self):
         testCube = cube.Cube('520403304503011230434225544011231052142044231551155323')
         recreatedCube = ''
         testCube.rotateCubeL()
