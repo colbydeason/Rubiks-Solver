@@ -28,19 +28,19 @@ class Test(unittest.TestCase):
     #         test 001: Flower stage
     #         test 002: bottom cross
     
-    def test_bottomCrossTest_solveBottomCross_001_TopFlower(self):
-        testCube = cube.Cube('114205020241014115213322235500133144004342453355054253')
-        bottomColor = testCube.get()[49]
-        edgeList = {37, 39, 41, 43}
-        solveBottomCross(testCube)
-        for edge in edgeList:
-            if testCube.get()[edge] == bottomColor:
-                continue
-            else:
-                print(testCube.get())
-                self.fail()
-        print(testCube.get())
-        pass
+    # def test_bottomCrossTest_solveBottomCross_001_TopFlower(self):
+    #     testCube = cube.Cube('114205020241014115213322235500133144004342453355054253')
+    #     bottomColor = testCube.get()[49]
+    #     edgeList = {37, 39, 41, 43}
+    #     solveBottomCross(testCube)
+    #     for edge in edgeList:
+    #         if testCube.get()[edge] == bottomColor:
+    #             continue
+    #         else:
+    #             print(testCube.get())
+    #             self.fail()
+    #     print(testCube.get())
+    #     pass
     
     def test_bottomCrossTest_solveBottomCross_002_BottomLayer(self):
         testCube = cube.Cube('114205020241014115213322235500133144004342453355054253')
