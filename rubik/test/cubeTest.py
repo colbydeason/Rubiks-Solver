@@ -413,7 +413,7 @@ class Test(unittest.TestCase):
     def test_cubeTest_getRelativeSquare_002_RFacing(self):
         testCube = cube.Cube('520403304503011230434225544011231052142044231551155323')
         recreatedCube = ''
-        testCube.RotateCubeR()
+        testCube.rotateCubeR()
         recreatedCube += testCube.getRelativeSquare(0)
         recreatedCube += testCube.getRelativeSquare(1)
         recreatedCube += testCube.getRelativeSquare(2)
