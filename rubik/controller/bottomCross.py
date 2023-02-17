@@ -11,8 +11,7 @@ def solveBottomCross(theCube: Cube) -> str:
     #     b) match up edge to face center and rotate side 
     
     _solveFlower(theCube)
-    
-    
+    # _flowerToBottom(theCube)
     
     return theCube.popCurrentRotationStringResetOrientation()
 
@@ -43,4 +42,19 @@ def _solveFlower(flowerCube):
                     break
                 flowerCube.rotate('u')
                 flowerCube.rotateCubeR()
+    
+    flowerCube.resetCubeOrientation()
+    
+def _flowerToBottom(ftbCube):
+    for i in range(4):
+        for j in range(4):
+            if ftbCube.getRelativeSquare(1) == ftbCube.getRelativeSquare(4):
+                ftbCube.rotate('FF')
+                ftbCube.rotateCubeR()
+                break
+            else:
+                ftbCube.rotate('u')
+                ftbCube.rotateCubeR()
+                    
+                
     
