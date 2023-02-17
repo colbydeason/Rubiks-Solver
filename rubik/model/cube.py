@@ -195,7 +195,7 @@ class Cube:
             case 'B':
                 if FTL <= square <= RBR:
                     adjSquare = self._cube[square + 18]
-                elif BTR <= square <= LBR:
+                elif BTL <= square <= LBR:
                     adjSquare = self._cube[square - 18]
                 else:
                     match square:
