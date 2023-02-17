@@ -39,4 +39,5 @@ class Test(unittest.TestCase):
             else:
                 print(testCube.get())
                 self.fail()
+        print(testCube.get())
         pass
