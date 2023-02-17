@@ -143,7 +143,7 @@ class Cube:
         self._currentRotationsString = ''
         return returnString
     
-    def getRelativeSquare(self, square = 'UTM'):
+    def getRelativeSquare(self, square):
         match self.getCurrentOrientation():
             case 'F':
                 adjSquare = self._cube[square]
@@ -154,44 +154,44 @@ class Cube:
                     adjSquare = self._cube[square - 27]
                 else:
                     match square:
-                        case UTL:
+                        case 36:
                             adjSquare = self._cube[UBL]
-                        case UTM:
+                        case 37:
                             adjSquare = self._cube[UML]
-                        case UTR:
+                        case 38:
                             adjSquare = self._cube[UTL]
-                        case UML:
+                        case 39:
                             adjSquare = self._cube[UBM]
-                        case UMM:
+                        case 40:
                             adjSquare = self._cube[UMM]
-                        case UMR:
+                        case 41:
                             adjSquare = self._cube[UTM]
-                        case UBL:
+                        case 42:
                             adjSquare = self._cube[UBR]
-                        case UBM:
+                        case 43:
                             adjSquare = self._cube[UMR]
-                        case UBR:
+                        case 44:
                             adjSquare = self._cube[UTR]
-                        case DTL:
+                        case 45:
                             adjSquare = self._cube[DTR]
-                        case DTM:
+                        case 46:
                             adjSquare = self._cube[DMR]
-                        case DTR:
+                        case 47:
                             adjSquare = self._cube[DBR]
-                        case DML:
+                        case 48:
                             adjSquare = self._cube[DTM]
-                        case DMM:
+                        case 49:
                             adjSquare = self._cube[DMM]
-                        case DMR:
+                        case 50:
                             adjSquare = self._cube[DBM]
-                        case DBL:
+                        case 51:
                             adjSquare = self._cube[DTL]
-                        case DBM:
+                        case 52:
                             adjSquare = self._cube[DML]
-                        case DBR:
+                        case 53:
                             adjSquare = self._cube[DBL]
                         case _:
-                            print("oh")
+                            print("Dev error")
             case 'B':
                 if FTL <= square <= RBR:
                     adjSquare = self._cube[square + 18]
@@ -199,44 +199,44 @@ class Cube:
                     adjSquare = self._cube[square - 18]
                 else:
                     match square:
-                        case UTL:
+                        case 36:
                             adjSquare = self._cube[UBR]
-                        case UTM:
+                        case 37:
                             adjSquare = self._cube[UBM]
-                        case UTR:
+                        case 38:
                             adjSquare = self._cube[UBL]
-                        case UML:
+                        case 39:
                             adjSquare = self._cube[UMR]
-                        case UMM:
+                        case 40:
                             adjSquare = self._cube[UMM]
-                        case UMR:
+                        case 41:
                             adjSquare = self._cube[UML]
-                        case UBL:
+                        case 42:
                             adjSquare = self._cube[UTR]
-                        case UBM:
+                        case 43:
                             adjSquare = self._cube[UTM]
-                        case UBR:
+                        case 44:
                             adjSquare = self._cube[UTL]
-                        case DTL:
+                        case 45:
                             adjSquare = self._cube[DBR]
-                        case DTM:
+                        case 46:
                             adjSquare = self._cube[DBM]
-                        case DTR:
+                        case 47:
                             adjSquare = self._cube[DBL]
-                        case DML:
+                        case 48:
                             adjSquare = self._cube[DMR]
-                        case DMM:
+                        case 49:
                             adjSquare = self._cube[DMM]
-                        case DMR:
+                        case 50:
                             adjSquare = self._cube[DML]
-                        case DBL:
+                        case 51:
                             adjSquare = self._cube[DTR]
-                        case DBM:
+                        case 52:
                             adjSquare = self._cube[DTM]
-                        case DBR:
+                        case 53:
                             adjSquare = self._cube[DTL]
                         case _:
-                            print("oh")
+                            print("Dev error")
             case 'L':
                 if FTL <= square <= FBR:
                     adjSquare = self._cube[square + 27]
@@ -244,44 +244,44 @@ class Cube:
                     adjSquare = self._cube[square - 9]
                 else:
                     match square:
-                        case UTL:
+                        case 36:
                             adjSquare = self._cube[UTR]
-                        case UTM:
+                        case 37:
                             adjSquare = self._cube[UMR]
-                        case UTR:
+                        case 38:
                             adjSquare = self._cube[UBR]
-                        case UML:
+                        case 39:
                             adjSquare = self._cube[UTM]
-                        case UMM:
+                        case 40:
                             adjSquare = self._cube[UMM]
-                        case UMR:
+                        case 41:
                             adjSquare = self._cube[UBM]
-                        case UBL:
+                        case 42:
                             adjSquare = self._cube[UTL]
-                        case UBM:
+                        case 43:
                             adjSquare = self._cube[UML]
-                        case UBR:
+                        case 44:
                             adjSquare = self._cube[UBL]
-                        case DTL:
+                        case 45:
                             adjSquare = self._cube[DBL]
-                        case DTM:
+                        case 46:
                             adjSquare = self._cube[DML]
-                        case DTR:
+                        case 47:
                             adjSquare = self._cube[DTL]
-                        case DML:
+                        case 48:
                             adjSquare = self._cube[DBM]
-                        case DMM:
+                        case 49:
                             adjSquare = self._cube[DMM]
-                        case DMR:
+                        case 50:
                             adjSquare = self._cube[DTM]
-                        case DBL:
+                        case 51:
                             adjSquare = self._cube[DBR]
-                        case DBM:
+                        case 52:
                             adjSquare = self._cube[DMR]
-                        case DBR:
+                        case 53:
                             adjSquare = self._cube[DTR]
                         case _:
-                            print("oh")
+                            print("Dev error")
             case _:
                 print("oh")
         return adjSquare
