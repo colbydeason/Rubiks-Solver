@@ -10,33 +10,37 @@ def solveBottomCross(theCube: Cube) -> str:
     # Step 2: Solve cross
     #     b) match up edge to face center and rotate side 
     
+    _solveFlower(theCube)
+    
+    
+    
+    return theCube.popCurrentRotationStringResetOrientation()()
+
+def _solveFlower(flowerCube):
     edgeList = [1, 3, 5, 7, 46]
-    bottomColor = theCube.get()[49]
+    bottomColor = flowerCube.get()[49]
     for i in range(4):
-        topEdge = theCube.getRelativeSquare(43)
+        topEdge = flowerCube.getRelativeSquare(43)
         if topEdge == bottomColor:
-            theCube.rotate('U')
+            flowerCube.rotate('U')
             continue
         else:
             for j in range (4):
-                if theCube.getRelativeSquare(edgeList[0]) == bottomColor:
-                    theCube.rotate('FuRUU')
+                if flowerCube.getRelativeSquare(edgeList[0]) == bottomColor:
+                    flowerCube.rotate('FuRUU')
                     break
-                if theCube.getRelativeSquare(edgeList[1]) == bottomColor:
-                    theCube.rotate('Ul')
+                if flowerCube.getRelativeSquare(edgeList[1]) == bottomColor:
+                    flowerCube.rotate('Ul')
                     break
-                if theCube.getRelativeSquare(edgeList[2]) == bottomColor:
-                    theCube.rotate('uRUU')
+                if flowerCube.getRelativeSquare(edgeList[2]) == bottomColor:
+                    flowerCube.rotate('uRUU')
                     break
-                if theCube.getRelativeSquare(edgeList[3]) == bottomColor:
-                    theCube.rotate('FUr')
+                if flowerCube.getRelativeSquare(edgeList[3]) == bottomColor:
+                    flowerCube.rotate('FUr')
                     break
-                if theCube.getRelativeSquare(edgeList[4]) == bottomColor:
-                    theCube.rotate('FFU')
+                if flowerCube.getRelativeSquare(edgeList[4]) == bottomColor:
+                    flowerCube.rotate('FFU')
                     break
-                theCube.rotate('u')
-                theCube.rotateCubeR()
+                flowerCube.rotate('u')
+                flowerCube.rotateCubeR()
     
-    
-    
-    return theCube.popCurrentRotationString()

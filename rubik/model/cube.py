@@ -138,9 +138,10 @@ class Cube:
         returnString = self._currentRotationsString
         return returnString
     
-    def popCurrentRotationString(self):
+    def popCurrentRotationStringResetOrientation(self):
         returnString = self._currentRotationsString
         self._currentRotationsString = ''
+        self.resetCubeOrientation()
         return returnString
     
     def getRelativeSquare(self, square):
