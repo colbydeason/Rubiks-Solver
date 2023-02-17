@@ -143,7 +143,7 @@ class Cube:
         self._currentRotationsString = ''
         return returnString
     
-    def getRelativeSquare(self, square):
+    def getRelativeSquare(self, square = 'UTM'):
         match self.getCurrentOrientation():
             case 'F':
                 adjSquare = self._cube[square]
