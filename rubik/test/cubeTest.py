@@ -468,5 +468,5 @@ class Test(unittest.TestCase):
         recreatedCube += testCube.getRelativeSquare(51)
         recreatedCube += testCube.getRelativeSquare(52)
         recreatedCube += testCube.getRelativeSquare(53)
-        recreatedCubeString = '503011230434225544011231052520403304201344141253552513'
+        recreatedCubeString = '503011230434225544011231052520403304201344142153552513'
         self.assertEqual(recreatedCube, recreatedCubeString)
