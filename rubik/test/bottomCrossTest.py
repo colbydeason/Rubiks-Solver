@@ -34,7 +34,7 @@ class Test(unittest.TestCase):
         edgeList = {37, 39, 41, 43}
         solveBottomCross(testCube)
         for edge in edgeList:
-            if testCube.get(edge) == bottomColor:
+            if testCube.get()[edge] == bottomColor:
                 continue
             else:
                 self.fail()
