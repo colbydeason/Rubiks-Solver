@@ -85,7 +85,7 @@ class Test(unittest.TestCase):
         testCube = cube.Cube('llllrllll333333333KKKKKKKKKlrrrrrrrr999999999AAAAAAAAA')
         self.assertEqual('error: centers are not unique', testCube.get())
         
-    def test_cubeTest_cube_904_UniqueCenterError(self):
+    def test_cubeTest_cube_905_IncorrectUniqueColor(self):
         testCube = cube.Cube('lllllllll333333333KKKKKKKKKKrrrrrrrr999999999AAAAAAAAA')
         self.assertEqual('error: incorrect number of unique colors [6, 9 of each]', testCube.get())
         
