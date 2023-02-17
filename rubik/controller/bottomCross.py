@@ -14,7 +14,7 @@ def solveBottomCross(theCube: Cube) -> str:
     
     
     
-    return theCube.popCurrentRotationStringResetOrientation()()
+    return theCube.popCurrentRotationStringResetOrientation()
 
 def _solveFlower(flowerCube):
     edgeList = [1, 3, 5, 7, 46]
