@@ -285,3 +285,27 @@ class Test(unittest.TestCase):
         testCube.rotate('RBLFU')
         self.assertEqual('000000000111111111222222222333333333444444444555555555', testCube.get())
         
+    def test_cubeTest_rotateUpdated_005_FBasisCCW(self):
+        testCube = cube.Cube('444001355312412055423423155431435235211240000011052332')
+        testCube.rotate('frblu')
+        self.assertEqual('000000000111111111222222222333333333444444444555555555', testCube.get())
+        
+    def test_cubeTest_rotateUpdated_006_RBasiCCW(self):
+        testCube = cube.Cube('444001355312412055423423155431435235211240000011052332')
+        testCube.rotateCubeR()
+        testCube.rotate('lfrbu')
+        self.assertEqual('000000000111111111222222222333333333444444444555555555', testCube.get())
+    
+    def test_cubeTest_rotateUpdated_007_BBasiCCW(self):
+        testCube = cube.Cube('444001355312412055423423155431435235211240000011052332')
+        testCube.rotateCubeR()
+        testCube.rotateCubeR()
+        testCube.rotate('blfru')
+        self.assertEqual('000000000111111111222222222333333333444444444555555555', testCube.get())
+        
+    def test_cubeTest_rotateUpdated_008_LBasiCCW(self):
+        testCube = cube.Cube('444001355312412055423423155431435235211240000011052332')
+        testCube.rotateCubeL()
+        testCube.rotate('rblfu')
+        self.assertEqual('000000000111111111222222222333333333444444444555555555', testCube.get())
+        
