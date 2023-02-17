@@ -238,12 +238,12 @@ class Test(unittest.TestCase):
     def test_cubeTest_rotateCube_001_RightTurn(self):
         testCube = cube.Cube('aaaaaaaaabbbbbbbbbcccccccccdddddddddeeeeeeeeefffffffff')
         testCube.rotateCubeR()
-        self.assertEqual('R', testCube.getCurrentFrontFace())
+        self.assertEqual('R', testCube.getCurrentOrientation())
         
     def test_cubeTest_rotateCube_002_LeftTurn(self):
         testCube = cube.Cube('aaaaaaaaabbbbbbbbbcccccccccdddddddddeeeeeeeeefffffffff')
         testCube.rotateCubeL()
-        self.assertEqual('L', testCube.getCurrentFrontFace())
+        self.assertEqual('L', testCube.getCurrentOrientation())
         
     def test_cubeTest_rotateCube_003_MultipleTurns(self):
         testCube = cube.Cube('aaaaaaaaabbbbbbbbbcccccccccdddddddddeeeeeeeeefffffffff')
@@ -251,7 +251,7 @@ class Test(unittest.TestCase):
         testCube.rotateCubeL()
         testCube.rotateCubeR()
         testCube.rotateCubeR()
-        self.assertEqual('B', testCube.getCurrentFrontFace())
+        self.assertEqual('B', testCube.getCurrentOrientation())
         
     def test_cubeTest_rotateCube_004_MultipleTurns2(self):
         testCube = cube.Cube('aaaaaaaaabbbbbbbbbcccccccccdddddddddeeeeeeeeefffffffff')
@@ -259,7 +259,7 @@ class Test(unittest.TestCase):
         testCube.rotateCubeR()
         testCube.rotateCubeL()
         testCube.rotateCubeL()
-        self.assertEqual('B', testCube.getCurrentFrontFace())
+        self.assertEqual('B', testCube.getCurrentOrientation())
         
     def test_cubeTest_rotateUpdated_001_FBasisCW(self):
         testCube = cube.Cube('244300555344511211044522522134534530221041300333250110')

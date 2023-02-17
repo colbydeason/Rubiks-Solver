@@ -11,7 +11,6 @@ def solveBottomCross(theCube: Cube) -> str:
     #     b) match up edge to face center and rotate side 
     
     
-    bottomFaceColor = theCube.get()[4]
     
     
     

@@ -25,13 +25,20 @@ class Cube:
         tempFace = self._faceState.pop(3)
         self._faceState.insert(0, tempFace)
         
+    def resetCubeOrientation(self):
+        self._faceState = []
+        self._faceState.append('F')
+        self._faceState.append('R')
+        self._faceState.append('B')
+        self._faceState.append('L')
+        
     def rotate(self, directions = 'F'):
         if directions == None or len(directions) == 0:
             directions = 'F'
         for rotation in directions:
             match rotation:
                 case 'F':
-                    match self.getCurrentFrontFace():
+                    match self.getCurrentOrientation():
                         case 'F':
                             self._rotateF()
                         case 'R':
@@ -41,7 +48,7 @@ class Cube:
                         case 'L':
                             self._rotateL()
                 case 'f':
-                    match self.getCurrentFrontFace():
+                    match self.getCurrentOrientation():
                         case 'F':
                             self._rotatef()
                         case 'R':
@@ -51,7 +58,7 @@ class Cube:
                         case 'L':
                             self._rotatel()
                 case 'B':
-                    match self.getCurrentFrontFace():
+                    match self.getCurrentOrientation():
                         case 'F':
                             self._rotateB()
                         case 'R':
@@ -61,7 +68,7 @@ class Cube:
                         case 'L':
                             self._rotateR()
                 case 'b':
-                    match self.getCurrentFrontFace():
+                    match self.getCurrentOrientation():
                         case 'F':
                             self._rotateb()
                         case 'R':
@@ -71,7 +78,7 @@ class Cube:
                         case 'L':
                             self._rotater()
                 case 'L':
-                    match self.getCurrentFrontFace():
+                    match self.getCurrentOrientation():
                         case 'F':
                             self._rotateL()
                         case 'R':
@@ -81,7 +88,7 @@ class Cube:
                         case 'L':
                             self._rotateB()
                 case 'l':
-                    match self.getCurrentFrontFace():
+                    match self.getCurrentOrientation():
                         case 'F':
                             self._rotatel()
                         case 'R':
@@ -91,7 +98,7 @@ class Cube:
                         case 'L':
                             self._rotateb()
                 case 'R':
-                    match self.getCurrentFrontFace():
+                    match self.getCurrentOrientation():
                         case 'F':
                             self._rotateR()
                         case 'R':
@@ -101,7 +108,7 @@ class Cube:
                         case 'L':
                             self._rotateF()
                 case 'r':
-                    match self.getCurrentFrontFace():
+                    match self.getCurrentOrientation():
                         case 'F':
                             self._rotater()
                         case 'R':
@@ -124,12 +131,13 @@ class Cube:
     def get(self):
         return self._cube
 
-    def getCurrentFrontFace(self):
+    def getCurrentOrientation(self):
         return self._faceState[0]
     
     def getCurrentRotationString(self):
         returnString = self._currentRotationsString
         self._currentRotationsString = ''
+        self._faceState = 
         return returnString
 
 
