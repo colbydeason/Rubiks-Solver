@@ -321,11 +321,11 @@ class Test(unittest.TestCase):
         testCube.rotateCubeR()
         testCube.rotate('frblu')
         testCube.rotateCubeL()
-        testCube.rotate('lfrbu')
+        testCube.rotate('rblfu')
         testCube.rotateCubeL()
         testCube.rotate('blfru')
         testCube.rotateCubeL()
-        testCube.rotate('rblfu')
+        testCube.rotate('lfrbu')
         correctStringList = ('FRBLUFRBLUFRBLUFRBLUfrblufrblufrblufrblu')
         self.assertEqual(correctStringList, testCube.getCurrentRotationString())
         
