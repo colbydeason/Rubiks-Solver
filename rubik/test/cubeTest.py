@@ -226,6 +226,7 @@ class Test(unittest.TestCase):
     #         test 006: Rotate all directions CCW using R as basis
     #         test 007: Rotate all directions CCW using B as basis
     #         test 008: Rotate all directions CCW using L as basis
+    #         test 009: Combination of all, resulting in string showing true rotations on cube
     #
     #     sad path:
     #         N/A
@@ -263,5 +264,11 @@ class Test(unittest.TestCase):
     def test_cubeTest_rotateUpdated_001_FBasis(self):
         testCube = cube.Cube('244300555344511211044522522134534530221041300333250110')
         testCube.rotate('FRBLU')
+        self.assertEqual('000000000111111111222222222333333333444444444555555555', testCube.get())
+        
+    def test_cubeTest_rotateUpdated_001_FBasis(self):
+        testCube = cube.Cube('244300555344511211044522522134534530221041300333250110')
+        testCube.rotateCubeR()
+        testCube.rotate('LFRBU')
         self.assertEqual('000000000111111111222222222333333333444444444555555555', testCube.get())
         
