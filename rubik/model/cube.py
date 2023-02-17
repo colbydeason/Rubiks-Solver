@@ -136,9 +136,12 @@ class Cube:
     
     def getCurrentRotationString(self):
         returnString = self._currentRotationsString
+        return returnString
+    
+    def popCurrentRotationString(self):
+        returnString = self._currentRotationsString
         self._currentRotationsString = ''
         return returnString
-
 
 
     def _isValidCube(self):
