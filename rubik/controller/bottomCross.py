@@ -35,7 +35,7 @@ def _solveFlower(flowerCube):
                     flowerCube.rotate('uRUU')
                     break
                 if flowerCube.getRelativeSquare(edgeList[3]) == bottomColor:
-                    flowerCube.rotate('FUr')
+                    flowerCube.rotate('FUl')
                     break
                 if flowerCube.getRelativeSquare(edgeList[4]) == bottomColor:
                     flowerCube.rotate('FFU')
