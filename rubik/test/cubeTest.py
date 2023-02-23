@@ -89,6 +89,10 @@ class Test(unittest.TestCase):
         testCube = cube.Cube('lllllllll333333333KKKKKKKKKKrrrrrrrr999999999AAAAAAAAA')
         self.assertEqual('error: incorrect number of unique colors [6, 9 of each]', testCube.get())
         
+    def test_cubeTest_cube_906_MissingCube(self):
+        testCube = cube.Cube(None)
+        self.assertEqual('error: missing cube [string]', testCube.get())
+        
         
     #    Analysis of Cube.rotate
     #        inputs:

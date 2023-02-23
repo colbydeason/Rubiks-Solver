@@ -282,12 +282,21 @@ class Cube:
         return adjSquare
 
     def _isValidCube(self):
+        if not self._cubeIsString():
+            return
         if not self._isValidLength():
             return
         if not self._isValidFaces():
             return
         if not self._isUniquelyCentered():
             return
+        
+    def _cubeIsString(self):
+        if isinstance(self._cube, str):
+            return True
+        else:
+            self._cube = 'error: missing cube [string]'
+            return False
         
     def _isValidLength(self):
         if len(self._cube) == 54:
