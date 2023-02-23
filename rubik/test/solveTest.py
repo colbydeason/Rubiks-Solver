@@ -56,6 +56,12 @@ class SolveTest(TestCase):
             else:
                 print(testCube)
                 self.fail()
+                
+    def test_solveTest_solve_901_MissingCube(self):
+        parmsTest = {}
+        parmsTest['cube'] = None
+        solveDic = solve(parmsTest)
+        self.assertEqual('error: missing cube [53]', solveDic['status'])
         
         
         
