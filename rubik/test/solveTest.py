@@ -61,7 +61,7 @@ class SolveTest(TestCase):
         parmsTest = {}
         parmsTest['cube'] = None
         solveDic = solve(parmsTest)
-        self.assertEqual('error: missing cube [53]', solveDic['status'])
+        self.assertEqual('error: missing cube [string]', solveDic['status'])
         
         
         
