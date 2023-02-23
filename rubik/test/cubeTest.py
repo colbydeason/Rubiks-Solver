@@ -93,7 +93,6 @@ class Test(unittest.TestCase):
         testCube = cube.Cube(None)
         self.assertEqual('error: missing cube [string]', testCube.get())
         
-        
     #    Analysis of Cube.rotate
     #        inputs:
     #            directions: string, len >= 0, in[FfRrBbLlUu]; optional, defaults to F if missing; un-validated
