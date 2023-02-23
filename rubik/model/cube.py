@@ -319,6 +319,7 @@ class Cube:
                 self._cube = 'error: incorrect number of unique colors [6, 9 of each]'
                 return False
         return True
+    
     def _isValidCharacter(self, char):
         if char.isalpha():
             return True
@@ -655,12 +656,3 @@ class Cube:
         # Modifies the cubeList
         self._currentRotationsString += 'u'
         self._cubeList = rotatedCubeList
-        
-    # Advanced Cube Rotation Idea
-    #
-    # In order to allow for less code and more general algorithms, a rotate full cube option will be allowed, in which all
-    # rotations done in this "state" will be recorded and transferred to normal facing cube notation
-    #
-    # Separate cube with notation showing what full turns it has done so they can be transcribed to regular face rotations
-    #
-    # Face rotate doesn't actually do anything, just changes how rotate sees incoming characters, transferring to regular cube face

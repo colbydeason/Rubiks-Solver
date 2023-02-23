@@ -30,7 +30,7 @@ class SolveTest(TestCase):
 #     sad path:
 #         test 901: invalid cube (implementation only, boundary tests done by cubeTest for invalid cube)
 #
-    def test_solveTest_solve_000_Equivalence(self):
+    def test_solveTest_solve_001_BottomCross(self):
         parmsSolve = {}
         parmsRotate= {}
         parmsSolve['cube'] = '453302001421512031240422212500134313114343302544055555'
