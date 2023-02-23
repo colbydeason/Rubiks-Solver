@@ -21,24 +21,29 @@ def _solveFlower(flowerCube):
     for i in range(4):
         topEdge = flowerCube.getRelativeSquare(43)
         if topEdge == bottomColor:
-            flowerCube.rotate('U')
+            flowerCube.rotateCubeR()
             continue
         else:
             for j in range (4):
                 if flowerCube.getRelativeSquare(edgeList[0]) == bottomColor:
-                    flowerCube.rotate('FuRUU')
+                    flowerCube.rotate('FuR')
+                    flowerCube.rotateCubeR()
+                    flowerCube.rotateCubeR()
                     break
                 if flowerCube.getRelativeSquare(edgeList[1]) == bottomColor:
                     flowerCube.rotate('Ul')
                     break
                 if flowerCube.getRelativeSquare(edgeList[2]) == bottomColor:
-                    flowerCube.rotate('uRUU')
+                    flowerCube.rotate('uR')
+                    flowerCube.rotateCubeR()
+                    flowerCube.rotateCubeR()
                     break
                 if flowerCube.getRelativeSquare(edgeList[3]) == bottomColor:
                     flowerCube.rotate('FUl')
                     break
                 if flowerCube.getRelativeSquare(edgeList[4]) == bottomColor:
-                    flowerCube.rotate('FFU')
+                    flowerCube.rotate('FF')
+                    flowerCube.rotateCubeR()
                     break
                 flowerCube.rotate('u')
                 flowerCube.rotateCubeR()
