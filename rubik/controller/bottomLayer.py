@@ -74,12 +74,12 @@ def _alignCorner(alCube):
     cornerArray = [2, 44, 9]
     middle1 = 4
     middle2 = 13
-    middle1Color = alCube.getRelativeSquare(middle1)
-    middle2Color = alCube.getRelativeSquare(middle2)
     colorList = []
     for square in cornerArray:
         colorList.append(alCube.getRelativeSquare(square))
     for tryMatch in range(4):
+        middle1Color = alCube.getRelativeSquare(middle1)
+        middle2Color = alCube.getRelativeSquare(middle2)
         if (middle1Color in colorList) and (middle2Color in colorList):
             return colorList
         else:
