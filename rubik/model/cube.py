@@ -130,6 +130,9 @@ class Cube:
     
     def get(self):
         return self._cube
+    
+    def getBottomColor(self):
+        return self._cube[49]
 
     def getCurrentOrientation(self):
         return self._faceState[0]
