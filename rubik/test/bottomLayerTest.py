@@ -47,6 +47,7 @@ class Test(unittest.TestCase):
             if colorArray.count(bottomColor) == 1:
                 continue
             else:
+                print(testCube.get())
                 self.fail("Corners are not on the top layer")
                 
             
