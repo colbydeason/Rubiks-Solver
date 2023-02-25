@@ -27,31 +27,26 @@ def _solveFlower(flowerCube):
             for j in range (4):
                 if flowerCube.getRelativeSquare(edgeList[0]) == bottomColor:
                     flowerCube.rotate('FuR')
-                    print(flowerCube.get())
                     flowerCube.rotateCubeR()
                     flowerCube.rotateCubeR()
                     break
                 if flowerCube.getRelativeSquare(edgeList[1]) == bottomColor:
                     flowerCube.rotate('Ul')
-                    print(flowerCube.get())
                     break
                 if flowerCube.getRelativeSquare(edgeList[2]) == bottomColor:
                     flowerCube.rotate('uR')
-                    print(flowerCube.get())
                     flowerCube.rotateCubeR()
                     flowerCube.rotateCubeR()
                     break
                 if flowerCube.getRelativeSquare(edgeList[3]) == bottomColor:
                     flowerCube.rotate('FUl')
-                    print(flowerCube.get())
                     break
                 if flowerCube.getRelativeSquare(edgeList[4]) == bottomColor:
                     flowerCube.rotate('FF')
-                    print(flowerCube.get())
                     flowerCube.rotateCubeR()
                     break
                 flowerCube.rotate('u')
-                print(flowerCube.get())
+                print(flowerCube.get() + ',')
                 flowerCube.rotateCubeR()
     
     flowerCube.resetCubeOrientation()
@@ -61,12 +56,10 @@ def _flowerToBottom(ftbCube):
         for j in range(4):
             if ftbCube.getRelativeSquare(1) == ftbCube.getRelativeSquare(4):
                 ftbCube.rotate('FF')
-                print(ftbCube.get())
                 ftbCube.rotateCubeR()
                 break
             else:
                 ftbCube.rotate('u')
-                print(ftbCube.get())
                 ftbCube.rotateCubeR()
     ftbCube.resetCubeOrientation()              
                 
