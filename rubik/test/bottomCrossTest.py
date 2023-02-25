@@ -27,10 +27,11 @@ class Test(unittest.TestCase):
     #         DEVELOPER TEST
     #         test 001: Flower stage
     #         FULL TEST
-    #         test 002: bottom cross
-    #         test 003: bottom cross
-    #         test 004: bottom cross
-    #         test 005: bottom cross
+    #         test 002: bottom cross nominal
+    #         test 003: bottom cross nominal
+    #         test 004: bottom cross nominal
+    #         test 005: bottom cross nominal
+    #         test 006: bottom cross solved
     
     # def test_bottomCrossTest_solveBottomCross_001_TopFlower(self):
     #     testCube = cube.Cube('114205020241014115213322235500133144004342453355054253')
@@ -46,7 +47,7 @@ class Test(unittest.TestCase):
     #     print(testCube.get())
     #     pass
     
-    def test_bottomCrossTest_solveBottomCross_002_BottomLayer(self):
+    def test_bottomCrossTest_solveBottomCross_002_BottomCross(self):
         testCube = cube.Cube('114205020241014115213322235500133144004342453355054253')
         bottomColor = testCube.get()[49]
         edgeList = {46, 48, 50, 52}
@@ -66,7 +67,7 @@ class Test(unittest.TestCase):
                 self.fail()
         print(testCube.get())
         pass
-    def test_bottomCrossTest_solveBottomCross_003_BottomLayer(self):
+    def test_bottomCrossTest_solveBottomCross_003_BottomCross(self):
         testCube = cube.Cube('h00xxxNhDXXxDXXhN0DhDx0XhD0xNxDhhX0XX0h0DNNDNxN0XNxDhN')
         bottomColor = testCube.get()[49]
         edgeList = {46, 48, 50, 52}
@@ -86,7 +87,7 @@ class Test(unittest.TestCase):
                 self.fail()
         print(testCube.get())
         pass
-    def test_bottomCrossTest_solveBottomCross_004_BottomLayer(self):
+    def test_bottomCrossTest_solveBottomCross_004_BottomCross(self):
         testCube = cube.Cube('CgZC11COZOO1ZOvOOOZgZOCvvZvCgv1gvggvgvgCZ1OZCgZ11vC1C1')
         bottomColor = testCube.get()[49]
         edgeList = {46, 48, 50, 52}
@@ -106,7 +107,7 @@ class Test(unittest.TestCase):
                 self.fail()
         print(testCube.get())
         pass
-    def test_bottomCrossTest_solveBottomCross_005_BottomLayer(self):
+    def test_bottomCrossTest_solveBottomCross_005_BottomCrossr(self):
         testCube = cube.Cube('5Vddx5xVd4d405405VVx0V0x54dV4VV404054dxxd5x0xd554Vx0d0')
         bottomColor = testCube.get()[49]
         edgeList = {46, 48, 50, 52}
@@ -126,7 +127,7 @@ class Test(unittest.TestCase):
                 self.fail()
         print(testCube.get())
         pass
-    def test_bottomCrossTest_solveBottomCross_006_BottomLayer(self):
+    def test_bottomCrossTest_solveBottomCross_006_BottomCross(self):
         testCube = cube.Cube('YnFnnY45F5YB4YnnB455545FB45FBnBBY4nYYY44FFFFBnFBB45Y5n')
         bottomColor = testCube.get()[49]
         edgeList = {46, 48, 50, 52}
@@ -146,7 +147,7 @@ class Test(unittest.TestCase):
                 self.fail()
         print(testCube.get())
         pass
-    def test_bottomCrossTest_solveBottomCross_007_BottomLayer(self):
+    def test_bottomCrossTest_solveBottomCross_007_BottomCross(self):
         testCube = cube.Cube('JjJ0jJMLhML0MJj00JMLhMLhMhh0Jh00MJJ0L0LjMMjhjjhjLhjLJL')
         bottomColor = testCube.get()[49]
         edgeList = {46, 48, 50, 52}
@@ -166,7 +167,7 @@ class Test(unittest.TestCase):
                 self.fail()
         print(testCube.get())
         pass
-    def test_bottomCrossTest_solveBottomCross_008_BottomLayer(self):
+    def test_bottomCrossTest_solveBottomCross_008_BottomCross(self):
         testCube = cube.Cube('TbZTuubATT6bA666bA6T6AbbbuAuZu6ZuZZTAZAbTTZAb6ZuuATu6Z')
         bottomColor = testCube.get()[49]
         edgeList = {46, 48, 50, 52}
