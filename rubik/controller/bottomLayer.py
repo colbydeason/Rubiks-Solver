@@ -16,21 +16,17 @@ def solveBottomLayer(theCube: Cube) -> str:
     return theCube.popCurrentRotationStringResetOrientation()     
 
 def _moveCornerOut(corneredCube):
-    print(corneredCube.get() + ',')
     for topCorners in range(8):
         if _checkRightCornerColor(corneredCube, 'top'):
-            print(corneredCube.get() + ',')
             corneredCube.rotateCubeR()
         else:
             for bottomCorners in range(4):
                 if _checkRightCornerColor(corneredCube, 'bottom'):
                     corneredCube.rotate('URur')
-                    print(corneredCube.get() + ',')
                     corneredCube.rotateCubeR()
                     break
                 else:
                     corneredCube.rotate('u')
-                    print(corneredCube.get() + ',')
                     corneredCube.rotateCubeR()
                     
     corneredCube.resetCubeOrientation()
