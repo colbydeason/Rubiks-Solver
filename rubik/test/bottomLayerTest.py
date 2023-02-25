@@ -35,9 +35,9 @@ class Test(unittest.TestCase):
     #         test 006: bottom layer solved
     
     def test_bottomLayerTest_solveBottomCross_001_CornerOut(self):
-        testCube = cube.Cube('220202332535115004202022011414433500411545341153454533')
+        testCube = cube.Cube('542305011404012521220121233453532541343344011400355205')
         solveBottomCross(testCube)
-        # solveBottomLayer(testCube)
+        solveBottomLayer(testCube)
         cornersCheckList = [[0, 42, 29], [2, 44, 9], [11, 18, 38], [36, 20, 27]]
         bottomColor = testCube.get()[49]
         for group in cornersCheckList:
