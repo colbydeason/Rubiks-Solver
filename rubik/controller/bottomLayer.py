@@ -17,7 +17,7 @@ def solveBottomLayer(theCube: Cube) -> str:
 
 def _moveCornerOut(corneredCube):
     print(corneredCube.get() + ',')
-    for topCorners in range(4):
+    for topCorners in range(8):
         if _checkRightCornerColor(corneredCube, 'top'):
             print(corneredCube.get() + ',')
             corneredCube.rotateCubeR()
