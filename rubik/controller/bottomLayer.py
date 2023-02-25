@@ -33,7 +33,20 @@ def _moveCornerOut(corneredCube):
                 
     
 def _bringCornerDown(bcdCube):
-    return ''
+    currCorner = [2, 44, 9]
+    for corner in range(4):
+        colorArray = _alignCorner(bcdCube)
+        if colorArray[0] == bcdCube.getBottomColor():
+            bcdCube.rotate('URur')
+        elif colorArray[1] == bcdCube.getBottomColor():
+            bcdCube.rotate('fuuFUfuF')
+        elif colorArray[2] == bcdCube.getBottomColor():
+            bcdCube.rotate('RUr')
+        else:
+            raise Exception('Corner is not a bottom face corner in _bringCornerDown')
+        if corner != 4:
+            while not _checkRightCornerColor(bcdCube, 'top'):
+                bcdCube.rotateCubeR()
     
 def _checkRightCornerColor(cCube, topOrBottom):
     cornerTop = [2, 44, 9]
@@ -57,4 +70,20 @@ def _checkRightCornerColor(cCube, topOrBottom):
                 return False    
         case other:
             raise Exception("must be top or bottom for _checkRightCornerColor")
-    
+
+def _alignCorner(alCube):
+    cornerArray = [2, 44, 9]
+    middle1 = 4
+    middle2 = 13
+    middle1Color = alCube.getRelativeSquare(middle1)
+    middle2Color = alCube.getRelativeSquare(middle2)
+    colorArray = []
+    for square in cornerArray:
+        colorArray.append(alCube.getRelativeSquare(square))
+    for tryMatch in range(4):
+        if (colorArray.includes(middle1Color)) and (colorArray.includes(middle2Color)):
+            return colorArray
+        else:
+            alCube.rotate('u')
+            alCube.rotateCubeR()
+    raise Exception('Corner not able to match centers in _alignCorner')
