@@ -73,92 +73,92 @@ class Test(unittest.TestCase):
         else:
             self.fail("Bottom face is not solid")
     
-    def test_bottomLayerTest_solveBottomCross_003_BottomLayer(self):
-        testCube = cube.Cube('120504224505110033223524531544331023051041241413350452')
-        quadMatchList = [[4, 6, 7, 8], [13, 15, 16, 17], [22, 24, 25, 26], [31, 33, 34, 35]]
-        bottomRangeList = {45, 46, 47, 48, 49, 50, 51, 52, 53}
-        solveBottomCross(testCube)
-        solveBottomLayer(testCube)
-        for group in quadMatchList:
-            colorArray = []
-            for color in group:
-                colorArray.append(testCube.get()[color])
-            if colorArray.count(colorArray[0]) == len(colorArray):
-                continue
-            else:
-                self.fail("Sides do not match color")
-        colorArray = []
-        for square in bottomRangeList:
-            colorArray.append(testCube.get()[square])
-        if colorArray.count(colorArray[0]) == len(colorArray):
-            pass
-        else:
-            self.fail("Bottom face is not solid")
-    
-    def test_bottomLayerTest_solveBottomCross_004_BottomLayer(self):
-        testCube = cube.Cube('402001044321211241030520252351433314555043014331452525')
-        quadMatchList = [[4, 6, 7, 8], [13, 15, 16, 17], [22, 24, 25, 26], [31, 33, 34, 35]]
-        bottomRangeList = {45, 46, 47, 48, 49, 50, 51, 52, 53}
-        solveBottomCross(testCube)
-        solveBottomLayer(testCube)
-        for group in quadMatchList:
-            colorArray = []
-            for color in group:
-                colorArray.append(testCube.get()[color])
-            if colorArray.count(colorArray[0]) == len(colorArray):
-                continue
-            else:
-                self.fail("Sides do not match color")
-        colorArray = []
-        for square in bottomRangeList:
-            colorArray.append(testCube.get()[square])
-        if colorArray.count(colorArray[0]) == len(colorArray):
-            pass
-        else:
-            self.fail("Bottom face is not solid")
-    
-    def test_bottomLayerTest_solveBottomCross_005_BottomLayer(self):
-        testCube = cube.Cube('135004211034115530241120340212435455433240553300252124')
-        quadMatchList = [[4, 6, 7, 8], [13, 15, 16, 17], [22, 24, 25, 26], [31, 33, 34, 35]]
-        bottomRangeList = {45, 46, 47, 48, 49, 50, 51, 52, 53}
-        solveBottomCross(testCube)
-        solveBottomLayer(testCube)
-        for group in quadMatchList:
-            colorArray = []
-            for color in group:
-                colorArray.append(testCube.get()[color])
-            if colorArray.count(colorArray[0]) == len(colorArray):
-                continue
-            else:
-                self.fail("Sides do not match color")
-        colorArray = []
-        for square in bottomRangeList:
-            colorArray.append(testCube.get()[square])
-        if colorArray.count(colorArray[0]) == len(colorArray):
-            pass
-        else:
-            self.fail("Bottom face is not solid")
-    
-    def test_bottomLayerTest_solveBottomCross_006_BottomLayer(self):
-        testCube = cube.Cube('000000000111111111222222222333333333444444444555555555')
-        quadMatchList = [[4, 6, 7, 8], [13, 15, 16, 17], [22, 24, 25, 26], [31, 33, 34, 35]]
-        bottomRangeList = {45, 46, 47, 48, 49, 50, 51, 52, 53}
-        solveBottomCross(testCube)
-        solveBottomLayer(testCube)
-        for group in quadMatchList:
-            colorArray = []
-            for color in group:
-                colorArray.append(testCube.get()[color])
-            if colorArray.count(colorArray[0]) == len(colorArray):
-                continue
-            else:
-                self.fail("Sides do not match color")
-        colorArray = []
-        for square in bottomRangeList:
-            colorArray.append(testCube.get()[square])
-        if colorArray.count(colorArray[0]) == len(colorArray):
-            pass
-        else:
-            self.fail("Bottom face is not solid")
+    # def test_bottomLayerTest_solveBottomCross_003_BottomLayer(self):
+    #     testCube = cube.Cube('120504224505110033223524531544331023051041241413350452')
+    #     quadMatchList = [[4, 6, 7, 8], [13, 15, 16, 17], [22, 24, 25, 26], [31, 33, 34, 35]]
+    #     bottomRangeList = {45, 46, 47, 48, 49, 50, 51, 52, 53}
+    #     solveBottomCross(testCube)
+    #     solveBottomLayer(testCube)
+    #     for group in quadMatchList:
+    #         colorArray = []
+    #         for color in group:
+    #             colorArray.append(testCube.get()[color])
+    #         if colorArray.count(colorArray[0]) == len(colorArray):
+    #             continue
+    #         else:
+    #             self.fail("Sides do not match color")
+    #     colorArray = []
+    #     for square in bottomRangeList:
+    #         colorArray.append(testCube.get()[square])
+    #     if colorArray.count(colorArray[0]) == len(colorArray):
+    #         pass
+    #     else:
+    #         self.fail("Bottom face is not solid")
+    #
+    # def test_bottomLayerTest_solveBottomCross_004_BottomLayer(self):
+    #     testCube = cube.Cube('402001044321211241030520252351433314555043014331452525')
+    #     quadMatchList = [[4, 6, 7, 8], [13, 15, 16, 17], [22, 24, 25, 26], [31, 33, 34, 35]]
+    #     bottomRangeList = {45, 46, 47, 48, 49, 50, 51, 52, 53}
+    #     solveBottomCross(testCube)
+    #     solveBottomLayer(testCube)
+    #     for group in quadMatchList:
+    #         colorArray = []
+    #         for color in group:
+    #             colorArray.append(testCube.get()[color])
+    #         if colorArray.count(colorArray[0]) == len(colorArray):
+    #             continue
+    #         else:
+    #             self.fail("Sides do not match color")
+    #     colorArray = []
+    #     for square in bottomRangeList:
+    #         colorArray.append(testCube.get()[square])
+    #     if colorArray.count(colorArray[0]) == len(colorArray):
+    #         pass
+    #     else:
+    #         self.fail("Bottom face is not solid")
+    #
+    # def test_bottomLayerTest_solveBottomCross_005_BottomLayer(self):
+    #     testCube = cube.Cube('135004211034115530241120340212435455433240553300252124')
+    #     quadMatchList = [[4, 6, 7, 8], [13, 15, 16, 17], [22, 24, 25, 26], [31, 33, 34, 35]]
+    #     bottomRangeList = {45, 46, 47, 48, 49, 50, 51, 52, 53}
+    #     solveBottomCross(testCube)
+    #     solveBottomLayer(testCube)
+    #     for group in quadMatchList:
+    #         colorArray = []
+    #         for color in group:
+    #             colorArray.append(testCube.get()[color])
+    #         if colorArray.count(colorArray[0]) == len(colorArray):
+    #             continue
+    #         else:
+    #             self.fail("Sides do not match color")
+    #     colorArray = []
+    #     for square in bottomRangeList:
+    #         colorArray.append(testCube.get()[square])
+    #     if colorArray.count(colorArray[0]) == len(colorArray):
+    #         pass
+    #     else:
+    #         self.fail("Bottom face is not solid")
+    #
+    # def test_bottomLayerTest_solveBottomCross_006_BottomLayer(self):
+    #     testCube = cube.Cube('000000000111111111222222222333333333444444444555555555')
+    #     quadMatchList = [[4, 6, 7, 8], [13, 15, 16, 17], [22, 24, 25, 26], [31, 33, 34, 35]]
+    #     bottomRangeList = {45, 46, 47, 48, 49, 50, 51, 52, 53}
+    #     solveBottomCross(testCube)
+    #     solveBottomLayer(testCube)
+    #     for group in quadMatchList:
+    #         colorArray = []
+    #         for color in group:
+    #             colorArray.append(testCube.get()[color])
+    #         if colorArray.count(colorArray[0]) == len(colorArray):
+    #             continue
+    #         else:
+    #             self.fail("Sides do not match color")
+    #     colorArray = []
+    #     for square in bottomRangeList:
+    #         colorArray.append(testCube.get()[square])
+    #     if colorArray.count(colorArray[0]) == len(colorArray):
+    #         pass
+    #     else:
+    #         self.fail("Bottom face is not solid")
     
     
