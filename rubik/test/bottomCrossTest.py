@@ -187,3 +187,23 @@ class Test(unittest.TestCase):
                 self.fail()
         print(testCube.get())
         pass
+    def test_bottomCrossTest_solveBottomCross_009_BottomCross(self):
+        testCube = cube.Cube('220202332535115004202022011414433500411545341153454533')
+        bottomColor = testCube.get()[49]
+        edgeList = {46, 48, 50, 52}
+        pairEdgeList = [[4, 7], [13, 16], [22, 25], [31, 34]]
+        solveBottomCross(testCube)
+        for edge in edgeList:
+            if testCube.get()[edge] == bottomColor:
+                continue
+            else:
+                print(testCube.get())
+                self.fail()
+        for pair in pairEdgeList:
+            if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
+                continue
+            else:
+                print(testCube.get())
+                self.fail()
+        print(testCube.get())
+        pass
