@@ -23,10 +23,12 @@ def _moveCornerOut(corneredCube):
             for bottomCorners in range(4):
                 if _checkRightCornerColor(corneredCube, 'bottom'):
                     corneredCube.rotate('URur')
+                    print(corneredCube.get() + ',')
                     corneredCube.rotateCubeR()
                     break
                 else:
                     corneredCube.rotate('u')
+                    print(corneredCube.get() + ',')
                     corneredCube.rotateCubeR()
                     
     corneredCube.resetCubeOrientation()
