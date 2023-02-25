@@ -67,7 +67,7 @@ class Test(unittest.TestCase):
         for square in bottomRangeList:
             colorArray.append(testCube.get()[square])
         if colorArray.count(colorArray[0]) == len(colorArray):
-            continue
+            pass
         else:
             self.fail("Bottom face is not solid")
     
@@ -87,7 +87,7 @@ class Test(unittest.TestCase):
         for square in bottomRangeList:
             colorArray.append(testCube.get()[square])
         if colorArray.count(colorArray[0]) == len(colorArray):
-            continue
+            pass
         else:
             self.fail("Bottom face is not solid")
     
@@ -107,7 +107,7 @@ class Test(unittest.TestCase):
         for square in bottomRangeList:
             colorArray.append(testCube.get()[square])
         if colorArray.count(colorArray[0]) == len(colorArray):
-            continue
+            pass
         else:
             self.fail("Bottom face is not solid")
     
@@ -127,7 +127,7 @@ class Test(unittest.TestCase):
         for square in bottomRangeList:
             colorArray.append(testCube.get()[square])
         if colorArray.count(colorArray[0]) == len(colorArray):
-            continue
+            pass
         else:
             self.fail("Bottom face is not solid")
     
@@ -147,7 +147,7 @@ class Test(unittest.TestCase):
         for square in bottomRangeList:
             colorArray.append(testCube.get()[square])
         if colorArray.count(colorArray[0]) == len(colorArray):
-            continue
+            pass
         else:
             self.fail("Bottom face is not solid")
     
