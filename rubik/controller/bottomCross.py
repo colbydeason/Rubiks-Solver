@@ -18,7 +18,7 @@ def solveBottomCross(theCube: Cube) -> str:
 def _solveFlower(flowerCube):
     edgeList = [1, 3, 5, 7, 46]
     bottomColor = flowerCube.get()[49]
-    for i in range(4):
+    for i in range(5):
         topEdge = flowerCube.getRelativeSquare(43)
         if topEdge == bottomColor:
             flowerCube.rotateCubeR()
