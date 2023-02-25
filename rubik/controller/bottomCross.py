@@ -46,7 +46,6 @@ def _solveFlower(flowerCube):
                     flowerCube.rotateCubeR()
                     break
                 flowerCube.rotate('u')
-                print(flowerCube.get() + ',')
                 flowerCube.rotateCubeR()
     
     flowerCube.resetCubeOrientation()
