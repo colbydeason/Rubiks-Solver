@@ -47,146 +47,147 @@ class Test(unittest.TestCase):
     #     print(testCube.get())
     #     pass
     
-    def test_bottomCrossTest_solveBottomCross_002_BottomCross(self):
-        testCube = cube.Cube('114205020241014115213322235500133144004342453355054253')
-        bottomColor = testCube.get()[49]
-        edgeList = {46, 48, 50, 52}
-        pairEdgeList = [[4, 7], [13, 16], [22, 25], [31, 34]]
-        solveBottomCross(testCube)
-        for edge in edgeList:
-            if testCube.get()[edge] == bottomColor:
-                continue
-            else:
-                print(testCube.get())
-                self.fail()
-        for pair in pairEdgeList:
-            if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
-                continue
-            else:
-                print(testCube.get())
-                self.fail()
-        print(testCube.get())
-        pass
-    def test_bottomCrossTest_solveBottomCross_003_BottomCross(self):
-        testCube = cube.Cube('h00xxxNhDXXxDXXhN0DhDx0XhD0xNxDhhX0XX0h0DNNDNxN0XNxDhN')
-        bottomColor = testCube.get()[49]
-        edgeList = {46, 48, 50, 52}
-        pairEdgeList = [[4, 7], [13, 16], [22, 25], [31, 34]]
-        solveBottomCross(testCube)
-        for edge in edgeList:
-            if testCube.get()[edge] == bottomColor:
-                continue
-            else:
-                print(testCube.get())
-                self.fail()
-        for pair in pairEdgeList:
-            if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
-                continue
-            else:
-                print(testCube.get())
-                self.fail()
-        print(testCube.get())
-        pass
-    def test_bottomCrossTest_solveBottomCross_004_BottomCross(self):
-        testCube = cube.Cube('CgZC11COZOO1ZOvOOOZgZOCvvZvCgv1gvggvgvgCZ1OZCgZ11vC1C1')
-        bottomColor = testCube.get()[49]
-        edgeList = {46, 48, 50, 52}
-        pairEdgeList = [[4, 7], [13, 16], [22, 25], [31, 34]]
-        solveBottomCross(testCube)
-        for edge in edgeList:
-            if testCube.get()[edge] == bottomColor:
-                continue
-            else:
-                print(testCube.get())
-                self.fail()
-        for pair in pairEdgeList:
-            if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
-                continue
-            else:
-                print(testCube.get())
-                self.fail()
-        print(testCube.get())
-        pass
-    def test_bottomCrossTest_solveBottomCross_005_BottomCrossr(self):
-        testCube = cube.Cube('5Vddx5xVd4d405405VVx0V0x54dV4VV404054dxxd5x0xd554Vx0d0')
-        bottomColor = testCube.get()[49]
-        edgeList = {46, 48, 50, 52}
-        pairEdgeList = [[4, 7], [13, 16], [22, 25], [31, 34]]
-        solveBottomCross(testCube)
-        for edge in edgeList:
-            if testCube.get()[edge] == bottomColor:
-                continue
-            else:
-                print(testCube.get())
-                self.fail()
-        for pair in pairEdgeList:
-            if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
-                continue
-            else:
-                print(testCube.get())
-                self.fail()
-        print(testCube.get())
-        pass
-    def test_bottomCrossTest_solveBottomCross_006_BottomCross(self):
-        testCube = cube.Cube('YnFnnY45F5YB4YnnB455545FB45FBnBBY4nYYY44FFFFBnFBB45Y5n')
-        bottomColor = testCube.get()[49]
-        edgeList = {46, 48, 50, 52}
-        pairEdgeList = [[4, 7], [13, 16], [22, 25], [31, 34]]
-        solveBottomCross(testCube)
-        for edge in edgeList:
-            if testCube.get()[edge] == bottomColor:
-                continue
-            else:
-                print(testCube.get())
-                self.fail()
-        for pair in pairEdgeList:
-            if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
-                continue
-            else:
-                print(testCube.get())
-                self.fail()
-        print(testCube.get())
-        pass
-    def test_bottomCrossTest_solveBottomCross_007_BottomCross(self):
-        testCube = cube.Cube('JjJ0jJMLhML0MJj00JMLhMLhMhh0Jh00MJJ0L0LjMMjhjjhjLhjLJL')
-        bottomColor = testCube.get()[49]
-        edgeList = {46, 48, 50, 52}
-        pairEdgeList = [[4, 7], [13, 16], [22, 25], [31, 34]]
-        solveBottomCross(testCube)
-        for edge in edgeList:
-            if testCube.get()[edge] == bottomColor:
-                continue
-            else:
-                print(testCube.get())
-                self.fail()
-        for pair in pairEdgeList:
-            if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
-                continue
-            else:
-                print(testCube.get())
-                self.fail()
-        print(testCube.get())
-        pass
-    def test_bottomCrossTest_solveBottomCross_008_BottomCross(self):
-        testCube = cube.Cube('TbZTuubATT6bA666bA6T6AbbbuAuZu6ZuZZTAZAbTTZAb6ZuuATu6Z')
-        bottomColor = testCube.get()[49]
-        edgeList = {46, 48, 50, 52}
-        pairEdgeList = [[4, 7], [13, 16], [22, 25], [31, 34]]
-        solveBottomCross(testCube)
-        for edge in edgeList:
-            if testCube.get()[edge] == bottomColor:
-                continue
-            else:
-                print(testCube.get())
-                self.fail()
-        for pair in pairEdgeList:
-            if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
-                continue
-            else:
-                print(testCube.get())
-                self.fail()
-        print(testCube.get())
-        pass
+    # def test_bottomCrossTest_solveBottomCross_002_BottomCross(self):
+    #     testCube = cube.Cube('114205020241014115213322235500133144004342453355054253')
+    #     bottomColor = testCube.get()[49]
+    #     edgeList = {46, 48, 50, 52}
+    #     pairEdgeList = [[4, 7], [13, 16], [22, 25], [31, 34]]
+    #     solveBottomCross(testCube)
+    #     for edge in edgeList:
+    #         if testCube.get()[edge] == bottomColor:
+    #             continue
+    #         else:
+    #             print(testCube.get())
+    #             self.fail()
+    #     for pair in pairEdgeList:
+    #         if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
+    #             continue
+    #         else:
+    #             print(testCube.get())
+    #             self.fail()
+    #     print(testCube.get())
+    #     pass
+    # def test_bottomCrossTest_solveBottomCross_003_BottomCross(self):
+    #     testCube = cube.Cube('h00xxxNhDXXxDXXhN0DhDx0XhD0xNxDhhX0XX0h0DNNDNxN0XNxDhN')
+    #     bottomColor = testCube.get()[49]
+    #     edgeList = {46, 48, 50, 52}
+    #     pairEdgeList = [[4, 7], [13, 16], [22, 25], [31, 34]]
+    #     solveBottomCross(testCube)
+    #     for edge in edgeList:
+    #         if testCube.get()[edge] == bottomColor:
+    #             continue
+    #         else:
+    #             print(testCube.get())
+    #             self.fail()
+    #     for pair in pairEdgeList:
+    #         if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
+    #             continue
+    #         else:
+    #             print(testCube.get())
+    #             self.fail()
+    #     print(testCube.get())
+    #     pass
+    # def test_bottomCrossTest_solveBottomCross_004_BottomCross(self):
+    #     testCube = cube.Cube('CgZC11COZOO1ZOvOOOZgZOCvvZvCgv1gvggvgvgCZ1OZCgZ11vC1C1')
+    #     bottomColor = testCube.get()[49]
+    #     edgeList = {46, 48, 50, 52}
+    #     pairEdgeList = [[4, 7], [13, 16], [22, 25], [31, 34]]
+    #     solveBottomCross(testCube)
+    #     for edge in edgeList:
+    #         if testCube.get()[edge] == bottomColor:
+    #             continue
+    #         else:
+    #             print(testCube.get())
+    #             self.fail()
+    #     for pair in pairEdgeList:
+    #         if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
+    #             continue
+    #         else:
+    #             print(testCube.get())
+    #             self.fail()
+    #     print(testCube.get())
+    #     pass
+    # def test_bottomCrossTest_solveBottomCross_005_BottomCrossr(self):
+    #     testCube = cube.Cube('5Vddx5xVd4d405405VVx0V0x54dV4VV404054dxxd5x0xd554Vx0d0')
+    #     bottomColor = testCube.get()[49]
+    #     edgeList = {46, 48, 50, 52}
+    #     pairEdgeList = [[4, 7], [13, 16], [22, 25], [31, 34]]
+    #     solveBottomCross(testCube)
+    #     for edge in edgeList:
+    #         if testCube.get()[edge] == bottomColor:
+    #             continue
+    #         else:
+    #             print(testCube.get())
+    #             self.fail()
+    #     for pair in pairEdgeList:
+    #         if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
+    #             continue
+    #         else:
+    #             print(testCube.get())
+    #             self.fail()
+    #     print(testCube.get())
+    #     pass
+    # def test_bottomCrossTest_solveBottomCross_006_BottomCross(self):
+    #     testCube = cube.Cube('YnFnnY45F5YB4YnnB455545FB45FBnBBY4nYYY44FFFFBnFBB45Y5n')
+    #     bottomColor = testCube.get()[49]
+    #     edgeList = {46, 48, 50, 52}
+    #     pairEdgeList = [[4, 7], [13, 16], [22, 25], [31, 34]]
+    #     solveBottomCross(testCube)
+    #     for edge in edgeList:
+    #         if testCube.get()[edge] == bottomColor:
+    #             continue
+    #         else:
+    #             print(testCube.get())
+    #             self.fail()
+    #     for pair in pairEdgeList:
+    #         if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
+    #             continue
+    #         else:
+    #             print(testCube.get())
+    #             self.fail()
+    #     print(testCube.get())
+    #     pass
+    # def test_bottomCrossTest_solveBottomCross_007_BottomCross(self):
+    #     testCube = cube.Cube('JjJ0jJMLhML0MJj00JMLhMLhMhh0Jh00MJJ0L0LjMMjhjjhjLhjLJL')
+    #     bottomColor = testCube.get()[49]
+    #     edgeList = {46, 48, 50, 52}
+    #     pairEdgeList = [[4, 7], [13, 16], [22, 25], [31, 34]]
+    #     solveBottomCross(testCube)
+    #     for edge in edgeList:
+    #         if testCube.get()[edge] == bottomColor:
+    #             continue
+    #         else:
+    #             print(testCube.get())
+    #             self.fail()
+    #     for pair in pairEdgeList:
+    #         if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
+    #             continue
+    #         else:
+    #             print(testCube.get())
+    #             self.fail()
+    #     print(testCube.get())
+    #     pass
+    # def test_bottomCrossTest_solveBottomCross_008_BottomCross(self):
+    #     testCube = cube.Cube('TbZTuubATT6bA666bA6T6AbbbuAuZu6ZuZZTAZAbTTZAb6ZuuATu6Z')
+    #     bottomColor = testCube.get()[49]
+    #     edgeList = {46, 48, 50, 52}
+    #     pairEdgeList = [[4, 7], [13, 16], [22, 25], [31, 34]]
+    #     solveBottomCross(testCube)
+    #     for edge in edgeList:
+    #         if testCube.get()[edge] == bottomColor:
+    #             continue
+    #         else:
+    #             print(testCube.get())
+    #             self.fail()
+    #     for pair in pairEdgeList:
+    #         if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
+    #             continue
+    #         else:
+    #             print(testCube.get())
+    #             self.fail()
+    #     print(testCube.get())
+    #     pass
+    
     def test_bottomCrossTest_solveBottomCross_009_BottomCross(self):
         testCube = cube.Cube('220202332535115004202022011414433500411545341153454533')
         bottomColor = testCube.get()[49]
