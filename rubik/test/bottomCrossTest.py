@@ -189,7 +189,7 @@ class Test(unittest.TestCase):
     #     pass
     
     def test_bottomCrossTest_solveBottomCross_009_BottomCross(self):
-        testCube = cube.Cube('220202332535115004202022011414433500411545341153454533')
+        testCube = cube.Cube('542305011404012521220121233453532541343344011400355205')
         bottomColor = testCube.get()[49]
         edgeList = {46, 48, 50, 52}
         pairEdgeList = [[4, 7], [13, 16], [22, 25], [31, 34]]
