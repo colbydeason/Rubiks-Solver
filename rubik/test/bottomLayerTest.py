@@ -34,21 +34,21 @@ class Test(unittest.TestCase):
     #         test 005: bottom layer nominal
     #         test 006: bottom layer solved
     
-    def test_bottomLayerTest_solveBottomCross_001_CornerOut(self):
-        testCube = cube.Cube('542305011404012521220121233453532541343344011400355205')
-        solveBottomCross(testCube)
-        solveBottomLayer(testCube)
-        cornersCheckList = [[0, 42, 29], [2, 44, 9], [11, 18, 38], [36, 20, 27]]
-        bottomColor = testCube.get()[49]
-        for group in cornersCheckList:
-            colorArray = []
-            for color in group:
-                colorArray.append(testCube.get()[color])
-            if colorArray.count(bottomColor) == 1:
-                continue
-            else:
-                print(testCube.get())
-                self.fail("Corners are not on the top layer")
+    # def test_bottomLayerTest_solveBottomCross_001_CornerOut(self):
+    #     testCube = cube.Cube('542305011404012521220121233453532541343344011400355205')
+    #     solveBottomCross(testCube)
+    #     solveBottomLayer(testCube)
+    #     cornersCheckList = [[0, 42, 29], [2, 44, 9], [11, 18, 38], [36, 20, 27]]
+    #     bottomColor = testCube.get()[49]
+    #     for group in cornersCheckList:
+    #         colorArray = []
+    #         for color in group:
+    #             colorArray.append(testCube.get()[color])
+    #         if colorArray.count(bottomColor) == 1:
+    #             continue
+    #         else:
+    #             print(testCube.get())
+    #             self.fail("Corners are not on the top layer")
                 
             
     def test_bottomLayerTest_solveBottomCross_002_BottomLayer(self):

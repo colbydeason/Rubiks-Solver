@@ -77,12 +77,12 @@ def _alignCorner(alCube):
     middle2 = 13
     middle1Color = alCube.getRelativeSquare(middle1)
     middle2Color = alCube.getRelativeSquare(middle2)
-    colorArray = []
+    colorList = []
     for square in cornerArray:
-        colorArray.append(alCube.getRelativeSquare(square))
+        colorList.append(alCube.getRelativeSquare(square))
     for tryMatch in range(4):
-        if (colorArray.includes(middle1Color)) and (colorArray.includes(middle2Color)):
-            return colorArray
+        if (middle1Color in colorList) and (middle2Color in colorList):
+            return colorList
         else:
             alCube.rotate('u')
             alCube.rotateCubeR()
