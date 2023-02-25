@@ -33,18 +33,17 @@ def _moveCornerOut(corneredCube):
                 
     
 def _bringCornerDown(bcdCube):
-    currCorner = [2, 44, 9]
     for corner in range(4):
-        colorArray = _alignCorner(bcdCube)
-        if colorArray[0] == bcdCube.getBottomColor():
+        colorList = _alignCorner(bcdCube)
+        if colorList[0] == bcdCube.getBottomColor():
             bcdCube.rotate('URur')
-        elif colorArray[1] == bcdCube.getBottomColor():
+        elif colorList[1] == bcdCube.getBottomColor():
             bcdCube.rotate('fuuFUfuF')
-        elif colorArray[2] == bcdCube.getBottomColor():
+        elif colorList[2] == bcdCube.getBottomColor():
             bcdCube.rotate('RUr')
         else:
             raise Exception('Corner is not a bottom face corner in _bringCornerDown')
-        if corner != 4:
+        if corner != 3:
             while not _checkRightCornerColor(bcdCube, 'top'):
                 bcdCube.rotateCubeR()
     
