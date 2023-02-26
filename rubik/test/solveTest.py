@@ -68,25 +68,24 @@ class SolveTest(TestCase):
         rotateDic = rotate(parmsRotate)
         testCube = rotateDic['cube']
         
-        bottomColor = testCube[49]
         quadMatchList = [[4, 6, 7, 8], [13, 15, 16, 17], [22, 24, 25, 26], [31, 33, 34, 35]]
         bottomRangeList = {45, 46, 47, 48, 49, 50, 51, 52, 53}
         for group in quadMatchList:
             colorArray = []
             for color in group:
-                colorArray.append(testCube.get()[color])
+                colorArray.append(testCube[color])
             if colorArray.count(colorArray[0]) == len(colorArray):
                 continue
             else:
                 self.fail("Sides do not match color")
         colorArray = []
         for square in bottomRangeList:
-            colorArray.append(testCube.get()[square])
+            colorArray.append(testCube[square])
         if colorArray.count(colorArray[0]) == len(colorArray):
             pass
         else:
             self.fail("Bottom face is not solid")
-            
+                
     def test_solveTest_solve_901_MissingCube(self):
         parmsTest = {}
         parmsTest['cube'] = None
