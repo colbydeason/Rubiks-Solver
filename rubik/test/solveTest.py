@@ -40,7 +40,8 @@ class SolveTest(TestCase):
         parmsRotate['dir'] = solveString
         rotateDic = rotate(parmsRotate)
         testCube = rotateDic['cube']
-        print(testCube)
+        print(testCube + ',')
+        
         bottomColor = testCube[49]
         edgeList = {46, 48, 50, 52}
         pairEdgeList = [[4, 7], [13, 16], [22, 25], [31, 34]]
@@ -67,7 +68,8 @@ class SolveTest(TestCase):
         parmsRotate['dir'] = solveString
         rotateDic = rotate(parmsRotate)
         testCube = rotateDic['cube']
-        print(testCube)
+        print(testCube + ',')
+        
         quadMatchList = [[4, 6, 7, 8], [13, 15, 16, 17], [22, 24, 25, 26], [31, 33, 34, 35]]
         bottomRangeList = {45, 46, 47, 48, 49, 50, 51, 52, 53}
         for group in quadMatchList:
