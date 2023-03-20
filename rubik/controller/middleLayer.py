@@ -25,6 +25,7 @@ def _edgeOut(edgeCube):
             for j in range(4):
                 if edgeCube.checkForColor([28, 39], topColor):
                     edgeCube.rotate('RUrufuF')
+                    edgeCube.rotateCubeR()
                     break
                 else:
                     edgeCube.rotate('U')
