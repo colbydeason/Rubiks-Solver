@@ -285,21 +285,16 @@ class Cube:
                             adjSquare = self._cube[DTR]
         return adjSquare
 
-    def checkForColor(self, checkArray, checkColor, notIn = False):
+    def checkForColor(self, checkArray, checkColorNum, notIn = False):
         colors = []
+        checkColor = self.getRelativeSquare(checkColorNum)
         for square in checkArray:
             colors.append(self.getRelativeSquare(square))
         if notIn == False:
             if checkColor in colors:
                 True
-                print(colors)
-                print(checkColor)
-                print('True')
             else:
                 False
-                print(colors)
-                print(checkColor)
-                print('False')
         if notIn == True:
             if checkColor not in colors:
                 True 
