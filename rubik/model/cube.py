@@ -289,6 +289,7 @@ class Cube:
         colors = []
         for square in checkArray:
             colors.append(self.getRelativeSquare(square))
+        print (colors)
         if notIn == False:
             if checkColor in colors:
                 True 
