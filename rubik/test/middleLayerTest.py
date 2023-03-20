@@ -46,7 +46,7 @@ class Test(unittest.TestCase):
             edgeColors = []
             for color in edge:
                 edgeColors.append(testCube.get()[color])
-            if topColor in edgeColors:
+            if topColor not in edgeColors:
                 continue
             else:
                 self.fail('Edges not correct for edgeOut')
