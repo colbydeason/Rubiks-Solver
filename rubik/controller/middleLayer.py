@@ -16,7 +16,7 @@ def solveMiddleLayer(theCube: Cube) -> str:
     return theCube.popCurrentRotationStringResetOrientation()
     
 def _edgeOut(edgeCube):
-    topColor = [40]
+    topColor = 40
     for i in range(4):
         if edgeCube.checkForColor([5, 12], topColor):
             edgeCube.rotateCubeR()
