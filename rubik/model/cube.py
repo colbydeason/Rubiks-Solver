@@ -292,14 +292,14 @@ class Cube:
             colors.append(self.getRelativeSquare(square))
         if notIn == False:
             if checkColor in colors:
-                True
+                return True
             else:
-                False
+                return False
         if notIn == True:
             if checkColor not in colors:
-                True 
+                return True 
             else:
-                False
+                return False
             
 
     def _isValidCube(self):
