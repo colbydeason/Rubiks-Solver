@@ -287,8 +287,8 @@ class Cube:
 
     def checkForColor(self, checkArray, checkColor, notIn = False):
         colors = []
-        for currColor in checkArray:
-            colors.append(self.getRelativeSquare(currColor))
+        for square in checkArray:
+            colors.append(self.getRelativeSquare(square))
         if notIn == False:
             if checkColor in colors:
                 True 

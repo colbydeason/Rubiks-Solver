@@ -28,6 +28,7 @@ def _edgeOut(edgeCube):
                     break
                 else:
                     edgeCube.rotate('U')
+            print("not finding edge in j loop")
             
 def _bringDown(solveCube):
     return ''
