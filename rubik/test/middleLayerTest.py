@@ -27,16 +27,53 @@ class Test(unittest.TestCase):
     #
     #     happy path:
     #     DEVELOPER TEST
-    #     test 001: edgeOut
+    #     test 001: edgeOut Nominal
+    #     test 002: edgeOut Nominal
+    #     test 003: edgeOut Solved
     #     FULL TEST
-    #     test 002: bottom layer nominal
-    #     test 003: bottom layer nominal
     #     test 004: bottom layer nominal
     #     test 005: bottom layer nominal
-    #     test 006: bottom layer solved
+    #     test 006: bottom layer nominal
+    #     test 007: bottom layer nominal
+    #     test 008: bottom layer solved
     
-    def test_middleLayerTest_solveMiddleLayer_001_EdgeOut(self):
+    def test_middleLayerTest_solveMiddleLayer_001_EdgeOutNominal(self):
         testCube = cube.Cube('542305011404012521220121233453532541343344011400355205')
+        edgeList = [[1, 43], [10, 41], [19, 37], [28, 39]]
+        topColor = testCube.get()[40]
+        solveBottomCross(testCube)
+        solveBottomLayer(testCube)
+        solveMiddleLayer(testCube)
+        for edge in edgeList:
+            edgeColors = []
+            for color in edge:
+                edgeColors.append(testCube.get()[color])
+            if topColor not in edgeColors:
+                continue
+            else:
+                self.fail('Edges not correct for edgeOut')
+        pass
+    
+    def test_middleLayerTest_solveMiddleLayer_002_EdgeOutNominal(self):
+        testCube = cube.Cube('552002044332412251125522055303331014215440034331450114')
+        edgeList = [[1, 43], [10, 41], [19, 37], [28, 39]]
+        topColor = testCube.get()[40]
+        solveBottomCross(testCube)
+        solveBottomLayer(testCube)
+        solveMiddleLayer(testCube)
+        for edge in edgeList:
+            edgeColors = []
+            for color in edge:
+                edgeColors.append(testCube.get()[color])
+            if topColor not in edgeColors:
+                continue
+            else:
+                self.fail('Edges not correct for edgeOut')
+        pass
+    
+    
+    def test_middleLayerTest_solveMiddleLayer_003_EdgeOutNominal(self):
+        testCube = cube.Cube('000000000111111111222222222333333333444444444555555555')
         edgeList = [[1, 43], [10, 41], [19, 37], [28, 39]]
         topColor = testCube.get()[40]
         solveBottomCross(testCube)
