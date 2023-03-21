@@ -34,8 +34,9 @@ def _bringDown(solveCube):
     topColor = 40
     for i in range(4):
         continue
+    return ''
         
     
 def _alignEdge(alignCube):
-    
+    return ''
             
