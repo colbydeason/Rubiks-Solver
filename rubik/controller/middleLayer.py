@@ -39,7 +39,7 @@ def _bringDown(solveCube):
         matchSide = _alignTopEdge(solveCube)
         match matchSide:
             case 'L':
-                solveCube.rotate('urURUFuf')
+                solveCube.rotate('ulULUFuf')
             case 'R':
                 solveCube.rotate('URurufUF')
             
