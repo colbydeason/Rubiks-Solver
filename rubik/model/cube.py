@@ -124,7 +124,7 @@ class Cube:
                 case _:
                     self._cube = 'error: invalid direction'
                     return self._cube
-                print(self._cube + ',')
+            print(self._cube + ',')
         
         self._cube = "".join(self._cubeList)
         return self._cube
