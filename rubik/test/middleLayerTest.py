@@ -105,69 +105,69 @@ class Test(unittest.TestCase):
                 self.fail("Bottom and Middle layer not solved.")
         pass
     
-    # def test_middleLayerTest_solveMiddleLater_005_solveMiddleLayerNom(self):
-    #     testCube = cube.Cube('120504224505110033223524531544331023051041241413350452')
-    #     matchArray = [[45, 46, 47, 48, 49, 50, 51, 52, 53], [3, 4, 5, 6, 7, 8], [12, 13, 14, 15, 16, 17], [21, 22, 23, 24, 25, 26], [30, 31, 32, 33, 34, 35]]
-    #     solveBottomCross(testCube)
-    #     solveBottomLayer(testCube)
-    #     solveMiddleLayer(testCube)
-    #     for side in matchArray:
-    #         sideColorArray = []
-    #         for square in side:
-    #             sideColorArray.append(testCube.get()[square])
-    #         if sideColorArray.count(sideColorArray[0]) == len(sideColorArray):
-    #             continue
-    #         else:
-    #             self.fail("Bottom and Middle layer not solved.")
-    #     pass
-    #
-    # def test_middleLayerTest_solveMiddleLater_006_solveMiddleLayerNom(self):
-    #     testCube = cube.Cube('402001044321211241030520252351433314555043014331452525')
-    #     matchArray = [[45, 46, 47, 48, 49, 50, 51, 52, 53], [3, 4, 5, 6, 7, 8], [12, 13, 14, 15, 16, 17], [21, 22, 23, 24, 25, 26], [30, 31, 32, 33, 34, 35]]
-    #     solveBottomCross(testCube)
-    #     solveBottomLayer(testCube)
-    #     solveMiddleLayer(testCube)
-    #     for side in matchArray:
-    #         sideColorArray = []
-    #         for square in side:
-    #             sideColorArray.append(testCube.get()[square])
-    #         if sideColorArray.count(sideColorArray[0]) == len(sideColorArray):
-    #             continue
-    #         else:
-    #             self.fail("Bottom and Middle layer not solved.")
-    #     pass
-    #
-    # def test_middleLayerTest_solveMiddleLater_007_solveMiddleLayerNom(self):
-    #     testCube = cube.Cube('135004211034115530241120340212435455433240553300252124')
-    #     matchArray = [[45, 46, 47, 48, 49, 50, 51, 52, 53], [3, 4, 5, 6, 7, 8], [12, 13, 14, 15, 16, 17], [21, 22, 23, 24, 25, 26], [30, 31, 32, 33, 34, 35]]
-    #     solveBottomCross(testCube)
-    #     solveBottomLayer(testCube)
-    #     solveMiddleLayer(testCube)
-    #     for side in matchArray:
-    #         sideColorArray = []
-    #         for square in side:
-    #             sideColorArray.append(testCube.get()[square])
-    #         if sideColorArray.count(sideColorArray[0]) == len(sideColorArray):
-    #             continue
-    #         else:
-    #             self.fail("Bottom and Middle layer not solved.")
-    #     pass
-    #
-    # def test_middleLayerTest_solveMiddleLater_008_solveMiddleLayerSol(self):
-    #     testCube = cube.Cube('000000000111111111222222222333333333444444444555555555')
-    #     matchArray = [[45, 46, 47, 48, 49, 50, 51, 52, 53], [3, 4, 5, 6, 7, 8], [12, 13, 14, 15, 16, 17], [21, 22, 23, 24, 25, 26], [30, 31, 32, 33, 34, 35]]
-    #     solveBottomCross(testCube)
-    #     solveBottomLayer(testCube)
-    #     solveMiddleLayer(testCube)
-    #     for side in matchArray:
-    #         sideColorArray = []
-    #         for square in side:
-    #             sideColorArray.append(testCube.get()[square])
-    #         if sideColorArray.count(sideColorArray[0]) == len(sideColorArray):
-    #             continue
-    #         else:
-    #             self.fail("Bottom and Middle layer not solved.")
-    #     pass
-    #
+    def test_middleLayerTest_solveMiddleLater_005_solveMiddleLayerNom(self):
+        testCube = cube.Cube('120504224505110033223524531544331023051041241413350452')
+        matchArray = [[45, 46, 47, 48, 49, 50, 51, 52, 53], [3, 4, 5, 6, 7, 8], [12, 13, 14, 15, 16, 17], [21, 22, 23, 24, 25, 26], [30, 31, 32, 33, 34, 35]]
+        solveBottomCross(testCube)
+        solveBottomLayer(testCube)
+        solveMiddleLayer(testCube)
+        for side in matchArray:
+            sideColorArray = []
+            for square in side:
+                sideColorArray.append(testCube.get()[square])
+            if sideColorArray.count(sideColorArray[0]) == len(sideColorArray):
+                continue
+            else:
+                self.fail("Bottom and Middle layer not solved.")
+        pass
+    
+    def test_middleLayerTest_solveMiddleLater_006_solveMiddleLayerNom(self):
+        testCube = cube.Cube('402001044321211241030520252351433314555043014331452525')
+        matchArray = [[45, 46, 47, 48, 49, 50, 51, 52, 53], [3, 4, 5, 6, 7, 8], [12, 13, 14, 15, 16, 17], [21, 22, 23, 24, 25, 26], [30, 31, 32, 33, 34, 35]]
+        solveBottomCross(testCube)
+        solveBottomLayer(testCube)
+        solveMiddleLayer(testCube)
+        for side in matchArray:
+            sideColorArray = []
+            for square in side:
+                sideColorArray.append(testCube.get()[square])
+            if sideColorArray.count(sideColorArray[0]) == len(sideColorArray):
+                continue
+            else:
+                self.fail("Bottom and Middle layer not solved.")
+        pass
+    
+    def test_middleLayerTest_solveMiddleLater_007_solveMiddleLayerNom(self):
+        testCube = cube.Cube('135004211034115530241120340212435455433240553300252124')
+        matchArray = [[45, 46, 47, 48, 49, 50, 51, 52, 53], [3, 4, 5, 6, 7, 8], [12, 13, 14, 15, 16, 17], [21, 22, 23, 24, 25, 26], [30, 31, 32, 33, 34, 35]]
+        solveBottomCross(testCube)
+        solveBottomLayer(testCube)
+        solveMiddleLayer(testCube)
+        for side in matchArray:
+            sideColorArray = []
+            for square in side:
+                sideColorArray.append(testCube.get()[square])
+            if sideColorArray.count(sideColorArray[0]) == len(sideColorArray):
+                continue
+            else:
+                self.fail("Bottom and Middle layer not solved.")
+        pass
+    
+    def test_middleLayerTest_solveMiddleLater_008_solveMiddleLayerSol(self):
+        testCube = cube.Cube('000000000111111111222222222333333333444444444555555555')
+        matchArray = [[45, 46, 47, 48, 49, 50, 51, 52, 53], [3, 4, 5, 6, 7, 8], [12, 13, 14, 15, 16, 17], [21, 22, 23, 24, 25, 26], [30, 31, 32, 33, 34, 35]]
+        solveBottomCross(testCube)
+        solveBottomLayer(testCube)
+        solveMiddleLayer(testCube)
+        for side in matchArray:
+            sideColorArray = []
+            for square in side:
+                sideColorArray.append(testCube.get()[square])
+            if sideColorArray.count(sideColorArray[0]) == len(sideColorArray):
+                continue
+            else:
+                self.fail("Bottom and Middle layer not solved.")
+        pass
+    
 
     
