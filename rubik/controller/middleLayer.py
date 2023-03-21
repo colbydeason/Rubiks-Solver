@@ -31,8 +31,10 @@ def _edgeOut(edgeCube):
                     edgeCube.rotate('U')
             
 def _bringDown(solveCube):
-    return ''
+    topColor = 40
+    for i in range(4):
+        
     
 def _alignEdge(alignCube):
-    return ''
+    
             
