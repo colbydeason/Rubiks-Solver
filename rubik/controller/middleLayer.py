@@ -33,6 +33,7 @@ def _edgeOut(edgeCube):
 def _bringDown(solveCube):
     topColor = 40
     for i in range(4):
+        continue
         
     
 def _alignEdge(alignCube):
