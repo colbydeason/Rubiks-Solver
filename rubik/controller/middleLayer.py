@@ -29,14 +29,29 @@ def _edgeOut(edgeCube):
                     break
                 else:
                     edgeCube.rotate('U')
+    edgeCube.resetCubeOrientation()
             
 def _bringDown(solveCube):
     topColor = 40
     for i in range(4):
-        continue
-    return ''
+        while solveCube.checkForColor([1, 43], topColor):
+                solveCube.rotate('u')
+        matchSide = _alignTopEdge(solveCube)
+        match matchSide:
+            case 'L':
+                solveCube.rotate('urURUFuf')
+            case 'R':
+                solveCube.rotate('URurufUF')
+            
         
     
-def _alignEdge(alignCube):
-    return ''
+def _alignTopEdge(alignCube):
+    while alignCube.getRelativeSquare(1) != alignCube.getRelativeSquare(4):
+        alignCube.rotate('u')
+        alignCube.rotateCubeR()
+    if alignCube.getRelativeSquare(43) == alignCube.getRelativeSquare(31):
+        matchSide = 'L'
+    else:
+        matchSide = 'R'
+    return matchSide
             
