@@ -6,7 +6,7 @@ def solveUpSurface(theCube: Cube) -> str:
         theCube.rotate("RUrURUUr")
     return theCube.popCurrentRotationStringResetOrientation()
 
-def _alignCorner(cornerCube, numberMatching):
+def _alignCorner(cornerCube):
     cornerArray = [UTL, UTR, UBL, UBR]
     cornerColorArray = []
     topColor = cornerCube.getRelativeSquare(UMM)
