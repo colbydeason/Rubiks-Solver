@@ -4,7 +4,7 @@ from rubik.model.cube import Cube
 def solveUpSurface(theCube: Cube) -> str:
     cornerArray = [UTL, UTR, UBL, UBR]
     cornerColorArray = []
-    topColor = theCube[UMM]
+    topColor = theCube.getRelativeSquare(UMM)
     for corner in cornerArray:
         cornerColorArray.append(theCube.getRelativeSquare(corner))
     numberMatching = cornerColorArray.count(topColor)
@@ -13,7 +13,7 @@ def solveUpSurface(theCube: Cube) -> str:
     return theCube.popCurrentRotationStringResetOrientation()
 
 def _alignCorner(cornerCube, numberMatching):
-    topColor = cornerCube[UMM]
+    topColor = cornerCube.getRelativeSquare(UMM)
     if numberMatching == 0 or numberMatching == 2:
         while topColor != cornerCube.getRelativeSquare(LTR):
             cornerCube.rotateCubeR()
