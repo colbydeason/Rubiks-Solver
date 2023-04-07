@@ -15,11 +15,11 @@ def _alignShape(shapeCube):
         return False
     for edge in range(4):
         if shapeCube.getRelativeSquare(UBM) == topColor:
-            shapeCube.rotate('U')
+            shapeCube.rotateCubeR()
             continue
         else:
             if shapeCube.getRelativeSquare(UML) != topColor:
-                shapeCube.rotate('u')
+                shapeCube.rotateCubeL()
                 return True
             else:
                 return True
