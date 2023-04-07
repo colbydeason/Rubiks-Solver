@@ -45,7 +45,8 @@ class Test(unittest.TestCase):
         self.faceArray = [faceD, faceF, faceR, faceL, faceB, faceU]
     
     def test_upFaceSurface_001_solveUpSurfaceNom(self):
-        testCube = cube.Cube('302102343140113413101223014022535252554440435530250145')solveBottomCross(testCube)
+        testCube = cube.Cube('302102343140113413101223014022535252554440435530250145')
+        solveBottomCross(testCube)
         solveBottomLayer(testCube)
         solveMiddleLayer(testCube)
         solveUpCross(testCube)
@@ -59,6 +60,7 @@ class Test(unittest.TestCase):
                 
     def test_upFaceSurface_002_solveUpSurfaceNom(self):
         testCube = cube.Cube('120504224505110033223524531544331023051041241413350452')
+        solveBottomCross(testCube)
         solveBottomLayer(testCube)
         solveMiddleLayer(testCube)
         solveUpCross(testCube)
@@ -72,6 +74,7 @@ class Test(unittest.TestCase):
           
     def test_upFaceSurface_003_solveUpSurfaceNom(self):
         testCube = cube.Cube('402001044321211241030520252351433314555043014331452525')
+        solveBottomCross(testCube)
         solveBottomLayer(testCube)
         solveMiddleLayer(testCube)
         solveUpCross(testCube)
@@ -85,6 +88,7 @@ class Test(unittest.TestCase):
     
     def test_upFaceSurface_004_solveUpSurfaceNom(self):
         testCube = cube.Cube('135004211034115530241120340212435455433240553300252124')
+        solveBottomCross(testCube)
         solveBottomLayer(testCube)
         solveMiddleLayer(testCube)
         solveUpCross(testCube)
@@ -98,6 +102,7 @@ class Test(unittest.TestCase):
     
     def test_upFaceSurface_005_solveUpSurfaceSolv(self):
         testCube = cube.Cube('000000000111111111222222222333333333444444444555555555')
+        solveBottomCross(testCube)
         solveBottomLayer(testCube)
         solveMiddleLayer(testCube)
         solveUpCross(testCube)
