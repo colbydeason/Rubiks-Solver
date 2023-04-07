@@ -101,7 +101,7 @@ class Test(unittest.TestCase):
                 self.fail("Bottom, middle, and / or top layer cross not solved")
         pass
     
-    def test_upFaceCross_solveUpCross_005_solveUpCrossNom(self):
+    def test_upFaceCross_solveUpCross_005_solveUpCrossSolv(self):
         testCube = cube.Cube('000000000111111111222222222333333333444444444555555555')
         matchArray = [[45, 46, 47, 48, 49, 50, 51, 52, 53], [3, 4, 5, 6, 7, 8], [12, 13, 14, 15, 16, 17], [21, 22, 23, 24, 25, 26], [30, 31, 32, 33, 34, 35], [37, 39, 40, 41, 43]]
         solveBottomCross(testCube)
