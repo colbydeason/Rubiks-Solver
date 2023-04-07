@@ -300,7 +300,15 @@ class Cube:
                 return True 
             else:
                 return False
-            
+     
+    def isSameColor(self, checkArray):
+        colors = []
+        for square in checkArray:
+            colors.append(self.getRelativeSquare(square))  
+        if colors.count(colors[0]) == len(colors): 
+            return True 
+        else:
+            return False 
 
     def _isValidCube(self):
         if not self._cubeIsString():
