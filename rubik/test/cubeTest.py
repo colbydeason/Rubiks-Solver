@@ -604,4 +604,4 @@ class Test(unittest.TestCase):
     def test_cubeTest_isSolved_002_solved(self):
         testCube = cube.Cube('000000000111111111222222222333333333444444444555555555')
         isSolved = testCube.isSolved()
-        self.assertFalse(isSolved)
+        self.assertTrue(isSolved)
