@@ -4,6 +4,10 @@ from rubik.model.cube import Cube
 def solveUpperLayer(theCube: Cube) -> str:
     
     _solveCorners(theCube)
+    
+    while not theCube.isSameColor([FTL, FML]):
+        theCube.rotate('U')
+        
     # _solveEdges(theCube)
     
     return theCube.popCurrentRotationStringResetOrientation()
