@@ -122,7 +122,7 @@ class Cube:
                 case 'u':
                     self._rotateu()
                 case _:
-                    # self._cube = 'error: invalid direction'
+                    self._cube = 'error: invalid direction'
                     return self._cube
         
         self._cube = "".join(self._cubeList)
