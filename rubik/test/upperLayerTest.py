@@ -61,7 +61,7 @@ class Test(unittest.TestCase):
             if testCube.isSameColor(face):
                 continue
             else:
-                self.fail("Bottom, middle, and / or top face are not solved")
+                self.fail("Top layer corners are not solved")
         pass
     
     def test_upperLayer_102_solveCorners(self):
@@ -76,7 +76,7 @@ class Test(unittest.TestCase):
             if testCube.isSameColor(face):
                 continue
             else:
-                self.fail("Bottom, middle, and / or top face are not solved")
+                self.fail("Top layer corners are not solved")
         pass
     
     def test_upperLayer_103_solveCorners(self):
@@ -91,7 +91,7 @@ class Test(unittest.TestCase):
             if testCube.isSameColor(face):
                 continue
             else:
-                self.fail("Bottom, middle, and / or top face are not solved")
+                self.fail("Top layer corners are not solved")
         pass
         
     def test_upperLayer_001_solveUpperLayerNom(self):
@@ -106,7 +106,7 @@ class Test(unittest.TestCase):
             if testCube.isSameColor(face):
                 continue
             else:
-                self.fail("Bottom, middle, and / or top face are not solved")
+                self.fail("Top layer is not solved")
         pass
                 
     def test_upperLayer_002_solveUpperLayerNom(self):
@@ -121,7 +121,7 @@ class Test(unittest.TestCase):
             if testCube.isSameColor(face):
                 continue
             else:
-                self.fail("Bottom, middle, and / or top face are not solved")
+                self.fail("Top layer is not solved")
         pass  
           
     def test_upperLayer_003_solveUpperLayerNom(self):
@@ -136,7 +136,7 @@ class Test(unittest.TestCase):
             if testCube.isSameColor(face):
                 continue
             else:
-                self.fail("Bottom, middle, and / or top face are not solved")
+                self.fail("Top layer is not solved")
         pass
     
     def test_upperLayer_004_solveUpperLayerNom(self):
@@ -151,7 +151,7 @@ class Test(unittest.TestCase):
             if testCube.isSameColor(face):
                 continue
             else:
-                self.fail("Bottom, middle, and / or top face are not solved")
+                self.fail("Top layer is not solved")
         pass  
     
     def test_upperLayer_005_solveUpperLayerSolv(self):
@@ -166,7 +166,7 @@ class Test(unittest.TestCase):
             if testCube.isSameColor(face):
                 continue
             else:
-                self.fail("Bottom, middle, and / or top face are not solved")
+                self.fail("Top layer is not solved")
         pass
     
     
