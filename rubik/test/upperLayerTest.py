@@ -49,19 +49,19 @@ class Test(unittest.TestCase):
                                 [RTL, RTL, RML, RMM, RMR, RBL, RBM, RBR], [LTL, LTR, LML, LMM, LMR, LBL, LBM, LBR], 
                                 [BTL, BTR, BML, BMM, BMR, BBL, BBM, BBR]]
         
-    # def test_upperLayer_101_solveCorners(self):
-    #     testCube = cube.Cube('302102343140113413101223014022535252554440435530250145')
-    #     solveBottomCross(testCube)
-    #     solveBottomLayer(testCube)
-    #     solveMiddleLayer(testCube)
-    #     solveUpCross(testCube)
-    #     solveUpSurface(testCube)
-    #     solveUpperLayer(testCube)
-    #     for face in self.faceArrayCorner:
-    #         if testCube.isSameColor(face):
-    #             continue
-    #         else:
-    #             self.fail("Top layer corners are not solved")
+    def test_upperLayer_101_solveCorners(self):
+        testCube = cube.Cube('302102343140113413101223014022535252554440435530250145')
+        solveBottomCross(testCube)
+        solveBottomLayer(testCube)
+        solveMiddleLayer(testCube)
+        solveUpCross(testCube)
+        solveUpSurface(testCube)
+        solveUpperLayer(testCube)
+        for face in self.faceArrayCorner:
+            if testCube.isSameColor(face):
+                continue
+            else:
+                self.fail("Top layer corners are not solved")
         pass
     
     def test_upperLayer_102_solveCorners(self):
@@ -79,20 +79,20 @@ class Test(unittest.TestCase):
                 self.fail("Top layer corners are not solved")
         pass
     
-    # def test_upperLayer_103_solveCorners(self):
-    #     testCube = cube.Cube('000000000111111111222222222333333333444444444555555555')
-    #     solveBottomCross(testCube)
-    #     solveBottomLayer(testCube)
-    #     solveMiddleLayer(testCube)
-    #     solveUpCross(testCube)
-    #     solveUpSurface(testCube)
-    #     solveUpperLayer(testCube)
-    #     for face in self.faceArrayCorner:
-    #         if testCube.isSameColor(face):
-    #             continue
-    #         else:
-    #             self.fail("Top layer corners are not solved")
-    #     pass
+    def test_upperLayer_103_solveCorners(self):
+        testCube = cube.Cube('000000000111111111222222222333333333444444444555555555')
+        solveBottomCross(testCube)
+        solveBottomLayer(testCube)
+        solveMiddleLayer(testCube)
+        solveUpCross(testCube)
+        solveUpSurface(testCube)
+        solveUpperLayer(testCube)
+        for face in self.faceArrayCorner:
+            if testCube.isSameColor(face):
+                continue
+            else:
+                self.fail("Top layer corners are not solved")
+        pass
         
     # def test_upperLayer_001_solveUpperLayerNom(self):
     #     testCube = cube.Cube('302102343140113413101223014022535252554440435530250145')
