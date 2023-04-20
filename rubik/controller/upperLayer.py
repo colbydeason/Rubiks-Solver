@@ -4,7 +4,7 @@ from rubik.model.cube import Cube
 def solveUpperLayer(theCube: Cube) -> str:
     
     _solveCorners(theCube)
-    _solveEdges(theCube)
+    # _solveEdges(theCube)
     
     return theCube.popCurrentRotationStringResetOrientation()
 
@@ -17,15 +17,16 @@ def _solveCorners(cornerCube):
                 cornerCube.rotateCubeR()
         if numSolved == 4:
             return
-        for face in range(3):
-            if cornerCube.isSameColor([FTL, FTR]):
-                cornerCube.rotateCubeR()
-                cornerCube.rotateCubeR()
-                break
-            else:
-                cornerCube.rotateCubeR()
-        cornerCube.rotate('rFrBBRfrBBRR')
+        else:
+            for face in range(4):
+                if cornerCube.isSameColor([FTL, FTR]):
+                    cornerCube.rotateCubeR()
+                    cornerCube.rotateCubeR()
+                    break
+                else:
+                    cornerCube.rotateCubeR()
+            cornerCube.rotate('rFrBBRfrBBRR')
     return 
 
-def _solveEdges(edgeCube):
-    return 
+# def _solveEdges(edgeCube):
+#     return 
