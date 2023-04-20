@@ -8,7 +8,7 @@ def solveUpperLayer(theCube: Cube) -> str:
     while not theCube.isSameColor([FTL, FML]):
         theCube.rotate('U')
         
-    # _solveEdges(theCube)
+    _solveEdges(theCube)
     
     return theCube.popCurrentRotationStringResetOrientation()
 
@@ -32,5 +32,6 @@ def _solveCorners(cornerCube):
             cornerCube.rotate('rFrBBRfrBBRR')
     return 
 
-# def _solveEdges(edgeCube):
-#     return 
+def _solveEdges(edgeCube):
+    for algo in range(3):
+    return 

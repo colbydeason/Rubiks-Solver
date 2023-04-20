@@ -694,3 +694,13 @@ class Cube:
         # Modifies the cubeList
         self._currentRotationsString += 'u'
         self._cubeList = rotatedCubeList
+        
+    def isSolved(self):
+        faceArray = [FACEF, FACER, FACEB, FACEL, FACEU, FACED]
+        for face in faceArray:
+            if self.isSameColor(face):
+                continue
+            else:
+                return False
+        return True
+        

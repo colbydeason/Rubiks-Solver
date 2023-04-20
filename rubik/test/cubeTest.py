@@ -595,3 +595,13 @@ class Test(unittest.TestCase):
         recreatedCube += testCube.getRelativeSquare(53)
         recreatedCubeString = '011231052520403304503011230434225544241443102315255351'
         self.assertEqual(recreatedCube, recreatedCubeString)
+        
+    def test_cubeTest_isSolved_001_unsolved(self):
+        testCube = cube.Cube('245403511024510222050423410551033353101143423245251403')
+        isSolved = testCube.isSolved()
+        self.assertFalse(isSolved)
+        
+    def test_cubeTest_isSolved_002_solved(self):
+        testCube = cube.Cube('000000000111111111222222222333333333444444444555555555')
+        isSolved = testCube.isSolved()
+        self.assertFalse(isSolved)
