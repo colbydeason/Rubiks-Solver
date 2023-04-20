@@ -36,7 +36,7 @@ def _solveEdges(edgeCube):
     isSolidFace = False
     for algo in range(2):
         for face in range (4):
-            if edgeCube.isSameColor([FACEF]):
+            if edgeCube.isSameColor(FACEF):
                 edgeCube.rotateCubeR()
                 edgeCube.rotateCubeR()
                 isSolidFace = True
