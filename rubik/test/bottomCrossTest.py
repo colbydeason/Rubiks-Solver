@@ -42,9 +42,9 @@ class Test(unittest.TestCase):
     #         if testCube.get()[edge] == bottomColor:
     #             continue
     #         else:
-    #             print(testCube.get())
+    #             
     #             self.fail()
-    #     print(testCube.get())
+    #     
     #     pass
     
     def test_bottomCrossTest_solveBottomCross_002_BottomCross(self):
@@ -57,15 +57,15 @@ class Test(unittest.TestCase):
             if testCube.get()[edge] == bottomColor:
                 continue
             else:
-                print(testCube.get())
+                
                 self.fail()
         for pair in pairEdgeList:
             if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
                 continue
             else:
-                print(testCube.get())
+                
                 self.fail()
-        print(testCube.get())
+        
         pass
     def test_bottomCrossTest_solveBottomCross_003_BottomCross(self):
         testCube = cube.Cube('h00xxxNhDXXxDXXhN0DhDx0XhD0xNxDhhX0XX0h0DNNDNxN0XNxDhN')
@@ -77,15 +77,15 @@ class Test(unittest.TestCase):
             if testCube.get()[edge] == bottomColor:
                 continue
             else:
-                print(testCube.get())
+                
                 self.fail()
         for pair in pairEdgeList:
             if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
                 continue
             else:
-                print(testCube.get())
+                
                 self.fail()
-        print(testCube.get())
+        
         pass
     def test_bottomCrossTest_solveBottomCross_004_BottomCross(self):
         testCube = cube.Cube('CgZC11COZOO1ZOvOOOZgZOCvvZvCgv1gvggvgvgCZ1OZCgZ11vC1C1')
@@ -97,15 +97,15 @@ class Test(unittest.TestCase):
             if testCube.get()[edge] == bottomColor:
                 continue
             else:
-                print(testCube.get())
+                
                 self.fail()
         for pair in pairEdgeList:
             if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
                 continue
             else:
-                print(testCube.get())
+                
                 self.fail()
-        print(testCube.get())
+        
         pass
     def test_bottomCrossTest_solveBottomCross_005_BottomCrossr(self):
         testCube = cube.Cube('5Vddx5xVd4d405405VVx0V0x54dV4VV404054dxxd5x0xd554Vx0d0')
@@ -117,15 +117,15 @@ class Test(unittest.TestCase):
             if testCube.get()[edge] == bottomColor:
                 continue
             else:
-                print(testCube.get())
+                
                 self.fail()
         for pair in pairEdgeList:
             if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
                 continue
             else:
-                print(testCube.get())
+                
                 self.fail()
-        print(testCube.get())
+        
         pass
     def test_bottomCrossTest_solveBottomCross_006_BottomCross(self):
         testCube = cube.Cube('YnFnnY45F5YB4YnnB455545FB45FBnBBY4nYYY44FFFFBnFBB45Y5n')
@@ -137,15 +137,15 @@ class Test(unittest.TestCase):
             if testCube.get()[edge] == bottomColor:
                 continue
             else:
-                print(testCube.get())
+                
                 self.fail()
         for pair in pairEdgeList:
             if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
                 continue
             else:
-                print(testCube.get())
+                
                 self.fail()
-        print(testCube.get())
+        
         pass
     def test_bottomCrossTest_solveBottomCross_007_BottomCross(self):
         testCube = cube.Cube('JjJ0jJMLhML0MJj00JMLhMLhMhh0Jh00MJJ0L0LjMMjhjjhjLhjLJL')
@@ -157,15 +157,15 @@ class Test(unittest.TestCase):
             if testCube.get()[edge] == bottomColor:
                 continue
             else:
-                print(testCube.get())
+                
                 self.fail()
         for pair in pairEdgeList:
             if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
                 continue
             else:
-                print(testCube.get())
+                
                 self.fail()
-        print(testCube.get())
+        
         pass
     def test_bottomCrossTest_solveBottomCross_008_BottomCross(self):
         testCube = cube.Cube('TbZTuubATT6bA666bA6T6AbbbuAuZu6ZuZZTAZAbTTZAb6ZuuATu6Z')
@@ -177,15 +177,15 @@ class Test(unittest.TestCase):
             if testCube.get()[edge] == bottomColor:
                 continue
             else:
-                print(testCube.get())
+                
                 self.fail()
         for pair in pairEdgeList:
             if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
                 continue
             else:
-                print(testCube.get())
+                
                 self.fail()
-        print(testCube.get())
+        
         pass
     
     def test_bottomCrossTest_solveBottomCross_009_BottomCross(self):
@@ -198,15 +198,15 @@ class Test(unittest.TestCase):
             if testCube.get()[edge] == bottomColor:
                 continue
             else:
-                print(testCube.get())
+                
                 self.fail()
         for pair in pairEdgeList:
             if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
                 continue
             else:
-                print(testCube.get())
+                
                 self.fail()
-        print(testCube.get())
+        
         pass
     
     def test_bottomCrossTest_solveBottomCross_010_BottomCrossSolved(self):
@@ -219,13 +219,13 @@ class Test(unittest.TestCase):
             if testCube.get()[edge] == bottomColor:
                 continue
             else:
-                print(testCube.get())
+                
                 self.fail()
         for pair in pairEdgeList:
             if testCube.get()[pair[0]] == testCube.get()[pair[1]]:
                 continue
             else:
-                print(testCube.get())
+                
                 self.fail()
-        print(testCube.get())
+        
         pass
