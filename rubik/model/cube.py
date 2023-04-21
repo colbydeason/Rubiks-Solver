@@ -706,7 +706,7 @@ class Cube:
         
     def isSolved(self):
         faceArray = [FACEF, FACER, FACEB, FACEL, FACEU, FACED]
-        self.isSameColorMany(faceArray)
+        return self.isSameColorMany(faceArray)
     
     def bottomCrossDone(self):
         matchArray = [[BTM, BML, BMM, BMR, BBM], [FBM, FMM], [RBM, RMM], [BBM, BMM], [LBM, LMM]]
