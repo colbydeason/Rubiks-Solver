@@ -706,38 +706,26 @@ class Cube:
         
     def isSolved(self):
         faceArray = [FACEF, FACER, FACEB, FACEL, FACEU, FACED]
-        if self.isSameColorMany(faceArray):
-            print('is solved')
         return self.isSameColorMany(faceArray)
     
     def bottomCrossDone(self):
         matchArray = [[BTM, BML, BMM, BMR, BBM], [FBM, FMM], [RBM, RMM], [BBM, BMM], [LBM, LMM]]
-        if self.isSameColorMany(matchArray):
-            print('bc done')
         return self.isSameColorMany(matchArray)
         
     def bottomLayerDone(self):
         matchArray = [FACED, [FMM, FBL, FBM, FBR], [RMM, RBL, RBM, RBR], [BMM, BBL, BBM, BBR], [LMM, LBL, LBM, LBR]]
-        if self.isSameColorMany(matchArray):
-            print('bl done')
         return self.isSameColorMany(matchArray)
     
     def middleLayerDone(self):       
         matchArray = [FACED, [FML, FMM, FMR, FBL, FBM, FBR], [RML, RMM, RMR, RBL, RBM, RBR], [BML, BMM, BMR, BBL, BBM, BBR], [LML, LMM, LMR, LBL, LBM, LBR]]
-        if self.isSameColorMany(matchArray):
-            print('ml done')
         return self.isSameColorMany(matchArray)
     
     def upFaceCrossDone(self):
         matchArray = [FACED, [FML, FMM, FMR, FBL, FBM, FBR], [RML, RMM, RMR, RBL, RBM, RBR], [BML, BMM, BMR, BBL, BBM, BBR], [LML, LMM, LMR, LBL, LBM, LBR], [UTM, UML, UMM, UMR, UBM]]
-        if self.isSameColorMany(matchArray):
-            print('ufc done')
         return self.isSameColorMany(matchArray)
     
     def upFaceSurfaceDone(self):
         matchArray = [FACED, [FML, FMM, FMR, FBL, FBM, FBR], [RML, RMM, RMR, RBL, RBM, RBR], [BML, BMM, BMR, BBL, BBM, BBR], [LML, LMM, LMR, LBL, LBM, LBR], FACEU]
-        if self.isSameColorMany(matchArray):
-            print('ufs done')
         return self.isSameColorMany(matchArray)
     
     
