@@ -41,3 +41,19 @@ def solve(parms):
                      
     return result
 
+def optRotations(rotationString):
+    # Cases for opt
+    # 1. 4 of the same letter -> taken out
+    # 2. 3 of the same letter -> replaced by inverse of the letter
+    # 3. inverse moves directly next to each other -> remove both
+    #     3a. nested inverse moves -> remove all
+    # 4. first sweep bring new chances for optimization, run until no further changes
+    currRotation = ''
+    rotationQueue = []
+    for rotation in rotationString:
+        if currRotation == '':
+            currRotation = rotation
+            rotationQueue.append(rotation)
+    
+    return 
+
