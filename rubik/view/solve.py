@@ -17,14 +17,16 @@ def solve(parms):
     if theCube.get().startswith('error: '):
         result['status'] = theCube.get()
         return result
-    
-    rotations = ""
-    rotations += solveBottomCross(theCube)      #iteration 2
-    rotations += solveBottomLayer(theCube)      #iteration 3
-    rotations += solveMiddleLayer(theCube)      #iteration 4
-    rotations += solveUpCross(theCube)          #iteration 5
-    rotations += solveUpSurface(theCube)        #iteration 5
-    rotations += solveUpperLayer(theCube)       #iteration 6
+    if theCube.isSolved():
+        rotations = ""
+    else:
+        rotations = ""
+        rotations += solveBottomCross(theCube)      #iteration 2
+        rotations += solveBottomLayer(theCube)      #iteration 3
+        rotations += solveMiddleLayer(theCube)      #iteration 4
+        rotations += solveUpCross(theCube)          #iteration 5
+        rotations += solveUpSurface(theCube)        #iteration 5
+        rotations += solveUpperLayer(theCube)       #iteration 6
     
     itemToTokenize = encodedCube + rotations + 'cjd0057'
     sha256Hash = hashlib.sha256()
