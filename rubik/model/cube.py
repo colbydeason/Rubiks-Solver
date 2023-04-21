@@ -713,19 +713,19 @@ class Cube:
         return self.isSameColorMany(matchArray)
         
     def bottomLayerDone(self):
-        matchArray = [[FACED], [FMM, FBL, FBM, FBR], [RMM, RBL, RBM, RBR], [BMM, BBL, BBM, BBR], [LMM, LBL, LBM, LBR]]
+        matchArray = [FACED, [FMM, FBL, FBM, FBR], [RMM, RBL, RBM, RBR], [BMM, BBL, BBM, BBR], [LMM, LBL, LBM, LBR]]
         return self.isSameColorMany(matchArray)
     
     def middleLayerDone(self):       
-        matchArray = [[FACED], [FML, FMM, FMR, FBL, FBM, FBR], [RML, RMM, RMR, RBL, RBM, RBR], [BML, BMM, BMR, BBL, BBM, BBR], [LML, LMM, LMR, LBL, LBM, LBR]]
+        matchArray = [FACED, [FML, FMM, FMR, FBL, FBM, FBR], [RML, RMM, RMR, RBL, RBM, RBR], [BML, BMM, BMR, BBL, BBM, BBR], [LML, LMM, LMR, LBL, LBM, LBR]]
         return self.isSameColorMany(matchArray)
     
     def upFaceCrossDone(self):
-        matchArray = [[FACED], [FML, FMM, FMR, FBL, FBM, FBR], [RML, RMM, RMR, RBL, RBM, RBR], [BML, BMM, BMR, BBL, BBM, BBR], [LML, LMM, LMR, LBL, LBM, LBR], [UTM, UML, UMM, UMR, UBM]]
+        matchArray = [FACED, [FML, FMM, FMR, FBL, FBM, FBR], [RML, RMM, RMR, RBL, RBM, RBR], [BML, BMM, BMR, BBL, BBM, BBR], [LML, LMM, LMR, LBL, LBM, LBR], [UTM, UML, UMM, UMR, UBM]]
         return self.isSameColorMany(matchArray)
     
     def upFaceSurfaceDone(self):
-        matchArray = [[FACED], [FML, FMM, FMR, FBL, FBM, FBR], [RML, RMM, RMR, RBL, RBM, RBR], [BML, BMM, BMR, BBL, BBM, BBR], [LML, LMM, LMR, LBL, LBM, LBR], [FACEU]]
+        matchArray = [FACED, [FML, FMM, FMR, FBL, FBM, FBR], [RML, RMM, RMR, RBL, RBM, RBR], [BML, BMM, BMR, BBL, BBM, BBR], [LML, LMM, LMR, LBL, LBM, LBR], FACEU]
         return self.isSameColorMany(matchArray)
     
     
