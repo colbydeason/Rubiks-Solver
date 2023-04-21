@@ -308,7 +308,16 @@ class Cube:
         if colors.count(colors[0]) == len(colors): 
             return True 
         else:
-            return False 
+            return False
+        
+    def isSameColorMany(self, checkArray):
+        for array in checkArray:
+            if self.isSameColor(array):
+                continue
+            else:
+                return False 
+        return True
+            
 
     def _isValidCube(self):
         if not self._cubeIsString():
@@ -697,10 +706,36 @@ class Cube:
         
     def isSolved(self):
         faceArray = [FACEF, FACER, FACEB, FACEL, FACEU, FACED]
-        for face in faceArray:
-            if self.isSameColor(face):
+        self.isSameColorMany(faceArray)
+    
+    def bottomCrossDone(self):
+        matchArray = [[BTM, BML, BMM, BMR, BBM], [FBM, FMM], [RBM, RMM], [BBM, BMM], [LBM, LMM]]
+        for group in matchArray:
+            if self.isSameColor(group):
                 continue
             else:
                 return False
         return True
-            
+        
+    def bottomLayerDone(self):
+        matchArray = [[FACED], [FMM, FBL, FBM, FBR], [RMM, RBL, RBM, RBR], [BMM, BBL, BBM, BBR], [LMM, LBL, LBM, LBR]]
+        for group in matchArray:
+            if self.isSameColor(group):
+                continue
+            else:
+                return False
+        return True
+    
+    def middleLayerDone(self):       
+        return False
+    
+    def upFaceCrossDone(self):
+        return False
+    
+    def upFaceSurfaceDone(self):
+        return False
+    
+    def upperLayerDone(self):
+        return False
+    
+    
