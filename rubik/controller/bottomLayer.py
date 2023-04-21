@@ -10,6 +10,8 @@ def solveBottomLayer(theCube: Cube) -> str:
     # Step 2: Put corners into correct place
     #     b) move corners one by one into the correct place in the bottom of the cube
     
+    if theCube.bottomLayerDone():
+        return ''
     _moveCornerOut(theCube)
     _bringCornerDown(theCube)
     

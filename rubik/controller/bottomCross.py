@@ -10,6 +10,8 @@ def solveBottomCross(theCube: Cube) -> str:
     # Step 2: Solve cross
     #     b) match up edge to face center and rotate side 
     
+    if theCube.bottomCrossDone():
+        return ''
     _solveFlower(theCube)
     _flowerToBottom(theCube)
     

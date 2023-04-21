@@ -10,6 +10,8 @@ def solveMiddleLayer(theCube: Cube) -> str:
     # Step 2: Move edges into middle layer and solve
     #     go through each edge and come down
     
+    if theCube.middleLayerDone():
+        return ''
     _edgeOut(theCube)
     _bringDown(theCube)
     

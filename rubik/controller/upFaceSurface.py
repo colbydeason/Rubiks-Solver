@@ -2,6 +2,9 @@ from rubik.model.constants import *
 from rubik.model.cube import Cube
 
 def solveUpSurface(theCube: Cube) -> str:
+    
+    if theCube.upFaceSurfaceDone():
+        return ''
     while _alignCorner(theCube):
         theCube.rotate("RUrURUUr")
     return theCube.popCurrentRotationStringResetOrientation()

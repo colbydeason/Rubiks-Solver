@@ -2,6 +2,9 @@ from rubik.model.constants import *
 from rubik.model.cube import Cube
 
 def solveUpCross(theCube: Cube) -> str:
+    
+    if theCube.upFaceCrossDone():
+        return ''
     while _alignShape(theCube):
         theCube.rotate("FRUruf")
     return theCube.popCurrentRotationStringResetOrientation()
