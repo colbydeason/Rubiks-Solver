@@ -98,43 +98,43 @@ class SolveTest(TestCase):
         parmsSolve = {}
         parmsSolve['cube'] = 'ywgrorwowrbowboogyyoogrwbbgggrbgyrwrwbgyyybgwbybowryro'
         solveDic = solve(parmsSolve)
-        self.asserEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', solveDic['cube'])
+        self.assertEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', solveDic['cube'])
         
     def test_solveTest_solve_004_BottomCrossSolved(self):
         parmsSolve = {}
         parmsSolve['cube'] = 'wgbrooworyggybggbrworyrbyryybbrgyogbbboyyrrooowwwwwgwg'
         solveDic = solve(parmsSolve)
-        self.asserEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', solveDic['cube'])
+        self.assertEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', solveDic['cube'])
         
     def test_solveTest_solve_005_BottomLayerSolved(self):
         parmsSolve = {}
         parmsSolve['cube'] = 'bybyogoooyogrbbbbbygyrrorrrgbyygggggooryybrrowwwwwwwww'
         solveDic = solve(parmsSolve)
-        self.asserEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', solveDic['cube'])
+        self.assertEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', solveDic['cube'])
         
     def test_solveTest_solve_006_MiddleLayerSolved(self):
         parmsSolve = {}
         parmsSolve['cube'] = 'oyrooooooyrybbbbbbryorrrrrrbogggggggybgyyyygbwwwwwwwww'
         solveDic = solve(parmsSolve)
-        self.asserEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', solveDic['cube'])
+        self.assertEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', solveDic['cube'])
         
     def test_solveTest_solve_007_UpFaceCrossSolved(self):
         parmsSolve = {}
         parmsSolve['cube'] = 'yboooooooygybbbbbboryrrrrrrrotgggggggybyyybygwwwwwwwww'
         solveDic = solve(parmsSolve)
-        self.asserEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', solveDic['cube'])
+        self.assertEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', solveDic['cube'])
         
     def test_solveTest_solve_008_UpFaceSurfaceSolved(self):
         parmsSolve = {}
         parmsSolve['cube'] = 'ooooooooobbrbbbbbbggbrrrrrrrrgggggggyyyyyyyyywwwwwwwww'
         solveDic = solve(parmsSolve)
-        self.asserEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', solveDic['cube'])
+        self.assertEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', solveDic['cube'])
         
     def test_solveTest_solve_009_Solved(self):
         parmsSolve = {}
         parmsSolve['cube'] = 'ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww'
         solveDic = solve(parmsSolve)
-        self.asserEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', solveDic['cube'])
+        self.assertEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', solveDic['cube'])
                 
     def test_solveTest_solve_901_MissingCube(self):
         parmsTest = {}
