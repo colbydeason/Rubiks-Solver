@@ -15,7 +15,7 @@ def solve(parms):
     encodedCube = parms.get('cube')
     theCube = Cube(encodedCube)
     if isError(theCube, result):
-        return
+        return result
     if theCube.isSolved():
         rotations = ""
     else:
