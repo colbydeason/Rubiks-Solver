@@ -14,9 +14,8 @@ def solve(parms):
      
     encodedCube = parms.get('cube')
     theCube = Cube(encodedCube)
-    if theCube.get().startswith('error: '):
-        result['status'] = theCube.get()
-        return result
+    if isError(theCube, result):
+        return
     if theCube.isSolved():
         rotations = ""
     else:
@@ -56,4 +55,10 @@ def optRotations(rotationString):
             rotationQueue.append(rotation)
     
     return 
+
+def isError(errorCube, errorResult):
+    if errorCube.get().startswith('error: '):
+        errorResult['status'] = errorCube.get()
+        return True
+    return False
 

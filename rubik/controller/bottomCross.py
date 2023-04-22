@@ -15,6 +15,7 @@ def solveBottomCross(theCube: Cube) -> str:
     _solveFlower(theCube)
     _flowerToBottom(theCube)
     
+    
     return theCube.popCurrentRotationStringResetOrientation()
 
 def _solveFlower(flowerCube):
