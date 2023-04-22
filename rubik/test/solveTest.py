@@ -46,7 +46,6 @@ class SolveTest(TestCase):
         parmsRotate['dir'] = solveString
         rotateDic = rotate(parmsRotate)
         testCube = rotateDic['cube']
-        print(testCube + ',')
         
         bottomColor = testCube[49]
         edgeList = {46, 48, 50, 52}
@@ -55,13 +54,11 @@ class SolveTest(TestCase):
             if testCube[edge] == bottomColor:
                 continue
             else:
-                print(testCube)
                 self.fail()
         for pair in pairEdgeList:
             if testCube[pair[0]] == testCube[pair[1]]:
                 continue
             else:
-                print(testCube)
                 self.fail()
             
     def test_solveTest_solve_002_BottomLayer(self):
@@ -74,7 +71,6 @@ class SolveTest(TestCase):
         parmsRotate['dir'] = solveString
         rotateDic = rotate(parmsRotate)
         testCube = rotateDic['cube']
-        print(testCube + ',')
         
         quadMatchList = [[4, 6, 7, 8], [13, 15, 16, 17], [22, 24, 25, 26], [31, 33, 34, 35]]
         bottomRangeList = {45, 46, 47, 48, 49, 50, 51, 52, 53}
@@ -142,7 +138,6 @@ class SolveTest(TestCase):
         parmsSolve = {}
         parmsSolve['cube'] = 'broooooooyggbbbbbbybyrrrrrrooyggggggbyryyyrygwwwwwwwww'
         solveDic = solve(parmsSolve)
-        print(solveDic)
         parmsRotate = {}
         parmsRotate['cube'] = 'broooooooyggbbbbbbybyrrrrrrooyggggggbyryyyrygwwwwwwwww'
         parmsRotate['dir'] = solveDic['solution']
