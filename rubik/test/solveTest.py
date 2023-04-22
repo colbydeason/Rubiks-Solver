@@ -165,12 +165,7 @@ class SolveTest(TestCase):
         parmsSolve = {}
         parmsSolve['cube'] = 'ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww'
         solveDic = solve(parmsSolve)
-        parmsRotate = {}
-        parmsRotate['cube'] = 'ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww'
-        parmsRotate['dir'] = solveDic['solution']
-        rotateDic = rotate(parmsRotate)
-        testCube = rotateDic['cube']
-        self.assertEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', testCube)
+        self.assertEqual('', solveDic['solution'])
                 
     def test_solveTest_solve_901_MissingCube(self):
         parmsTest = {}
