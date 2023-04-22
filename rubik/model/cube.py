@@ -709,7 +709,7 @@ class Cube:
         return self.isSameColorMany(faceArray)
     
     def bottomCrossDone(self):
-        matchArray = [[BTM, BML, BMM, BMR, BBM], [FBM, FMM], [RBM, RMM], [BBM, BMM], [LBM, LMM]]
+        matchArray = [[DTM, DML, DMM, DMR, DBM], [FBM, FMM], [RBM, RMM], [BBM, BMM], [LBM, LMM]]
         return self.isSameColorMany(matchArray)
         
     def bottomLayerDone(self):
