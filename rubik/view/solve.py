@@ -21,11 +21,23 @@ def solve(parms):
     else:
         rotations = ""
         rotations += solveBottomCross(theCube)      #iteration 2
+        if isError(theCube, result):
+            return result
         rotations += solveBottomLayer(theCube)      #iteration 3
+        if isError(theCube, result):
+            return result
         rotations += solveMiddleLayer(theCube)      #iteration 4
+        if isError(theCube, result):
+            return result
         rotations += solveUpCross(theCube)          #iteration 5
+        if isError(theCube, result):
+            return result
         rotations += solveUpSurface(theCube)        #iteration 5
+        if isError(theCube, result):
+            return result
         rotations += solveUpperLayer(theCube)       #iteration 6
+        if isError(theCube, result):
+            return result
     
     itemToTokenize = encodedCube + rotations + 'cjd0057'
     sha256Hash = hashlib.sha256()
