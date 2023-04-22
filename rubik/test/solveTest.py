@@ -142,6 +142,7 @@ class SolveTest(TestCase):
         parmsSolve = {}
         parmsSolve['cube'] = 'yboooooooygybbbbbboryrrrrrrrotgggggggybyyybygwwwwwwwww'
         solveDic = solve(parmsSolve)
+        print(solveDic)
         parmsRotate = {}
         parmsRotate['cube'] = 'yboooooooygybbbbbboryrrrrrrrotgggggggybyyybygwwwwwwwww'
         parmsRotate['dir'] = solveDic['solution']
