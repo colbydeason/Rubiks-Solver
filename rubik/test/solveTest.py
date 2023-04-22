@@ -101,7 +101,6 @@ class SolveTest(TestCase):
         parmsRotate = {}
         parmsRotate['cube'] = 'ywgrorwowrbowboogyyoogrwbbgggrbgyrwrwbgyyybgwbybowryro'
         parmsRotate['dir'] = solveDic['solution']
-        print (parmsRotate['dir'])
         rotateDic = rotate(parmsRotate)
         testCube = rotateDic['cube']
         self.assertEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', testCube)
@@ -113,7 +112,6 @@ class SolveTest(TestCase):
         parmsRotate = {}
         parmsRotate['cube'] = 'wgbrooworyggybggbrworyrbyryybbrgyogbbboyyrrooowwwwwgwg'
         parmsRotate['dir'] = solveDic['solution']
-        print (parmsRotate['dir'])
         rotateDic = rotate(parmsRotate)
         testCube = rotateDic['cube']
         self.assertEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', testCube)
@@ -125,7 +123,6 @@ class SolveTest(TestCase):
         parmsRotate = {}
         parmsRotate['cube'] = 'bybyogoooyogrbbbbbygyrrorrrgbyygggggooryybrrowwwwwwwww'
         parmsRotate['dir'] = solveDic['solution']
-        print (parmsRotate['dir'])
         rotateDic = rotate(parmsRotate)
         testCube = rotateDic['cube']
         self.assertEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', testCube)
@@ -137,7 +134,6 @@ class SolveTest(TestCase):
         parmsRotate = {}
         parmsRotate['cube'] = 'oyrooooooyrybbbbbbryorrrrrrbogggggggybgyyyygbwwwwwwwww'
         parmsRotate['dir'] = solveDic['solution']
-        print (parmsRotate['dir'])
         rotateDic = rotate(parmsRotate)
         testCube = rotateDic['cube']
         self.assertEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', testCube)
@@ -149,7 +145,6 @@ class SolveTest(TestCase):
         parmsRotate = {}
         parmsRotate['cube'] = 'yboooooooygybbbbbboryrrrrrrrotgggggggybyyybygwwwwwwwww'
         parmsRotate['dir'] = solveDic['solution']
-        print (parmsRotate['dir'])
         rotateDic = rotate(parmsRotate)
         testCube = rotateDic['cube']
         self.assertEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', testCube)
@@ -161,7 +156,6 @@ class SolveTest(TestCase):
         parmsRotate = {}
         parmsRotate['cube'] = 'ooooooooobbrbbbbbbggbrrrrrrrrgggggggyyyyyyyyywwwwwwwww'
         parmsRotate['dir'] = solveDic['solution']
-        print (parmsRotate['dir'])
         rotateDic = rotate(parmsRotate)
         testCube = rotateDic['cube']
         self.assertEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', testCube)
@@ -173,7 +167,6 @@ class SolveTest(TestCase):
         parmsRotate = {}
         parmsRotate['cube'] = 'ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww'
         parmsRotate['dir'] = solveDic['solution']
-        print (parmsRotate['dir'])
         rotateDic = rotate(parmsRotate)
         testCube = rotateDic['cube']
         self.assertEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', testCube)
