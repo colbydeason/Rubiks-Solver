@@ -118,10 +118,10 @@ class SolveTest(TestCase):
         
     def test_solveTest_solve_005_BottomLayerSolved(self):
         parmsSolve = {}
-        parmsSolve['cube'] = 'bybyogoooyogrbbbbbygyrrorrrgbyygggggooryybrrowwwwwwwww'
+        parmsSolve['cube'] = 'gbygoyooobbbrbobbbyggyryrrrorrggogggyrobyoyyrwwwwwwwww'
         solveDic = solve(parmsSolve)
         parmsRotate = {}
-        parmsRotate['cube'] = 'bybyogoooyogrbbbbbygyrrorrrgbyygggggooryybrrowwwwwwwww'
+        parmsRotate['cube'] = 'gbygoyooobbbrbobbbyggyryrrrorrggogggyrobyoyyrwwwwwwwww'
         parmsRotate['dir'] = solveDic['solution']
         rotateDic = rotate(parmsRotate)
         testCube = rotateDic['cube']
@@ -140,11 +140,11 @@ class SolveTest(TestCase):
         
     def test_solveTest_solve_007_UpFaceCrossSolved(self):
         parmsSolve = {}
-        parmsSolve['cube'] = 'yboooooooygybbbbbboryrrrrrrrotgggggggybyyybygwwwwwwwww'
+        parmsSolve['cube'] = 'broooooooyggbbbbbbybyrrrrrrooyggggggbyryyyrygwwwwwwwww'
         solveDic = solve(parmsSolve)
         print(solveDic)
         parmsRotate = {}
-        parmsRotate['cube'] = 'yboooooooygybbbbbboryrrrrrrrotgggggggybyyybygwwwwwwwww'
+        parmsRotate['cube'] = 'broooooooyggbbbbbbybyrrrrrrooyggggggbyryyyrygwwwwwwwww'
         parmsRotate['dir'] = solveDic['solution']
         rotateDic = rotate(parmsRotate)
         testCube = rotateDic['cube']
