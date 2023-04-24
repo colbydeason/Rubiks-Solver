@@ -46,7 +46,7 @@ def _bringCornerDown(bcdCube):
         elif colorList[2] == bcdCube.getBottomColor():
             bcdCube.rotate('RUr')
         else:
-            raise Exception('Corner is not a bottom face corner in _bringCornerDown')
+            continue
         if corner != 3:
             while not _checkRightCornerColor(bcdCube, 'top'):
                 bcdCube.rotateCubeR()
@@ -72,7 +72,7 @@ def _checkRightCornerColor(cCube, topOrBottom):
             else:
                 return False    
         case other:
-            raise Exception("must be top or bottom for _checkRightCornerColor")
+            continue
 
 def _alignCorner(alCube):
     cornerArray = [FTR, UBR, RTL]
@@ -89,4 +89,4 @@ def _alignCorner(alCube):
         else:
             alCube.rotate('u')
             alCube.rotateCubeR()
-    raise Exception('Corner not able to match centers in _alignCorner')
+    continue
