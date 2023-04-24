@@ -20,10 +20,10 @@ def solveBottomCross(theCube: Cube) -> str:
     return theCube.popCurrentRotationStringResetOrientation()
 
 def _solveFlower(flowerCube):
-    edgeList = [1, 3, 5, 7, 46]
-    bottomColor = flowerCube.get()[49]
+    edgeList = [FTM, FML, FMR, FBM, DTM]
+    bottomColor = flowerCube.get()[DMM]
     for i in range(5):
-        topEdge = flowerCube.getRelativeSquare(43)
+        topEdge = flowerCube.getRelativeSquare(UBM)
         if topEdge == bottomColor:
             flowerCube.rotateCubeR()
             continue
@@ -57,7 +57,7 @@ def _solveFlower(flowerCube):
 def _flowerToBottom(ftbCube):
     for i in range(4):
         for j in range(4):
-            if ftbCube.getRelativeSquare(1) == ftbCube.getRelativeSquare(4):
+            if ftbCube.getRelativeSquare(FTM) == ftbCube.getRelativeSquare(FMM):
                 ftbCube.rotate('FF')
                 ftbCube.rotateCubeR()
                 break
