@@ -54,6 +54,7 @@ def solve(parms):
 
 def isError(errorCube, errorResult):
     if errorCube.get().startswith('error: '):
+        errorResult = {}
         errorResult['status'] = errorCube.get()
         return True
     return False
