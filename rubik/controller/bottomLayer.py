@@ -70,6 +70,7 @@ def _checkRightCornerColor(cCube, topOrBottom):
             else:
                 return False    
         case other:
+            return False
 
 def _alignCorner(alCube):
     cornerArray = [FTR, UBR, RTL]
