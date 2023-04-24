@@ -9,7 +9,7 @@ def solveUpCross(theCube: Cube) -> str:
     
     # while _alignShape(theCube):
     #     theCube.rotate("FRUruf")
-    for shape in range(3):
+    for shape in range(4):
         if _alignShape(theCube):
             theCube.rotate("FRUruf")
         else:
