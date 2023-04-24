@@ -29,13 +29,31 @@ class SolveTest(TestCase):
 #         test 007: upFaceCross done
 #         test 008: upFaceSurface done
 #         test 009: Solved cube
+#         # Lots of random cubes to insure success
+#         test 010
+#         test 011
+#         test 012
+#         test 013
+#         test 014
+#         test 015
+#         test 016
+#         test 017
+#         test 018
+#         test 019
+#         test 020
 #
 #     sad path:
 #         test 901: invalid cube missing
-#         test 902: invalid dir
-#         test 903: invalid dir multiple
 #         # Unsolvable cubes
-#         test 904: 
+#         test 902: corner twist
+#         test 903: edge flip
+#         test 904: corner and edge flip
+#         test 905: multiple of each
+#         test 906: sticker swap
+#         test 907: sticker swap
+#         test 908: sticker swap
+#         test 909: sticker swap
+
     def test_solveTest_solve_001_BottomCross(self):
         parmsSolve = {}
         parmsRotate= {}
@@ -161,7 +179,128 @@ class SolveTest(TestCase):
         parmsSolve['cube'] = 'ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww'
         solveDic = solve(parmsSolve)
         self.assertEqual('', solveDic['solution'])
-                
+        
+    def test_solveTest_solve_010_NominalSolve(self):
+        parmsSolve = {}
+        parmsSolve['cube'] = '125205044342112135301420342255333524414041012330555100'
+        solveDic = solve(parmsSolve)
+        parmsRotate = {}
+        parmsRotate['cube'] = '125205044342112135301420342255333524414041012330555100'
+        parmsRotate['dir'] = solveDic['solution']
+        rotateDic = rotate(parmsRotate)
+        testCube = rotateDic['cube']
+        self.assertEqual('00000000111111111222222222333333333444444444555555555', testCube)
+    
+    def test_solveTest_solve_011_NominalSolve(self):
+        parmsSolve = {}
+        parmsSolve['cube'] = '041304210230015322110322343545132251104140324554055435'
+        solveDic = solve(parmsSolve)
+        parmsRotate = {}
+        parmsRotate['cube'] = '041304210230015322110322343545132251104140324554055435'
+        parmsRotate['dir'] = solveDic['solution']
+        rotateDic = rotate(parmsRotate)
+        testCube = rotateDic['cube']
+        self.assertEqual('00000000111111111222222222333333333444444444555555555', testCube)
+    
+    def test_solveTest_solve_012_NominalSolve(self):
+        parmsSolve = {}
+        parmsSolve['cube'] = '535203352151411105414024133223031412350440050524453022'
+        solveDic = solve(parmsSolve)
+        parmsRotate = {}
+        parmsRotate['cube'] = '535203352151411105414024133223031412350440050524453022'
+        parmsRotate['dir'] = solveDic['solution']
+        rotateDic = rotate(parmsRotate)
+        testCube = rotateDic['cube']
+        self.assertEqual('00000000111111111222222222333333333444444444555555555', testCube)
+     
+    def test_solveTest_solve_013_NominalSolve(self):
+        parmsSolve = {}
+        parmsSolve['cube'] = '305200234012314150453121123254034231531142043520450455'
+        solveDic = solve(parmsSolve)
+        parmsRotate = {}
+        parmsRotate['cube'] = '305200234012314150453121123254034231531142043520450455'
+        parmsRotate['dir'] = solveDic['solution']
+        rotateDic = rotate(parmsRotate)
+        testCube = rotateDic['cube']
+        self.assertEqual('00000000111111111222222222333333333444444444555555555', testCube)
+     
+    def test_solveTest_solve_014_NominalSolve(self):
+        parmsSolve = {}
+        parmsSolve['cube'] = '033003002515414321224122454041131344151045500355253232'
+        solveDic = solve(parmsSolve)
+        parmsRotate = {}
+        parmsRotate['cube'] = '033003002515414321224122454041131344151045500355253232'
+        parmsRotate['dir'] = solveDic['solution']
+        rotateDic = rotate(parmsRotate)
+        testCube = rotateDic['cube']
+        self.assertEqual('00000000111111111222222222333333333444444444555555555', testCube)
+     
+    def test_solveTest_solve_015_NominalSolve(self):
+        parmsSolve = {}
+        parmsSolve['cube'] = '214404023231013021044521251353533411025040503435451225'
+        solveDic = solve(parmsSolve)
+        parmsRotate = {}
+        parmsRotate['cube'] = '214404023231013021044521251353533411025040503435451225'
+        parmsRotate['dir'] = solveDic['solution']
+        rotateDic = rotate(parmsRotate)
+        testCube = rotateDic['cube']
+        self.assertEqual('00000000111111111222222222333333333444444444555555555', testCube)
+     
+    def test_solveTest_solve_016_NominalSolve(self):
+        parmsSolve = {}
+        parmsSolve['cube'] = '520104422545015512330225454433130220302543031111454103'
+        solveDic = solve(parmsSolve)
+        parmsRotate = {}
+        parmsRotate['cube'] = '520104422545015512330225454433130220302543031111454103'
+        parmsRotate['dir'] = solveDic['solution']
+        rotateDic = rotate(parmsRotate)
+        testCube = rotateDic['cube']
+        self.assertEqual('00000000111111111222222222333333333444444444555555555', testCube)
+     
+    def test_solveTest_solve_017_NominalSolve(self):
+        parmsSolve = {}
+        parmsSolve['cube'] = '344201201351513402443423320400535121210440520512353515'
+        solveDic = solve(parmsSolve)
+        parmsRotate = {}
+        parmsRotate['cube'] = '344201201351513402443423320400535121210440520512353515'
+        parmsRotate['dir'] = solveDic['solution']
+        rotateDic = rotate(parmsRotate)
+        testCube = rotateDic['cube']
+        self.assertEqual('00000000111111111222222222333333333444444444555555555', testCube)
+     
+    def test_solveTest_solve_018_NominalSolve(self):
+        parmsSolve = {}
+        parmsSolve['cube'] = '414104105140315130312225103500130234345342322042255455'
+        solveDic = solve(parmsSolve)
+        parmsRotate = {}
+        parmsRotate['cube'] = '414104105140315130312225103500130234345342322042255455'
+        parmsRotate['dir'] = solveDic['solution']
+        rotateDic = rotate(parmsRotate)
+        testCube = rotateDic['cube']
+        self.assertEqual('00000000111111111222222222333333333444444444555555555', testCube)
+     
+    def test_solveTest_solve_019_NominalSolve(self):
+        parmsSolve = {}
+        parmsSolve['cube'] = '310002351440314451103124501450035232234342523512452510'
+        solveDic = solve(parmsSolve)
+        parmsRotate = {}
+        parmsRotate['cube'] = '310002351440314451103124501450035232234342523512452510'
+        parmsRotate['dir'] = solveDic['solution']
+        rotateDic = rotate(parmsRotate)
+        testCube = rotateDic['cube']
+        self.assertEqual('00000000111111111222222222333333333444444444555555555', testCube)
+     
+    def test_solveTest_solve_020_NominalSolve(self):
+        parmsSolve = {}
+        parmsSolve['cube'] = '141001442054212313224521001100034223233543435015455535'
+        solveDic = solve(parmsSolve)
+        parmsRotate = {}
+        parmsRotate['cube'] = '125205044342112135301420342255333524414041012330555100'
+        parmsRotate['dir'] = solveDic['solution']
+        rotateDic = rotate(parmsRotate)
+        testCube = rotateDic['cube']
+        self.assertEqual('00000000111111111222222222333333333444444444555555555', testCube)
+               
     def test_solveTest_solve_901_MissingCube(self):
         parmsTest = {}
         parmsTest['cube'] = None
