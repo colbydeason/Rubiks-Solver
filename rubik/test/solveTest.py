@@ -332,7 +332,7 @@ class SolveTest(TestCase):
         
     def test_solveTest_solve_905_FlipTwistMultipleUnsolvable(self):
         parmsSolve = {}
-        parmsSolve['cube'] = '531405012434110435131521244550230003222245100543154323'
+        parmsSolve['cube'] = '131405012434110435131521244550230003222245500543154323'
         solveDic = solve(parmsSolve)
         print (solveDic)
         self.assertEqual('error: unsolvable cube', solveDic['status'])
