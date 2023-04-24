@@ -14,30 +14,20 @@ def solve(parms):
      
     encodedCube = parms.get('cube')
     theCube = Cube(encodedCube)
-    if isError(theCube, result):
+    if theCube.get().startswith('error: '):
+        result['status'] = theCube.get()
         return result
     if theCube.isSolved():
         rotations = ""
     else:
         rotations = ""
         rotations += solveBottomCross(theCube)      #iteration 2
-        if isError(theCube, result):
-            return result
         rotations += solveBottomLayer(theCube)      #iteration 3
-        if isError(theCube, result):
-            return result
         rotations += solveMiddleLayer(theCube)      #iteration 4
-        if isError(theCube, result):
-            return result
         rotations += solveUpCross(theCube)          #iteration 5
-        if isError(theCube, result):
-            return result
         rotations += solveUpSurface(theCube)        #iteration 5
-        if isError(theCube, result):
-            return result
         rotations += solveUpperLayer(theCube)       #iteration 6
-        if isError(theCube, result):
-            return result
+
         
         # rotations = ""
         # rotSolveBottomCross = solveBottomCross(theCube)
@@ -67,11 +57,4 @@ def solve(parms):
     result['integrity'] = integrityToken                    #iteration 3
                      
     return result
-
-def isError(errorCube, errorResult):
-    if errorCube.get().startswith('error: '):
-        errorResult = {}
-        errorResult['status'] = errorCube.get()
-        return True
-    return False
 
