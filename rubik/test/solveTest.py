@@ -295,7 +295,7 @@ class SolveTest(TestCase):
         parmsSolve['cube'] = '141001442054212313224521001100034223233543435015455535'
         solveDic = solve(parmsSolve)
         parmsRotate = {}
-        parmsRotate['cube'] = '125205044342112135301420342255333524414041012330555100'
+        parmsRotate['cube'] = '141001442054212313224521001100034223233543435015455535'
         parmsRotate['dir'] = solveDic['solution']
         rotateDic = rotate(parmsRotate)
         testCube = rotateDic['cube']
