@@ -307,7 +307,6 @@ class SolveTest(TestCase):
         parmsTest = {}
         parmsTest['cube'] = None
         solveDic = solve(parmsTest)
-        print (solveDic)
         self.assertEqual('error: missing cube [string]', solveDic['status'])
         
     def test_solveTest_solve_902_CornerTwistUnsolvable(self):
