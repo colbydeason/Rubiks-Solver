@@ -5,8 +5,17 @@ def solveUpCross(theCube: Cube) -> str:
     
     if theCube.upFaceCrossDone():
         return ''
-    while _alignShape(theCube):
-        theCube.rotate("FRUruf")
+    
+    
+    # while _alignShape(theCube):
+    #     theCube.rotate("FRUruf")
+    for shape in range(3):
+        if _alignShape(theCube):
+            theCube.rotate("FRUruf")
+        else:
+            break
+    
+    
     return theCube.popCurrentRotationStringResetOrientation()
 
 def _alignShape(shapeCube):
