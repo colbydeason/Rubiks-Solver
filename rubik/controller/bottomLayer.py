@@ -46,8 +46,14 @@ def _bringCornerDown(bcdCube):
         elif colorList[2] == bcdCube.getBottomColor():
             bcdCube.rotate('RUr')
         if corner != 3:
-            while not _checkRightCornerColor(bcdCube, 'top'):
-                bcdCube.rotateCubeR()
+            
+            # while not _checkRightCornerColor(bcdCube, 'top'):
+            #     bcdCube.rotateCubeR()
+            for face in range(4):
+                if not _checkRightCornerColor(bcdCube, 'top'):
+                    bcdCube.rotateCubeR()
+                else:
+                    continue
     
 def _checkRightCornerColor(cCube, topOrBottom):
     cornerTop = [FTR, UBR, RTL]
