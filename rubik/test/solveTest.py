@@ -118,7 +118,6 @@ class SolveTest(TestCase):
         parmsRotate['dir'] = solveDic['solution']
         rotateDic = rotate(parmsRotate)
         testCube = rotateDic['cube']
-        print(solveDic)
         self.assertEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', testCube)
         
     def test_solveTest_solve_004_BottomCrossSolved(self):
@@ -313,63 +312,54 @@ class SolveTest(TestCase):
         parmsSolve = {}
         parmsSolve['cube'] = '453504314432314050103121425252233005545142122003350141'
         solveDic = solve(parmsSolve)
-        print (solveDic)
         self.assertEqual('error: unsolvable cube', solveDic['status'])
         
     def test_solveTest_solve_903_EdgeFlipUnsolvable(self):
         parmsSolve = {}
         parmsSolve['cube'] = '544002310135411134035520124242135340103142332425055250'
         solveDic = solve(parmsSolve)
-        print (solveDic)
         self.assertEqual('error: unsolvable cube', solveDic['status'])
         
     def test_solveTest_solve_904_FlipAndTwistUnsolvable(self):
         parmsSolve = {}
         parmsSolve['cube'] = '531405012432110435431521224550230003221245100543154343'
         solveDic = solve(parmsSolve)
-        print (solveDic)
         self.assertEqual('error: unsolvable cube', solveDic['status'])
         
     def test_solveTest_solve_905_FlipTwistMultipleUnsolvable(self):
         parmsSolve = {}
         parmsSolve['cube'] = '131405012434110435131521244550230003222245500543154323'
         solveDic = solve(parmsSolve)
-        print (solveDic)
         self.assertEqual('error: unsolvable cube', solveDic['status'])
         
     def test_solveTest_solve_906_StickerSwapsUnsolvable(self):
         parmsSolve = {}
         parmsSolve['cube'] = '352504454142313112551024024010232242543040515330150133'
         solveDic = solve(parmsSolve)
-        print (solveDic)
         self.assertEqual('error: unsolvable cube', solveDic['status'])
         
     def test_solveTest_solve_907_StickerSwapsUnsolvable(self):
         parmsSolve = {}
         parmsSolve['cube'] = '030500235125412153122523435405530213113144004422451340'
-        solveDic = solve(parmsSolve)
-        print (solveDic)
+        solveDic = solve(parmsSolve)      
         self.assertEqual('error: unsolvable cube', solveDic['status'])
         
     def test_solveTest_solve_908_StickerSwapsUnsolvable(self):
         parmsSolve = {}
         parmsSolve['cube'] = '324400120145013424310521302415030520343543252511354152'
-        solveDic = solve(parmsSolve)
-        print (solveDic)
+        solveDic = solve(parmsSolve)  
         self.assertEqual('error: unsolvable cube', solveDic['status'])
         
     def test_solveTest_solve_909_StickerSwapsUnsolvable(self):
         parmsSolve = {}
         parmsSolve['cube'] = '000010000111101111222222222333333333444444444555555555'
         solveDic = solve(parmsSolve)
-        print (solveDic)
         self.assertEqual('error: unsolvable cube', solveDic['status'])
         
     def test_solveTest_solve_910_TwistFlipSwapUnsolvable(self):
         parmsSolve = {}
         parmsSolve['cube'] = '041000000011111112222222522333333333444444404551555555'
-        solveDic = solve(parmsSolve)
-        print (solveDic)
+        solveDic = solve(parmsSolve)      
         self.assertEqual('error: unsolvable cube', solveDic['status'])
         
         
