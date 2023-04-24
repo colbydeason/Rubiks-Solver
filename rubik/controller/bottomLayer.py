@@ -1,4 +1,4 @@
-import rubik.model.constants
+from rubik.model.constants import *
 from rubik.model.cube import Cube
 
 def solveBottomLayer(theCube: Cube) -> str:
@@ -52,8 +52,8 @@ def _bringCornerDown(bcdCube):
                 bcdCube.rotateCubeR()
     
 def _checkRightCornerColor(cCube, topOrBottom):
-    cornerTop = [2, 44, 9]
-    cornerBottom = [8, 15, 47]
+    cornerTop = [FTR, UBR, RTL]
+    cornerBottom = [FBR, RBL, DTR]
     match topOrBottom:
         case 'top':
             colorArray = []
@@ -75,9 +75,9 @@ def _checkRightCornerColor(cCube, topOrBottom):
             raise Exception("must be top or bottom for _checkRightCornerColor")
 
 def _alignCorner(alCube):
-    cornerArray = [2, 44, 9]
-    middle1 = 4
-    middle2 = 13
+    cornerArray = [FTR, UBR, RTL]
+    middle1 = FMM
+    middle2 = RMM
     colorList = []
     for square in cornerArray:
         colorList.append(alCube.getRelativeSquare(square))
