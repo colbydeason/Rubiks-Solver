@@ -366,7 +366,7 @@ class SolveTest(TestCase):
         print (solveDic)
         self.assertEqual('error: unsolvable cube', solveDic['status'])
         
-    def test_solveTest_solve_906_TwistFlipSwapUnsolvable(self):
+    def test_solveTest_solve_910_TwistFlipSwapUnsolvable(self):
         parmsSolve = {}
         parmsSolve['cube'] = '041000000011111112222222522333333333444444404551555555'
         solveDic = solve(parmsSolve)
