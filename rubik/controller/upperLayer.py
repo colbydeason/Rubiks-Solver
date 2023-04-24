@@ -14,10 +14,11 @@ def solveUpperLayer(theCube: Cube) -> str:
         else:
             theCube.rotate('u')
         
-        
+   
     _solveEdges(theCube)
     
-    
+    if not theCube.isSolved():
+        return 'error: unsolvable cube' 
     return theCube.popCurrentRotationStringResetOrientation()
 
 def _solveCorners(cornerCube):
