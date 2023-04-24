@@ -34,13 +34,13 @@ def solve(parms):
         rotSolveUpCross = solveUpCross(theCube)
         rotSolveUpSurface = solveUpSurface(theCube)
         rotSolveUpperLayer = solveUpperLayer(theCube)
-        rotArray = {rotSolveBottomCross, rotSolveBottomLayer, rotSolveMiddleLayer, rotSolveUpCross, rotSolveUpSurface, rotSolveUpperLayer}
+        rotArray = [rotSolveBottomCross, rotSolveBottomLayer, rotSolveMiddleLayer, rotSolveUpCross, rotSolveUpSurface, rotSolveUpperLayer]
         for rotationString in rotArray:
-            # if rotationString == 'error: unsolvable cube':
-            #     result['status'] = rotationString
-            #     return result
-            # else:
-            rotations += rotationString
+            if rotationString == 'error: unsolvable cube':
+                result['status'] = rotationString
+                return result
+            else:
+                rotations += rotationString
         
         
     itemToTokenize = encodedCube + rotations + 'cjd0057'
