@@ -15,7 +15,8 @@ def solveUpCross(theCube: Cube) -> str:
         else:
             break
     
-    
+    if not theCube.upFaceCrossDone():
+        return 'error: unsolvable cube'
     return theCube.popCurrentRotationStringResetOrientation()
 
 def _alignShape(shapeCube):
