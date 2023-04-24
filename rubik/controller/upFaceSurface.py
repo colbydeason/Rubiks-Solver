@@ -5,8 +5,17 @@ def solveUpSurface(theCube: Cube) -> str:
     
     if theCube.upFaceSurfaceDone():
         return ''
-    while _alignCorner(theCube):
-        theCube.rotate("RUrURUUr")
+    
+    
+    # while _alignCorner(theCube):
+    #     theCube.rotate("RUrURUUr")
+    for shape in range(4):
+        if _alignCorner(theCube):
+            theCube.rotate("RUrURUUr")
+        else:
+            break
+    
+    
     return theCube.popCurrentRotationStringResetOrientation()
 
 def _alignCorner(cornerCube):
@@ -18,12 +27,30 @@ def _alignCorner(cornerCube):
     numberMatching = cornerColorArray.count(topColor)
     
     if numberMatching == 0 or numberMatching == 2:
-        while topColor != cornerCube.getRelativeSquare(LTR):
-            cornerCube.rotateCubeR()
+        
+        
+        # while topColor != cornerCube.getRelativeSquare(LTR):
+        #     cornerCube.rotateCubeR()
+        for square in range(4):
+            if topColor != cornerCube.getRelativeSquare(LTR):
+                cornerCube.rotateCubeR()
+            else:
+                break
+        
+        
         return True
     elif numberMatching == 1:
-        while topColor != cornerCube.getRelativeSquare(UBL):
-            cornerCube.rotateCubeR()
+        
+        
+        # while topColor != cornerCube.getRelativeSquare(UBL):
+        #     cornerCube.rotateCubeR()
+        for square in range(4):
+            if topColor != cornerCube.getRelativeSquare(UBL):
+                cornerCube.rotateCubeR()
+            else:
+                break
+        
+        
         return True
     else:
         return False
