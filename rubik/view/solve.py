@@ -20,29 +20,27 @@ def solve(parms):
     if theCube.isSolved():
         rotations = ""
     else:
-        rotations = ""
-        rotations += solveBottomCross(theCube)      #iteration 2
-        rotations += solveBottomLayer(theCube)      #iteration 3
-        rotations += solveMiddleLayer(theCube)      #iteration 4
-        rotations += solveUpCross(theCube)          #iteration 5
-        rotations += solveUpSurface(theCube)        #iteration 5
-        rotations += solveUpperLayer(theCube)       #iteration 6
-
-        
         # rotations = ""
-        # rotSolveBottomCross = solveBottomCross(theCube)
-        # rotSolveBottomLayer = solveBottomLayer(theCube)
-        # rotSolveMiddleLayer = solveMiddleLayer(theCube) 
-        # rotSolveUpCross = solveUpCross(theCube)
-        # rotSolveUpSurface = solveUpSurface(theCube)
-        # rotSolveUpperLayer = solveUpperLayer(theCube)
-        # rotArray = {rotSolveBottomCross, rotSolveBottomLayer, rotSolveMiddleLayer, rotSolveUpCross, rotSolveUpSurface, rotSolveUpperLayer}
-        # for rotationString in rotArray:
-        #     if rotationString == 'error: unsolvable cube':
-        #         result['status'] = rotationString
-        #         return result
-        #     else:
-        #         rotations += rotationString
+        # rotations += solveBottomCross(theCube)      #iteration 2
+        # rotations += solveBottomLayer(theCube)      #iteration 3
+        # rotations += solveMiddleLayer(theCube)      #iteration 4
+        # rotations += solveUpCross(theCube)          #iteration 5
+        # rotations += solveUpSurface(theCube)        #iteration 5
+        # rotations += solveUpperLayer(theCube)       #iteration 6        
+        rotations = ""
+        rotSolveBottomCross = solveBottomCross(theCube)
+        rotSolveBottomLayer = solveBottomLayer(theCube)
+        rotSolveMiddleLayer = solveMiddleLayer(theCube) 
+        rotSolveUpCross = solveUpCross(theCube)
+        rotSolveUpSurface = solveUpSurface(theCube)
+        rotSolveUpperLayer = solveUpperLayer(theCube)
+        rotArray = {rotSolveBottomCross, rotSolveBottomLayer, rotSolveMiddleLayer, rotSolveUpCross, rotSolveUpSurface, rotSolveUpperLayer}
+        for rotationString in rotArray:
+            if rotationString == 'error: unsolvable cube':
+                result['status'] = rotationString
+                return result
+            else:
+                rotations += rotationString
         
         
     itemToTokenize = encodedCube + rotations + 'cjd0057'
