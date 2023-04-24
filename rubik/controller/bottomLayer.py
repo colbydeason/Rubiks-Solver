@@ -93,3 +93,4 @@ def _alignCorner(alCube):
         else:
             alCube.rotate('u')
             alCube.rotateCubeR()
+    return colorList
