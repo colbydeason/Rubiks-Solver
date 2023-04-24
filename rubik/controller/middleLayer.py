@@ -15,6 +15,8 @@ def solveMiddleLayer(theCube: Cube) -> str:
     _edgeOut(theCube)
     _bringDown(theCube)
     
+    if not theCube.middleLayerDone():
+        return 'error: unsolvable cube'
     return theCube.popCurrentRotationStringResetOrientation()
     
 def _edgeOut(edgeCube):
@@ -36,6 +38,8 @@ def _edgeOut(edgeCube):
 def _bringDown(solveCube):
     topColor = UMM
     for edge in range(4):
+        
+        
         # while solveCube.checkForColor([FTM, UBM], topColor):
         #         solveCube.rotate('u')
         for matchEdge in range(4):
@@ -43,6 +47,8 @@ def _bringDown(solveCube):
                 solveCube.rotate('u')
             else:
                 break
+            
+            
         matchSide = _alignTopEdge(solveCube)
         match matchSide:
             case 'L':
@@ -53,6 +59,8 @@ def _bringDown(solveCube):
         
     
 def _alignTopEdge(alignCube):
+    
+    
     # while alignCube.getRelativeSquare(FTM) != alignCube.getRelativeSquare(FMM):
     #     alignCube.rotate('u')
     #     alignCube.rotateCubeR()
@@ -62,6 +70,8 @@ def _alignTopEdge(alignCube):
             alignCube.rotateCubeR()
         else:
             break 
+        
+        
     if alignCube.getRelativeSquare(UBM) == alignCube.getRelativeSquare(LMM):
         matchSide = 'L'
     else:
