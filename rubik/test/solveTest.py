@@ -293,10 +293,10 @@ class SolveTest(TestCase):
      
     def test_solveTest_solve_020_NominalSolve(self):
         parmsSolve = {}
-        parmsSolve['cube'] = '453504314432314050103121425252233005545142122003350141'
+        parmsSolve['cube'] = '320000141411515403415223051312433515250442433222054035'
         solveDic = solve(parmsSolve)
         parmsRotate = {}
-        parmsRotate['cube'] = '453504314432314050103121425252233005545142122003350141'
+        parmsRotate['cube'] = '320000141411515403415223051312433515250442433222054035'
         parmsRotate['dir'] = solveDic['solution']
         rotateDic = rotate(parmsRotate)
         testCube = rotateDic['cube']
