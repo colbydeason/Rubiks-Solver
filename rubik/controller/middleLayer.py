@@ -1,4 +1,4 @@
-import rubik.model.constants
+from rubik.model.constants import *
 from rubik.model.cube import Cube
 
 def solveMiddleLayer(theCube: Cube) -> str:
@@ -18,14 +18,14 @@ def solveMiddleLayer(theCube: Cube) -> str:
     return theCube.popCurrentRotationStringResetOrientation()
     
 def _edgeOut(edgeCube):
-    topColor = 40
+    topColor = UMM
     for i in range(4):
-        if edgeCube.checkForColor([5, 12], topColor):
+        if edgeCube.checkForColor([FMR, RML], topColor):
             edgeCube.rotateCubeR()
             continue
         else:
             for j in range(4):
-                if edgeCube.checkForColor([28, 39], topColor):
+                if edgeCube.checkForColor([LTM, UML], topColor):
                     edgeCube.rotate('RUrufuF')
                     edgeCube.rotateCubeR()
                     break
@@ -34,9 +34,9 @@ def _edgeOut(edgeCube):
     edgeCube.resetCubeOrientation()
             
 def _bringDown(solveCube):
-    topColor = 40
+    topColor = UMM
     for i in range(4):
-        while solveCube.checkForColor([1, 43], topColor):
+        while solveCube.checkForColor([FTM, UBM], topColor):
                 solveCube.rotate('u')
         matchSide = _alignTopEdge(solveCube)
         match matchSide:
@@ -48,10 +48,10 @@ def _bringDown(solveCube):
         
     
 def _alignTopEdge(alignCube):
-    while alignCube.getRelativeSquare(1) != alignCube.getRelativeSquare(4):
+    while alignCube.getRelativeSquare(FTM) != alignCube.getRelativeSquare(FMM):
         alignCube.rotate('u')
         alignCube.rotateCubeR()
-    if alignCube.getRelativeSquare(43) == alignCube.getRelativeSquare(31):
+    if alignCube.getRelativeSquare(UBM) == alignCube.getRelativeSquare(LMM):
         matchSide = 'L'
     else:
         matchSide = 'R'

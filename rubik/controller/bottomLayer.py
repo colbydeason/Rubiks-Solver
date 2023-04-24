@@ -14,6 +14,8 @@ def solveBottomLayer(theCube: Cube) -> str:
         return ''
     _moveCornerOut(theCube)
     _bringCornerDown(theCube)
+    if not theCube.bottomLayerDone():
+        return 'error: unsolvable cube'
     
     return theCube.popCurrentRotationStringResetOrientation()     
 
