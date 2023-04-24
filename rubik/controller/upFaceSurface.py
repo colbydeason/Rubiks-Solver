@@ -15,7 +15,8 @@ def solveUpSurface(theCube: Cube) -> str:
         else:
             break
     
-    
+    if not theCube.upFaceSurfaceDone():
+        return 'error: unsolvable cube'
     return theCube.popCurrentRotationStringResetOrientation()
 
 def _alignCorner(cornerCube):
