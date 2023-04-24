@@ -54,9 +54,17 @@ def _solveEdges(edgeCube):
             else:
                 edgeCube.rotateCubeR()
         if isSolidFace:
-            while not edgeCube.isSolved():
+            
+            
+            # while not edgeCube.isSolved():
+            #     edgeCube.rotate('FFUrLFFlRUFF')
+            #     break
+            if edgeCube.isSolved():
+                return
+            else:
                 edgeCube.rotate('FFUrLFFlRUFF')
-                break
+            
+            
         else:
             edgeCube.rotate('FFUrLFFlRUFF')
             continue
