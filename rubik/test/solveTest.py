@@ -118,6 +118,7 @@ class SolveTest(TestCase):
         parmsRotate['dir'] = solveDic['solution']
         rotateDic = rotate(parmsRotate)
         testCube = rotateDic['cube']
+        print(solveDic)
         self.assertEqual('ooooooooobbbbbbbbbrrrrrrrrrgggggggggyyyyyyyyywwwwwwwww', testCube)
         
     def test_solveTest_solve_004_BottomCrossSolved(self):
