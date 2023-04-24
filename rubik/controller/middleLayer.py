@@ -19,7 +19,7 @@ def solveMiddleLayer(theCube: Cube) -> str:
     
 def _edgeOut(edgeCube):
     topColor = UMM
-    for i in range(4):
+    for edge in range(4):
         if edgeCube.checkForColor([FMR, RML], topColor):
             edgeCube.rotateCubeR()
             continue
@@ -35,9 +35,14 @@ def _edgeOut(edgeCube):
             
 def _bringDown(solveCube):
     topColor = UMM
-    for i in range(4):
-        while solveCube.checkForColor([FTM, UBM], topColor):
+    for edge in range(4):
+        # while solveCube.checkForColor([FTM, UBM], topColor):
+        #         solveCube.rotate('u')
+        for matchEdge in range(4):
+            if solveCube.checkForColor([FTM, UBM], topColor):
                 solveCube.rotate('u')
+            else:
+                break
         matchSide = _alignTopEdge(solveCube)
         match matchSide:
             case 'L':
@@ -48,9 +53,15 @@ def _bringDown(solveCube):
         
     
 def _alignTopEdge(alignCube):
-    while alignCube.getRelativeSquare(FTM) != alignCube.getRelativeSquare(FMM):
-        alignCube.rotate('u')
-        alignCube.rotateCubeR()
+    # while alignCube.getRelativeSquare(FTM) != alignCube.getRelativeSquare(FMM):
+    #     alignCube.rotate('u')
+    #     alignCube.rotateCubeR()
+    for face in range(4):
+        if alignCube.getRelativeSquare(FTM) != alignCube.getRelativeSquare(FMM):
+            alignCube.rotate('u')
+            alignCube.rotateCubeR()
+        else:
+            break 
     if alignCube.getRelativeSquare(UBM) == alignCube.getRelativeSquare(LMM):
         matchSide = 'L'
     else:
