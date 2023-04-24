@@ -45,8 +45,6 @@ def _bringCornerDown(bcdCube):
             bcdCube.rotate('fuuFUfuF')
         elif colorList[2] == bcdCube.getBottomColor():
             bcdCube.rotate('RUr')
-        else:
-            continue
         if corner != 3:
             while not _checkRightCornerColor(bcdCube, 'top'):
                 bcdCube.rotateCubeR()
@@ -89,4 +87,3 @@ def _alignCorner(alCube):
         else:
             alCube.rotate('u')
             alCube.rotateCubeR()
-    continue
