@@ -44,7 +44,7 @@ def _solveCorners(cornerCube):
 
 def _solveEdges(edgeCube):
     isSolidFace = False
-    for algo in range(2):
+    for algo in range(3):
         for face in range (4):
             if edgeCube.isSameColor(FACEF):
                 edgeCube.rotateCubeR()
