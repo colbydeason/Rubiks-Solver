@@ -362,5 +362,11 @@ class SolveTest(TestCase):
         solveDic = solve(parmsSolve)      
         self.assertEqual('error: unsolvable cube', solveDic['status'])
         
+    def test_solveTest_solve_911_UnsolvableRandomGenerate(self):
+        parmsSolve = {}
+        parmsSolve['cube'] = '242405100533112421551422510534330312230044313451055420'
+        solveDic = solve(parmsSolve)      
+        self.assertEqual('error: unsolvable cube', solveDic['status'])
+        
         
         

@@ -126,7 +126,7 @@ class Cube:
                     return self._cube
         
         self._cube = "".join(self._cubeList)
-        # print(self._cube + ',')
+        print(self._cube + ',')
         return self._cube
     
     def get(self):
