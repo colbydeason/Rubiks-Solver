@@ -169,4 +169,20 @@ class Test(unittest.TestCase):
                 self.fail("Top layer is not solved")
         pass
     
+    def test_upperLayer_006_solveUpperLayerFailedTest(self):
+        testCube = cube.Cube('242405100533112421551422510534330312230044313451055420')
+        solveBottomCross(testCube)
+        solveBottomLayer(testCube)
+        solveMiddleLayer(testCube)
+        solveUpCross(testCube)
+        solveUpSurface(testCube)
+        solveUpperLayer(testCube)
+        for face in self.faceArray:
+            if testCube.isSameColor(face):
+                continue
+            else:
+                self.fail("Top layer is not solved")
+        pass
+    
+    
     
