@@ -5,16 +5,11 @@ def solveUpCross(theCube: Cube) -> str:
     
     if theCube.upFaceCrossDone():
         return ''
-    
-    
-    # while _alignShape(theCube):
-    #     theCube.rotate("FRUruf")
     for shape in range(4):
         if _alignShape(theCube):
             theCube.rotate("FRUruf")
         else:
             break
-    
     if not theCube.upFaceCrossDone():
         return 'error: unsolvable cube'
     return theCube.popCurrentRotationStringResetOrientation()

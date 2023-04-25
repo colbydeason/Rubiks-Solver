@@ -5,16 +5,11 @@ def solveUpSurface(theCube: Cube) -> str:
     
     if theCube.upFaceSurfaceDone():
         return ''
-    
-    
-    # while _alignCorner(theCube):
-    #     theCube.rotate("RUrURUUr")
     for shape in range(4):
         if _alignCorner(theCube):
             theCube.rotate("RUrURUUr")
         else:
             break
-    
     if not theCube.upFaceSurfaceDone():
         return 'error: unsolvable cube'
     return theCube.popCurrentRotationStringResetOrientation()
@@ -25,26 +20,15 @@ def _alignCorner(cornerCube):
     topColor = cornerCube.getRelativeSquare(UMM)
     for corner in cornerArray:
         cornerColorArray.append(cornerCube.getRelativeSquare(corner))
-    numberMatching = cornerColorArray.count(topColor)
-    
+    numberMatching = cornerColorArray.count(topColor)    
     if numberMatching == 0 or numberMatching == 2:
-        
-        
-        # while topColor != cornerCube.getRelativeSquare(LTR):
-        #     cornerCube.rotateCubeR()
         for square in range(4):
             if topColor != cornerCube.getRelativeSquare(LTR):
                 cornerCube.rotateCubeR()
             else:
                 break
-        
-        
         return True
     elif numberMatching == 1:
-        
-        
-        # while topColor != cornerCube.getRelativeSquare(UBL):
-        #     cornerCube.rotateCubeR()
         for square in range(4):
             if topColor != cornerCube.getRelativeSquare(UBL):
                 cornerCube.rotateCubeR()

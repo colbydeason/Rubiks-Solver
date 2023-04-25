@@ -14,7 +14,6 @@ def solveBottomCross(theCube: Cube) -> str:
         return ''
     _solveFlower(theCube)
     _flowerToBottom(theCube)
-    
     if not theCube.bottomCrossDone():
         return 'error: unsolvable cube'
     return theCube.popCurrentRotationStringResetOrientation()

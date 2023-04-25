@@ -14,7 +14,6 @@ def solveBottomLayer(theCube: Cube) -> str:
         return ''
     _moveCornerOut(theCube)
     _bringCornerDown(theCube)
-    
     if not theCube.bottomLayerDone():
         return 'error: unsolvable cube'
     return theCube.popCurrentRotationStringResetOrientation()     
@@ -31,8 +30,7 @@ def _moveCornerOut(corneredCube):
                     break
                 else:
                     corneredCube.rotate('u')
-                    corneredCube.rotateCubeR()
-                    
+                    corneredCube.rotateCubeR()     
     corneredCube.resetCubeOrientation()
                 
     
@@ -46,9 +44,6 @@ def _bringCornerDown(bcdCube):
         elif colorList[2] == bcdCube.getBottomColor():
             bcdCube.rotate('RUr')
         if corner != 3:
-            
-            # while not _checkRightCornerColor(bcdCube, 'top'):
-            #     bcdCube.rotateCubeR()
             for face in range(4):
                 if not _checkRightCornerColor(bcdCube, 'top'):
                     bcdCube.rotateCubeR()
