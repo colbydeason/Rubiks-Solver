@@ -10,7 +10,7 @@ Where rubik/rotate rotates a cube given a specific cube and set of rotations, an
 Rubike rotate takes in a cube string and a rotation string, or just a cube string. If the rotation argument is left out of the url, then it rotates the front face.
 
 The rotation string allows for the following rotational inputs:
-    F, f, R, r, L, l, B, b, U, u\n
+    **F, f, R, r, L, l, B, b, U, u**
 The capital letters refer to clockwise rotation, and the lowercase counterclockwise. 
 The supported side rotations are then front face, right face, left face, back face, and up face (NOT bottom face); represented by F and f, R and r, L and l, B and b, U and u
 
